@@ -1788,6 +1788,8 @@ section {
   width: 100%;
   aspect-ratio: 4/5;
   object-fit: cover;
+  object-position: top center;
+  display: block;
 }
 
 .about-badge-pill {
