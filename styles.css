@@ -2936,3 +2936,178 @@ section {
   }
 }
 
+/* --------------------------------------------------------------------------
+   22. CASE STUDY ENHANCEMENTS: DECISION MATRIX & PIVOT PIPELINE
+   -------------------------------------------------------------------------- */
+
+/* Responsive Decision Matrix Table */
+.decision-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 2rem 0;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background-color: var(--bg-surface);
+  box-shadow: var(--card-shadow);
+}
+
+.pm-matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9375rem;
+  min-width: 620px;
+}
+
+.pm-matrix-table th {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-weight: 700;
+  padding: 1rem 1.25rem;
+  border-bottom: 2px solid var(--border);
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.pm-matrix-table td {
+  padding: 1.15rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+  line-height: 1.55;
+  vertical-align: top;
+}
+
+.pm-matrix-table tr:last-child td {
+  border-bottom: none;
+}
+
+.pm-matrix-table td strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.pm-matrix-table tr:hover td {
+  background-color: var(--accent-light);
+}
+
+/* 0→1 Hypothesis & Pivot Progression Pipeline */
+.pivot-pipeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin: 1.75rem 0;
+}
+
+.pivot-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.15rem 1.25rem;
+  box-shadow: var(--card-shadow);
+  transition: transform var(--duration-fast) var(--ease-smooth),
+              border-color var(--duration-fast) var(--ease-smooth);
+}
+
+.pivot-step:hover {
+  transform: translateX(4px);
+  border-color: var(--accent-border);
+}
+
+.pivot-num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--accent);
+  background-color: var(--accent-light);
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  text-transform: uppercase;
+}
+
+.pivot-content {
+  flex-grow: 1;
+}
+
+.pivot-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.35;
+}
+
+.pivot-desc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-top: 0.35rem;
+  line-height: 1.5;
+}
+
+/* Comparison Cards: AI that Answers vs AI that Acts */
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.philosophy-box {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem;
+  box-shadow: var(--card-shadow);
+}
+
+.philosophy-box.reactive {
+  border-top: 4px solid var(--text-muted);
+}
+
+.philosophy-box.proactive {
+  border-top: 4px solid var(--accent);
+  background-color: var(--accent-light);
+}
+
+.philosophy-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.philosophy-prompt {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+  line-height: 1.45;
+}
+
+.philosophy-note {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+@media (max-width: 680px) {
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
