@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MySmartAssistant Case Study — Ghanshyam Kumar Singh | Product Manager</title>
+  <meta name="description" content="0 to 1 GenAI Product Case Study: How Product Manager Ghanshyam Kumar Singh led an 8-member pod to deliver MySmartAssistant across 100+ languages in 4 weeks.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. NAVIGATION BAR
+       ======================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" aria-label="Ghanshyam Kumar Singh Home">
+        <span>GHANSHYAM</span>
+        <span class="brand-badge">PM</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="work.html" class="nav-link active">Work</a></li>
+          <li><a href="experience.html" class="nav-link">Experience</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="Ghanshyam_Kumar_Singh_Resume.pdf" class="nav-link" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light and dark theme">
+          <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <a href="index.html#contact" class="btn-header-cta">
+          <span>Let's talk</span>
+          <span aria-hidden="true">→</span>
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open navigation menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+      <span class="brand-logo">GHANSHYAM</span>
+      <button class="close-mobile-menu" aria-label="Close menu" style="font-size: 1.5rem; color: var(--text-primary);">✕</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Home <span>→</span></a></li>
+      <li><a href="work.html" class="mobile-nav-link">Case Studies <span>→</span></a></li>
+      <li><a href="experience.html" class="mobile-nav-link">Experience <span>→</span></a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Me <span>→</span></a></li>
+      <li><a href="Ghanshyam_Kumar_Singh_Resume.pdf" class="mobile-nav-link" target="_blank">Download Resume <span>→</span></a></li>
+      <li><a href="index.html#contact" class="mobile-nav-link" style="color: var(--accent);">Contact & Connect <span>→</span></a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- ========================================================================
+         2. SUBPAGE HEADER & BREADCRUMBS
+         ======================================================================== -->
+    <header class="subpage-header">
+      <div class="container">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <a href="index.html" class="breadcrumb-link">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <a href="work.html" class="breadcrumb-link">Work</a>
+          <span class="breadcrumb-separator">/</span>
+          <span class="breadcrumb-current">MySmartAssistant 0→1 GenAI Case Study</span>
+        </nav>
+
+        <span class="eyebrow">GENAI · VOICE AI · 0 TO 1 PRODUCT DEVELOPMENT</span>
+        <h1 class="subpage-title">Taking MySmartAssistant from 200+ Discovery Calls to Multilingual Voice</h1>
+        <p class="subpage-subtitle">
+          Led an 8-member cross-functional pod to build and ship a 4-week MVP across 100+ languages, achieving ~92% task accuracy and +15% D1 activation.
+        </p>
+      </div>
+    </header>
+
+    <!-- ========================================================================
+         3. ARTICLE BODY & SIDEBAR
+         ======================================================================== -->
+    <section class="case-study-page-container">
+      <div class="container">
+        <div class="case-study-article-layout">
+          
+          <!-- Sticky Sidebar -->
+          <aside class="case-study-sidebar">
+            <h3 class="sidebar-heading">Contents</h3>
+            <ul class="toc-list">
+              <li><a href="#problem" class="toc-link active">1. The Problem & Market Gap</a></li>
+              <li><a href="#discovery" class="toc-link">2. Customer Discovery (200+ Calls)</a></li>
+              <li><a href="#architecture" class="toc-link">3. Architecture & Technical Specs</a></li>
+              <li><a href="#execution" class="toc-link">4. Pod Leadership & 4-Week MVP</a></li>
+              <li><a href="#outcomes" class="toc-link">5. Business Outcomes & Metrics</a></li>
+              <li><a href="#learnings" class="toc-link">6. AI Guardrails & Next Horizon</a></li>
+            </ul>
+
+            <div class="sidebar-meta-item">
+              <div class="sidebar-meta-label">Primary Metric</div>
+              <div class="sidebar-meta-val" style="color: var(--accent); font-size: 1.15rem; font-family: var(--font-mono);">4-Wk MVP · ~92% Accuracy · 100+ Langs</div>
+            </div>
+
+            <div class="sidebar-meta-item">
+              <div class="sidebar-meta-label">Role & Company</div>
+              <div class="sidebar-meta-val">Product Manager · AIVO Technologies</div>
+            </div>
+
+            <div class="sidebar-meta-item">
+              <div class="sidebar-meta-label">Team Pod</div>
+              <div class="sidebar-meta-val">8 Members (4 Eng, 2 Design, 2 QA)</div>
+            </div>
+
+            <div class="sidebar-meta-item">
+              <div class="sidebar-meta-label">Core AI Skills</div>
+              <div class="sidebar-meta-val">Voice AI, RAG, Prompt Engineering, Guardrails, Evaluation Loops</div>
+            </div>
+          </aside>
+
+          <!-- Main Article Column -->
+          <article class="case-study-content-column">
+            
+            <div style="margin-bottom: 2.5rem; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--card-shadow);">
+              <img src="images/case-mysa.png" alt="MySmartAssistant GenAI Voice Product Interface" loading="lazy" style="width: 100%; max-height: 420px; object-fit: cover;">
+            </div>
+
+            <!-- Section 1 -->
+            <section class="cs-deep-section" id="problem">
+              <h2>1. The Problem & Market Gap</h2>
+              <p>
+                Small and medium business owners lose up to <strong>30% of their prospective revenue</strong> simply due to unanswered inbound phone calls during peak hours or after business hours. Existing customer service solutions fell into two ineffective extremes:
+              </p>
+              <ul>
+                <li><strong>Traditional IVR Menus:</strong> "Press 1 for Sales, Press 2 for Support" led to a staggering 58% caller drop-off rate before reaching a human.</li>
+                <li><strong>Text-Based Chatbots:</strong> Required customers to open a browser and type out queries, which failed completely for customers calling on mobile devices while driving or on the move.</li>
+              </ul>
+              <p>
+                The market needed an autonomous conversational voice assistant that could answer questions, understand accents, qualify leads, and schedule appointments naturally over the telephone without sounding like a robotic synthesizer.
+              </p>
+            </section>
+
+            <!-- Section 2 -->
+            <section class="cs-deep-section" id="discovery">
+              <h2>2. Customer Discovery: 200+ User Interviews</h2>
+              <p>
+                Before building a single wireframe or prompt, I conducted <strong>200+ qualitative discovery calls</strong> with business operators across service industries (clinics, automotive service, boutique consulting, and real estate).
+              </p>
+              
+              <div class="cs-callout-box">
+                <div class="cs-callout-title">The Decisive Willingness-to-Pay Signal</div>
+                <div class="cs-callout-body">
+                  When presented with two product prototypes—an intelligent website text chatbot vs. an autonomous phone-answering voice agent—business owners demonstrated a <strong>~3x higher willingness-to-pay for voice automation</strong>. A missed chat felt like a minor inconvenience; a missed phone call was a verified lost sale worth hundreds of dollars.
+                </div>
+              </div>
+
+              <p>
+                This single discovery insight pivoted our entire product roadmap: we killed the web chat MVP and committed 100% of our engineering bandwidth to building real-time voice intelligence.
+              </p>
+            </section>
+
+            <!-- Section 3 -->
+            <section class="cs-deep-section" id="architecture">
+              <h2>3. Technical Architecture & Product Specs</h2>
+              <p>
+                In Voice AI, user experience is strictly bound by <strong>end-to-end conversational latency</strong>. If an agent pauses for more than 1,000ms after a caller speaks, the human perception of natural conversation collapses.
+              </p>
+              <p>
+                I collaborated closely with our engineering lead to architect a sub-800ms pipeline:
+              </p>
+              <ul>
+                <li><strong>Streaming Speech-to-Text (STT):</strong> Employed chunked audio streaming to begin transcription while the caller was still finishing their sentence.</li>
+                <li><strong>Domain-Specific RAG Retrieval:</strong> Built a vector-indexed knowledge repository grounded in business FAQs, operating hours, and service pricing.</li>
+                <li><strong>Streaming LLM Inference with Early Token Synthesis:</strong> Connected the LLM stream directly to the text-to-speech (TTS) engine, generating voice audio on the first tokens before the full response was generated.</li>
+                <li><strong>Strict Guardrail Boundaries:</strong> Formulated structured negative prompt constraints and fallback escalation pathways for medical, financial, or ungrounded queries.</li>
+              </ul>
+            </section>
+
+            <!-- Section 4 -->
+            <section class="cs-deep-section" id="execution">
+              <h2>4. Pod Leadership & 4-Week MVP Delivery</h2>
+              <p>
+                As Product Manager, I led an 8-member cross-functional pod (4 Backend/AI Engineers, 2 Product Designers, 2 QA Engineers) working in rapid 1-week sprint cycles.
+              </p>
+              <p>
+                To hit our aggressive 4-week launch deadline, I enforced ruthless MVP prioritization:
+              </p>
+              <ul>
+                <li><strong>Week 1 (Scoping & Prompts):</strong> Defined PRDs, designed core conversation flows, and evaluated LLM prompt variants across 50 simulated customer personas.</li>
+                <li><strong>Week 2 (Core Engine):</strong> Delivered the telephony integration (Twilio / WebRTC) and baseline streaming STT-LLM-TTS loop.</li>
+                <li><strong>Week 3 (Evaluation Harness):</strong> Built automated evaluation test suites checking task completion rate, hallucination rate, and interruption handling.</li>
+                <li><strong>Week 4 (Beta Launch):</strong> Onboarded the first cohort of 25 businesses across 100+ languages and dialects.</li>
+              </ul>
+            </section>
+
+            <!-- Section 5 -->
+            <section class="cs-deep-section" id="outcomes">
+              <h2>5. Business Outcomes & Impact</h2>
+              <p>
+                The 4-week MVP exceeded initial engagement benchmarks and proved commercial viability:
+              </p>
+
+              <div class="results-grid" style="margin: 2rem 0;">
+                <div class="result-card">
+                  <div class="result-num">~92%</div>
+                  <div class="result-label">Task Completion Rate</div>
+                  <div class="result-sub">Autonomous booking without human escalation</div>
+                </div>
+                <div class="result-card">
+                  <div class="result-num">100+</div>
+                  <div class="result-label">Languages Supported</div>
+                  <div class="result-sub">Real-time accent & dialect adaptation</div>
+                </div>
+                <div class="result-card">
+                  <div class="result-num">+15%</div>
+                  <div class="result-label">D1 Activation Lift</div>
+                  <div class="result-sub">Businesses received calls within 24h</div>
+                </div>
+                <div class="result-card">
+                  <div class="result-num">&lt;800ms</div>
+                  <div class="result-label">Conversational Latency</div>
+                  <div class="result-sub">Natural conversational cadence</div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Section 6 -->
+            <section class="cs-deep-section" id="learnings">
+              <h2>6. AI Guardrails & Future Horizon</h2>
+              <p>
+                <strong>The Critical Lesson in GenAI Product Management:</strong> Building an AI demo is trivial; building an AI product that business owners trust with their real customers requires obsessive attention to <em>failure modes and fallback design</em>. 
+              </p>
+              <p>
+                We established a rule: whenever the agent's confidence score dipped below 75%, it never improvised. Instead, it acknowledged the limitation with empathy, gathered caller details, and triggered an instant SMS notification to the business owner with a full call transcript. This guardrail transformed potential customer frustration into verified leads.
+              </p>
+              <p>
+                This foundation is now being leveraged to scale <strong>Lavola.ai</strong>, our enterprise outbound lead-generation and appointment scheduling voice platform.
+              </p>
+            </section>
+
+            <!-- Footer Navigation -->
+            <div class="cs-navigation-footer">
+              <a href="work.html" class="btn-secondary">
+                <span>← Back to All Work</span>
+              </a>
+              <a href="case-study-rocketskill.html" class="btn-primary">
+                <span>Next: Rocket Skill Revenue Growth (+167%) →</span>
+              </a>
+            </div>
+
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Navigation Pill -->
+  <div class="floating-nav-pill">
+    <a href="#" class="floating-btn" aria-label="Scroll to top">
+      <span>↑ Top</span>
+    </a>
+    <span style="color: var(--border-strong);">|</span>
+    <a href="work.html" class="floating-btn" aria-label="Back to work hub">
+      <span>← Work</span>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <strong>Ghanshyam Kumar Singh</strong> — Product Manager
+        </div>
+        <div class="footer-credo">
+          Build. Measure. Learn. Scale.
+        </div>
+        <div>
+          <a href="#" style="color: var(--accent); font-weight: 600;">Back to top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

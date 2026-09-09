@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Work & Case Studies — Ghanshyam Kumar Singh | Product Manager</title>
+  <meta name="description" content="Explore end-to-end product case studies across Growth, Monetization, GenAI, and Platform Engineering by Product Manager Ghanshyam Kumar Singh.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. NAVIGATION BAR
+       ======================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" aria-label="Ghanshyam Kumar Singh Home">
+        <span>GHANSHYAM</span>
+        <span class="brand-badge">PM</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="work.html" class="nav-link active">Work</a></li>
+          <li><a href="experience.html" class="nav-link">Experience</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="Ghanshyam_Kumar_Singh_Resume.pdf" class="nav-link" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light and dark theme">
+          <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <a href="index.html#contact" class="btn-header-cta">
+          <span>Let's talk</span>
+          <span aria-hidden="true">→</span>
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open navigation menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+      <span class="brand-logo">GHANSHYAM</span>
+      <button class="close-mobile-menu" aria-label="Close menu" style="font-size: 1.5rem; color: var(--text-primary);">✕</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Home <span>→</span></a></li>
+      <li><a href="work.html" class="mobile-nav-link">Case Studies <span>→</span></a></li>
+      <li><a href="experience.html" class="mobile-nav-link">Experience <span>→</span></a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Me <span>→</span></a></li>
+      <li><a href="Ghanshyam_Kumar_Singh_Resume.pdf" class="mobile-nav-link" target="_blank">Download Resume <span>→</span></a></li>
+      <li><a href="index.html#contact" class="mobile-nav-link" style="color: var(--accent);">Contact & Connect <span>→</span></a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- ========================================================================
+         2. SUBPAGE HEADER
+         ======================================================================== -->
+    <header class="subpage-header">
+      <div class="container">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <a href="index.html" class="breadcrumb-link">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <span class="breadcrumb-current">Work & Case Studies</span>
+        </nav>
+
+        <span class="eyebrow">PORTFOLIO DIRECTORY</span>
+        <h1 class="subpage-title">Selected Product Work</h1>
+        <p class="subpage-subtitle">
+          Six end-to-end product cases demonstrating problem diagnostics, customer discovery, live experimentation, technical architecture, and quantified commercial impact.
+        </p>
+
+        <!-- Category Filters -->
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">All Case Studies (6)</button>
+          <button class="filter-btn" data-filter="growth">Growth & Monetization</button>
+          <button class="filter-btn" data-filter="ai">0 to 1 & GenAI</button>
+          <button class="filter-btn" data-filter="platform">Platform & Systems</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ========================================================================
+         3. CASE STUDIES DIRECTORY
+         ======================================================================== -->
+    <section class="work-section" style="padding: 4rem 0 6rem;">
+      <div class="container">
+        
+        <!-- Grid of Case Studies -->
+        <div style="display: flex; flex-direction: column; gap: 3rem;">
+
+          <!-- Case 1: Rocket Skill (Flagship) -->
+          <div class="featured-card" data-category="growth" style="display: grid; grid-template-columns: 1.1fr 1fr; overflow: hidden;">
+            <div class="telemetry-header-visual" style="height: 100%; min-height: 280px;">
+              <div class="telemetry-badge-row">
+                <span class="telemetry-badge">Flagship Game</span>
+                <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-emerald); font-weight: 700;">+167% GGR</span>
+              </div>
+              
+              <!-- SVG Growth Telemetry -->
+              <div class="telemetry-svg-container">
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="width: 100%; height: 100%;">
+                  <defs>
+                    <linearGradient id="rocketGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.35" />
+                      <stop offset="100%" stop-color="var(--accent)" stop-opacity="0.0" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M0,130 C120,120 220,105 320,65 C400,35 460,20 500,10 L500,150 L0,150 Z" fill="url(#rocketGrad)" />
+                  <path d="M0,130 C120,120 220,105 320,65 C400,35 460,20 500,10" fill="none" stroke="var(--accent)" stroke-width="3.5" />
+                  <circle cx="500" cy="10" r="5" fill="var(--accent-emerald)" />
+                </svg>
+              </div>
+
+              <div class="telemetry-labels-row">
+                <span class="telemetry-val-before">Baseline: ₹3L/day</span>
+                <span class="telemetry-val-after">Scaled: ₹8L/day</span>
+              </div>
+            </div>
+
+            <div class="featured-card-content" style="padding: 2.5rem;">
+              <span class="eyebrow">GROWTH · MONETIZATION · EXPERIMENTATION</span>
+              <div class="featured-card-metric">₹3L → ₹8L/day</div>
+              <h2 class="featured-card-title">How I grew Rocket Skill's daily revenue by 167%</h2>
+              <p class="featured-card-snippet">
+                Diagnosed an imbalanced game economy driving rapid bankroll burn, introduced stake-based catalog restructuring, dynamic prize pool mechanics, and ran 10+ live A/B experiments across 30K–40K DAU.
+              </p>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+                <span class="tag-badge">30K–40K DAU</span>
+                <span class="tag-badge">10+ A/B Tests</span>
+                <span class="tag-badge">D7 Ret: 12%→25%</span>
+              </div>
+              <div class="featured-card-footer">
+                <span style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-muted);">BigCash · Witzeal</span>
+                <a href="case-study-rocketskill.html" class="btn-primary" style="padding: 0.6rem 1.25rem; font-size: 0.875rem;">
+                  <span>Read Full Case Study</span>
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case 2: MySmartAssistant (Flagship) -->
+          <div class="featured-card" data-category="ai" style="display: grid; grid-template-columns: 1fr 1.1fr; overflow: hidden;">
+            <div class="featured-card-visual" style="height: 100%; min-height: 280px; border-bottom: none; border-right: 1px solid var(--border);">
+              <img src="images/case-mysa.png" alt="MySmartAssistant GenAI Voice Product Interface" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+
+            <div class="featured-card-content" style="padding: 2.5rem;">
+              <span class="eyebrow">GENAI · VOICE AI · 0 TO 1 PRODUCT</span>
+              <div class="featured-card-metric">0 → 1 AI Voice</div>
+              <h2 class="featured-card-title">Taking MySmartAssistant from discovery to multilingual voice</h2>
+              <p class="featured-card-snippet">
+                Conducted 200+ user interviews uncovering 3x higher willingness-to-pay for voice automation over chat. Led an 8-member cross-functional pod to ship a 4-week MVP across 100+ languages with ~92% task accuracy and +15% D1 activation.
+              </p>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+                <span class="tag-badge">4-Week MVP</span>
+                <span class="tag-badge">100+ Languages</span>
+                <span class="tag-badge">&lt;800ms Latency</span>
+                <span class="tag-badge">RAG & Prompts</span>
+              </div>
+              <div class="featured-card-footer">
+                <span style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-muted);">AIVO Technologies · 2026</span>
+                <a href="case-study-mysmartassistant.html" class="btn-primary" style="padding: 0.6rem 1.25rem; font-size: 0.875rem;">
+                  <span>Read Full Case Study</span>
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2x2 Grid for Remaining 4 Case Studies -->
+          <div class="compact-work-grid">
+            
+            <!-- Case 3: VIP Club -->
+            <div class="compact-card" data-category="growth">
+              <div>
+                <span class="eyebrow">MONETIZATION & RETENTION</span>
+                <div class="compact-card-metric">+75% VIP ARPU</div>
+                <h3 class="compact-card-title">VIP Club: Turning a static badge into a progression system</h3>
+                <p class="compact-card-desc">
+                  <strong>Problem:</strong> 200+ qualitative interviews revealed high-wagering players had no post-qualification goals, causing plateaued wagering.<br><br>
+                  <strong>Solution:</strong> Restructured into a 3-tier wagering progression ladder (₹5K / ₹50K / ₹100K) with milestone nudges and personalized loss-back credits.<br><br>
+                  <strong>Outcome:</strong> Grew active VIP base from 45K to 65K (+44%) and lifted average VIP ARPU from ₹8K to ₹14K (+75%).
+                </p>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid var(--border);">
+                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">₹8K → ₹14K ARPU</span>
+                <a href="experience.html#role-witzeal" class="card-cta-link">View in Experience →</a>
+              </div>
+            </div>
+
+            <!-- Case 4: CRM + AI -->
+            <div class="compact-card" data-category="ai platform">
+              <div>
+                <span class="eyebrow">OPERATIONS & AI SYSTEMS</span>
+                <div class="compact-card-metric">CSAT 2/5 → 4.2/5</div>
+                <h3 class="compact-card-title">CRM + AI: From 4-day wait times to AI-assisted support</h3>
+                <p class="compact-card-desc">
+                  <strong>Problem:</strong> Rapid user growth created a 4-day ticket backlog with customer satisfaction plummeting to 2/5.<br><br>
+                  <strong>Solution:</strong> Built the CRM vertical from scratch, hired and trained 10+ agents, and deployed an internal AI Agent Helper before exposing automation to users.<br><br>
+                  <strong>Outcome:</strong> Slashed first response time by 45% and deflected 40–50% of routine inquiries autonomously, lifting CSAT to 4.2/5.
+                </p>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid var(--border);">
+                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">40–50% Deflection</span>
+                <a href="experience.html#role-witzeal" class="card-cta-link">View in Experience →</a>
+              </div>
+            </div>
+
+            <!-- Case 5: KYC Platform -->
+            <div class="compact-card" data-category="platform">
+              <div>
+                <span class="eyebrow">PLATFORM & COMPLIANCE</span>
+                <div class="compact-card-metric">&lt;1 Min Verification</div>
+                <h3 class="compact-card-title">KYC Platform: Rebuilding verification from 24h to real-time</h3>
+                <p class="compact-card-desc">
+                  <strong>Problem:</strong> Manual OCR verification took 12–24 hours, creating severe drop-offs during live events and high vendor cost.<br><br>
+                  <strong>Solution:</strong> Architected direct database record lookups paired with proprietary Indian name-matching algorithms (95% accuracy) and multi-vendor fallback.<br><br>
+                  <strong>Outcome:</strong> Cut verification time to &lt;1 minute, eliminated 97% of manual reviews, and reduced per-verification cost from ₹4 to ₹1 (-75%).
+                </p>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid var(--border);">
+                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">75% Cost Reduction</span>
+                <a href="experience.html#role-witzeal" class="card-cta-link">View in Experience →</a>
+              </div>
+            </div>
+
+            <!-- Case 6: GrowthTap Analytics -->
+            <div class="compact-card" data-category="platform growth">
+              <div>
+                <span class="eyebrow">B2B SAAS & TECHNICAL PRODUCT</span>
+                <div class="compact-card-metric">60% Faster Integration</div>
+                <h3 class="compact-card-title">GrowthTap: In-house analytics & engagement engine</h3>
+                <p class="compact-card-desc">
+                  <strong>Problem:</strong> Commercial analytics SaaS cost $50K+/year while restricting bespoke high-frequency game telemetry.<br><br>
+                  <strong>Solution:</strong> Collaborated with data engineering to architect an in-house analytics platform on Apache Kafka and ClickHouse, supporting real-time funnels and push campaigns.<br><br>
+                  <strong>Outcome:</strong> Reduced client SDK integration time by 60%, enabled sub-second funnel queries, and eliminated $50K+ in annual vendor licensing.
+                </p>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid var(--border);">
+                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">$50K+ Saved/Yr</span>
+                <a href="experience.html#role-witzeal" class="card-cta-link">View in Experience →</a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Bottom CTA Bar -->
+    <section style="background-color: var(--bg-secondary); border-top: 1px solid var(--border); padding: 4rem 0;">
+      <div class="container" style="text-align: center; max-width: 680px;">
+        <h2 style="font-family: var(--font-display); font-size: 1.85rem; font-weight: 800; margin-bottom: 0.75rem;">Want to discuss a specific case in detail?</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+          I'm happy to walk through experiment design docs, PRDs, and architecture trade-offs.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="index.html#contact" class="btn-primary">Let's talk →</a>
+          <a href="Ghanshyam_Kumar_Singh_Resume.pdf" download="Ghanshyam_Kumar_Singh_Resume.pdf" class="btn-secondary">Download Resume (PDF)</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <strong>Ghanshyam Kumar Singh</strong> — Product Manager
+        </div>
+        <div class="footer-credo">
+          Build. Measure. Learn. Scale.
+        </div>
+        <div>
+          <a href="#" style="color: var(--accent); font-weight: 600;">Back to top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

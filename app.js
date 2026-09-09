@@ -1,7 +1,7 @@
 /**
- * GHANSHYAM KUMAR SINGH — PORTFOLIO V2 JAVASCRIPT ENGINE
+ * GHANSHYAM KUMAR SINGH — PORTFOLIO JAVASCRIPT ENGINE
  * Animation orchestration, theme switching, count-up numbers,
- * interactive diagrams, and navigation tracking.
+ * 1-click clipboard actions, category filters, and navigation tracking.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -12,6 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initCountUpMetrics();
   initTimelineAnimation();
   initNavTracking();
+  initEmailCopy();
+  initWorkFilters();
+  initFloatingNav();
+  initCaseStudyToc();
 });
 
 /* --------------------------------------------------------------------------
@@ -56,7 +60,7 @@ function initHeaderScroll() {
   if (!header) return;
 
   function updateHeader() {
-    if (window.scrollY > 40) {
+    if (window.scrollY > 30) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
@@ -92,7 +96,7 @@ function initMobileMenu() {
 }
 
 /* --------------------------------------------------------------------------
-   4. SCROLL REVEAL (IntersectionObserver)
+   4. SCROLL REVEAL (IntersectionObserver - Fast)
    -------------------------------------------------------------------------- */
 function initScrollAnimations() {
   const revealElements = document.querySelectorAll('.reveal');
@@ -106,15 +110,15 @@ function initScrollAnimations() {
       }
     });
   }, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -40px 0px'
+    threshold: 0.08,
+    rootMargin: '0px 0px -20px 0px'
   });
 
   revealElements.forEach(el => observer.observe(el));
 }
 
 /* --------------------------------------------------------------------------
-   5. COUNT-UP METRICS ENGINE
+   5. COUNT-UP METRICS ENGINE (Snappy 550ms)
    -------------------------------------------------------------------------- */
 function initCountUpMetrics() {
   const metricElements = document.querySelectorAll('[data-count-to]');
@@ -128,7 +132,7 @@ function initCountUpMetrics() {
       }
     });
   }, {
-    threshold: 0.25
+    threshold: 0.15
   });
 
   metricElements.forEach(el => observer.observe(el));
@@ -145,7 +149,7 @@ function animateCountUp(element) {
     return;
   }
 
-  const duration = 1400; // ms
+  const duration = 550; // ms (fast and snappy)
   const startTime = performance.now();
 
   function update(now) {
@@ -181,34 +185,42 @@ function initTimelineAnimation() {
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        // Trigger SVG line drawing
         animatedPath.style.strokeDashoffset = '0';
 
-        // Stagger node activation
         nodes.forEach((node, idx) => {
           setTimeout(() => {
             node.classList.add('active');
-          }, 200 + (idx * 160));
+          }, 150 + (idx * 100));
         });
 
         obs.unobserve(entry.target);
       }
     });
   }, {
-    threshold: 0.2
+    threshold: 0.15
   });
 
   observer.observe(timelineSection);
 }
 
 /* --------------------------------------------------------------------------
-   7. NAVIGATION ACTIVE SECTION TRACKING
+   7. NAVIGATION ACTIVE SECTION TRACKING (Multi-page aware)
    -------------------------------------------------------------------------- */
 function initNavTracking() {
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
 
-  if (!sections.length || !navLinks.length) return;
+  // Highlight active page in nav
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentPath || (currentPath === 'index.html' && (href === '#' || href === 'index.html'))) {
+      link.classList.add('active');
+    }
+  });
+
+  // Track sections on current page if any
+  const sections = document.querySelectorAll('section[id]');
+  if (!sections.length) return;
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -218,7 +230,7 @@ function initNavTracking() {
           const href = link.getAttribute('href');
           if (href === `#${id}`) {
             link.classList.add('active');
-          } else {
+          } else if (href.startsWith('#')) {
             link.classList.remove('active');
           }
         });
@@ -231,3 +243,137 @@ function initNavTracking() {
 
   sections.forEach(sec => observer.observe(sec));
 }
+
+/* --------------------------------------------------------------------------
+   8. 1-CLICK EMAIL COPY TO CLIPBOARD
+   -------------------------------------------------------------------------- */
+function initEmailCopy() {
+  const copyBtns = document.querySelectorAll('[data-copy-email]');
+  if (!copyBtns.length) return;
+
+  // Create toast element once
+  let toast = document.getElementById('portfolio-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'portfolio-toast';
+    toast.className = 'toast-notification';
+    toast.innerHTML = `
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+      <span>Email copied to clipboard!</span>
+    `;
+    document.body.appendChild(toast);
+  }
+
+  copyBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const email = btn.getAttribute('data-copy-email') || 'ghanshyamrock05@gmail.com';
+      
+      navigator.clipboard.writeText(email).then(() => {
+        showToast('Email copied to clipboard: ' + email);
+      }).catch(() => {
+        // Fallback
+        const textarea = document.createElement('textarea');
+        textarea.value = email;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        showToast('Email copied to clipboard!');
+      });
+    });
+  });
+
+  function showToast(message) {
+    if (!toast) return;
+    toast.querySelector('span').textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => {
+      toast.classList.remove('show');
+    }, 2800);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   9. CATEGORY FILTERING (work.html)
+   -------------------------------------------------------------------------- */
+function initWorkFilters() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const workCards = document.querySelectorAll('[data-category]');
+
+  if (!filterBtns.length || !workCards.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const category = btn.getAttribute('data-filter');
+
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      workCards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        if (category === 'all' || cardCategory.includes(category)) {
+          card.style.display = '';
+          setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, 50);
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
+   10. FLOATING NAVIGATION PILL (Scroll-activated Back to Top / Work)
+   -------------------------------------------------------------------------- */
+function initFloatingNav() {
+  const floatingPill = document.querySelector('.floating-nav-pill');
+  if (!floatingPill) return;
+
+  function handleScroll() {
+    if (window.scrollY > 450) {
+      floatingPill.classList.add('visible');
+    } else {
+      floatingPill.classList.remove('visible');
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
+}
+
+/* --------------------------------------------------------------------------
+   11. CASE STUDY TABLE OF CONTENTS TRACKING
+   -------------------------------------------------------------------------- */
+function initCaseStudyToc() {
+  const tocLinks = document.querySelectorAll('.toc-link');
+  const sections = document.querySelectorAll('.cs-deep-section');
+
+  if (!tocLinks.length || !sections.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        tocLinks.forEach(link => {
+          if (link.getAttribute('href') === `#${id}`) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      }
+    });
+  }, {
+    threshold: 0.25,
+    rootMargin: '-80px 0px -60% 0px'
+  });
+
+  sections.forEach(sec => observer.observe(sec));
+}
+

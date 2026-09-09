@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rocket Skill Case Study — Ghanshyam Kumar Singh | Product Manager</title>
+  <meta name="description" content="How Product Manager Ghanshyam Kumar Singh grew Rocket Skill daily revenue by 167% (₹3L to ₹8L/day) via game economy redesign and 10+ live experiments.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. NAVIGATION BAR
+       ======================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" aria-label="Ghanshyam Kumar Singh Home">
+        <span>GHANSHYAM</span>
+        <span class="brand-badge">PM</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="work.html" class="nav-link active">Work</a></li>
+          <li><a href="experience.html" class="nav-link">Experience</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="Ghanshyam_Kumar_Singh_Resume.pdf" class="nav-link" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light and dark theme">
+          <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <a href="index.html#contact" class="btn-header-cta">
+          <span>Let's talk</span>
+          <span aria-hidden="true">→</span>
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open navigation menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+      <span class="brand-logo">GHANSHYAM</span>
+      <button class="close-mobile-menu" aria-label="Close menu" style="font-size: 1.5rem; color: var(--text-primary);">✕</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Home <span>→</span></a></li>
+      <li><a href="work.html" class="mobile-nav-link">Case Studies <span>→</span></a></li>
+      <li><a href="experience.html" class="mobile-nav-link">Experience <span>→</span></a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Me <span>→</span></a></li>
+      <li><a href="Ghanshyam_Kumar_Singh_Resume.pdf" class="mobile-nav-link" target="_blank">Download Resume <span>→</span></a></li>
+      <li><a href="index.html#contact" class="mobile-nav-link" style="color: var(--accent);">Contact & Connect <span>→</span></a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- ========================================================================
+         2. SUBPAGE HEADER & BREADCRUMBS
+         ======================================================================== -->
+    <header class="subpage-header">
+      <div class="container">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <a href="index.html" class="breadcrumb-link">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <a href="work.html" class="breadcrumb-link">Work</a>
+          <span class="breadcrumb-separator">/</span>
+          <span class="breadcrumb-current">Rocket Skill Growth Case Study</span>
+        </nav>
+
+        <span class="eyebrow">GROWTH · MONETIZATION · EXPERIMENTATION</span>
+        <h1 class="subpage-title">How I grew Rocket Skill daily revenue by 167%</h1>
+        <p class="subpage-subtitle">
+          Diagnosed an imbalanced game economy, introduced stake-based catalog restructuring, dynamic prize pool mechanics, and executed 10+ live experiments across 30K–40K DAU.
+        </p>
+      </div>
+    </header>
+
+    <!-- ========================================================================
+         3. ARTICLE BODY & SIDEBAR
+         ======================================================================== -->
+    <section class="case-study-page-container">
+      <div class="container">
+        <div class="case-study-article-layout">
+          
+          <!-- Sticky Sidebar -->
+          <aside class="case-study-sidebar">
+            <h3 class="sidebar-heading">Contents</h3>
+            <ul class="toc-list">
+              <li><a href="#context" class="toc-link active">1. Context & Business Problem</a></li>
+              <li><a href="#diagnostic" class="toc-link">2. Diagnostics & Data Analysis</a></li>
+              <li><a href="#strategy" class="toc-link">3. Strategy & Economy Design</a></li>
+              <li><a href="#experiments" class="toc-link">4. The 10+ Experimentation Loop</a></li>
+              <li><a href="#outcomes" class="toc-link">5. Business Outcomes</a></li>
+              <li><a href="#retrospective" class="toc-link">6. Retrospective & Trade-offs</a></li>
+            </ul>
+
+            <div class="sidebar-meta-item">
+              <div class="sidebar-meta-label">Primary Metric</div>
+              <div class="sidebar-meta-val" style="color: var(--accent); font-size: 1.15rem; font-family: var(--font-mono);">₹3L → ₹8L/day (+167%)</div>
+            </div>
+
+            <div class="sidebar-meta-item">
+              <div class="sidebar-meta-label">Product & Company</div>
+              <div class="sidebar-meta-val">Rocket Skill · Witzeal Technologies</div>
+            </div>
+
+            <div class="sidebar-meta-item">
+              <div class="sidebar-meta-label">Scale</div>
+              <div class="sidebar-meta-val">30K–40K DAU · 50M+ User Ecosystem</div>
+            </div>
+
+            <div class="sidebar-meta-item">
+              <div class="sidebar-meta-label">Core PM Skills</div>
+              <div class="sidebar-meta-val">Pricing Strategy, Live-Ops, A/B Testing, Economy Balance</div>
+            </div>
+          </aside>
+
+          <!-- Main Article Column -->
+          <article class="case-study-content-column">
+            
+            <!-- Section 1 -->
+            <section class="cs-deep-section" id="context">
+              <h2>1. Context & The Business Problem</h2>
+              <p>
+                Rocket Skill is one of the highest-velocity real-money skill gaming titles on the BigCash ecosystem. Players wager on a rocket's multiplier trajectory and must cash out before it crashes. While the game attracted a steady <strong>30,000 to 40,000 daily active users (DAU)</strong>, its daily revenue was stagnant at approximately ₹3 Lakhs per day for two consecutive quarters.
+              </p>
+              <p>
+                The platform faced three critical monetization bottlenecks:
+              </p>
+              <ul>
+                <li><strong>Premature Bankroll Exhaustion:</strong> Casual players entered high-multiplier tables too early, lost their deposit within 3–4 rounds, and churned from the platform.</li>
+                <li><strong>Under-Monetized Whale Segment:</strong> High-roller players who wanted higher-stake tables had to play multiple low-stake tables concurrently, creating fatigue and capped ARPU.</li>
+                <li><strong>Rigid Margin Structure:</strong> Fixed platform commission mechanics failed to adapt when table concurrency dropped during non-peak hours, creating volatile margins.</li>
+              </ul>
+            </section>
+
+            <!-- Section 2 -->
+            <section class="cs-deep-section" id="diagnostic">
+              <h2>2. Diagnostics & Data Analysis</h2>
+              <p>
+                To diagnose the root problem rather than treating symptoms, I ran deep cohort behavioral queries across 90 days of gameplay telemetry:
+              </p>
+              
+              <div class="cs-callout-box">
+                <div class="cs-callout-title">Key Discovery from Funnel Telemetry</div>
+                <div class="cs-callout-body">
+                  <strong>68% of new players who lost their initial deposit in the first 5 minutes churned forever.</strong> 
+                  The game didn't have an acquisition problem; it had an <em>entry-point matching problem</em>. Casual users were placed in tables alongside high-stakes players, driving extreme win/loss asymmetry and killing D7 retention.
+                </div>
+              </div>
+
+              <p>
+                At the same time, high-frequency players (the top 5% wagering segment) generated 62% of revenue but were logging off after only 18 minutes due to lack of table variety and stakes that matched their risk tolerance.
+              </p>
+            </section>
+
+            <!-- Section 3 -->
+            <section class="cs-deep-section" id="strategy">
+              <h2>3. Strategy & Game Economy Redesign</h2>
+              <p>
+                We redesigned Rocket Skill's entire game economy across three strategic pillars:
+              </p>
+              <ul>
+                <li><strong>Tiered Stake Architecture:</strong> Replaced the monolithic table listing with 3 segregated wagering tiers: <em>Bronze (₹5–₹25)</em>, <em>Silver (₹50–₹250)</em>, and <em>Gold/VIP (₹500–₹5,000)</em>. Users were guided toward tiers based on their historical deposit and bankroll health.</li>
+                <li><strong>Dynamic Prize Pool Mechanics:</strong> Introduced scaled prize multipliers that adjusted table liquidity dynamically during live rounds, ensuring tables always had active player liquidity regardless of the hour.</li>
+                <li><strong>Burn-Rate Protection Guardrails:</strong> Built intelligent in-game prompts that nudged users when their bankroll dropped below 30%, recommending lower-stake tables rather than letting them hit zero and churn.</li>
+              </ul>
+            </section>
+
+            <!-- Section 4 -->
+            <section class="cs-deep-section" id="experiments">
+              <h2>4. The 10+ Live Experimentation Loop</h2>
+              <p>
+                Rather than deploying a risky massive rewrite, I established a rigorous A/B experimentation cadence over a 16-week period:
+              </p>
+
+              <div class="timeline-desktop" style="grid-template-columns: repeat(3, 1fr); margin: 2rem 0;">
+                <div class="result-card">
+                  <div class="result-num">Test 1–3</div>
+                  <div class="result-label">Entry Stakes & UI</div>
+                  <div class="result-sub">Optimized default bet selectors; reduced early churn by 22%.</div>
+                </div>
+                <div class="result-card">
+                  <div class="result-num">Test 4–7</div>
+                  <div class="result-label">Multiplier Curves</div>
+                  <div class="result-sub">A/B tested payout distribution curves to maximize session depth.</div>
+                </div>
+                <div class="result-card">
+                  <div class="result-num">Test 8–10</div>
+                  <div class="result-label">Live-Ops Nudges</div>
+                  <div class="result-sub">Triggered contextual re-entry bonuses during winning streaks.</div>
+                </div>
+              </div>
+
+              <p>
+                We tracked leading indicators daily: <strong>Table Occupancy Rate</strong>, <strong>Average Rounds Played Per Session</strong>, and <strong>Re-deposit Velocity</strong>. When leading metrics validated healthy gameplay, we unlocked higher rollout percentages.
+              </p>
+            </section>
+
+            <!-- Section 5 -->
+            <section class="cs-deep-section" id="outcomes">
+              <h2>5. Business Outcomes & Impact</h2>
+              <p>
+                Within 4 months of progressive rollouts, the transformed economy delivered verified, sustained business outcomes:
+              </p>
+
+              <div class="results-grid" style="margin: 2rem 0;">
+                <div class="result-card">
+                  <div class="result-num">₹3L → ₹8L/day</div>
+                  <div class="result-label">Daily Revenue Growth</div>
+                  <div class="result-sub">+167% sustained revenue increase</div>
+                </div>
+                <div class="result-card">
+                  <div class="result-num">12% → 25%</div>
+                  <div class="result-label">D7 Player Retention</div>
+                  <div class="result-sub">Doubled casual cohort retention</div>
+                </div>
+                <div class="result-card">
+                  <div class="result-num">+42%</div>
+                  <div class="result-label">Session Duration</div>
+                  <div class="result-sub">Increased from 14 to 20+ minutes</div>
+                </div>
+                <div class="result-card">
+                  <div class="result-num">30K–40K</div>
+                  <div class="result-label">Maintained DAU Scale</div>
+                  <div class="result-sub">Revenue grew without inflating CAC</div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Section 6 -->
+            <section class="cs-deep-section" id="retrospective">
+              <h2>6. Retrospective & Strategic Trade-offs</h2>
+              <p>
+                <strong>What I would do differently:</strong> In cohort 4, we rolled out a multiplier curve adjustment too abruptly without sufficient UI tooltips. A vocal group of veteran players felt the game rhythm had changed and raised support tickets. We paused the experiment, added real-time probability tooltips, and grandfathered VIP players with bonus scratch cards. 
+              </p>
+              <p>
+                <strong>The core lesson:</strong> Monetization is fundamentally an economy design problem, not a pricing problem. You cannot extract revenue from a broken user journey; you expand revenue by aligning platform incentives with sustainable user enjoyment.
+              </p>
+            </section>
+
+            <!-- Footer Navigation -->
+            <div class="cs-navigation-footer">
+              <a href="work.html" class="btn-secondary">
+                <span>← Back to All Work</span>
+              </a>
+              <a href="case-study-mysmartassistant.html" class="btn-primary">
+                <span>Next: MySmartAssistant GenAI Voice →</span>
+              </a>
+            </div>
+
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Navigation Pill -->
+  <div class="floating-nav-pill">
+    <a href="#" class="floating-btn" aria-label="Scroll to top">
+      <span>↑ Top</span>
+    </a>
+    <span style="color: var(--border-strong);">|</span>
+    <a href="work.html" class="floating-btn" aria-label="Back to work hub">
+      <span>← Work</span>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <strong>Ghanshyam Kumar Singh</strong> — Product Manager
+        </div>
+        <div class="footer-credo">
+          Build. Measure. Learn. Scale.
+        </div>
+        <div>
+          <a href="#" style="color: var(--accent); font-weight: 600;">Back to top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
