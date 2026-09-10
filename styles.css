@@ -2728,42 +2728,21 @@ section {
 
 /* Work Hub Featured Flagship Cards */
 .work-hub-featured-card {
-  display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  align-items: stretch;
+  display: flex;
+  flex-direction: column;
 }
 
-.work-hub-featured-card .telemetry-header-visual,
-.work-hub-featured-card .featured-card-visual {
-  height: 100%;
-  min-height: 280px;
-  border-bottom: none;
-  border-right: 1px solid var(--border);
+.work-hub-featured-card .featured-card-content {
+  padding: 2.25rem 2rem;
 }
 
 @media (max-width: 900px) {
-  .work-hub-featured-card {
-    display: flex;
-    flex-direction: column;
-  }
-  .work-hub-featured-card .telemetry-header-visual,
-  .work-hub-featured-card .featured-card-visual {
-    height: 220px;
-    min-height: 220px;
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
   .work-hub-featured-card .featured-card-content {
     padding: 1.75rem 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .work-hub-featured-card .telemetry-header-visual,
-  .work-hub-featured-card .featured-card-visual {
-    height: 180px;
-    min-height: 180px;
-  }
   .work-hub-featured-card .featured-card-content {
     padding: 1.25rem 1rem;
   }
