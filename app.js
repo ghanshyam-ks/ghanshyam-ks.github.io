@@ -377,3 +377,21 @@ function initCaseStudyToc() {
   sections.forEach(sec => observer.observe(sec));
 }
 
+
+
+  // --------------------------------------------------------------------------
+  // Cinematic Parallel BlurText Animation Trigger
+  // --------------------------------------------------------------------------
+  const blurRows = document.querySelectorAll('.blur-text-row');
+  if (blurRows.length > 0) {
+    const triggerBlurAnimation = () => {
+      blurRows.forEach((row) => {
+        row.classList.add('is-in-view');
+      });
+    };
+    
+    // Trigger on requestAnimationFrame for smooth entry
+    requestAnimationFrame(() => {
+      setTimeout(triggerBlurAnimation, 80);
+    });
+  }
