@@ -76,7 +76,7 @@
   <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true">
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
       <span class="brand-logo">GHANSHYAM</span>
-      <button class="close-mobile-menu" aria-label="Close menu" style="font-size: 1.5rem; color: var(--text-primary);">✕</button>
+      <button class="close-mobile-menu" aria-label="Close menu" style="color: var(--text-primary); cursor: pointer; padding: 0.5rem; display: flex; align-items: center; justify-content: center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
     </div>
     <ul class="mobile-nav-list">
       <li><a href="index.html" class="mobile-nav-link">Home <span>→</span></a></li>
@@ -267,31 +267,50 @@
     <section class="education-skills-section" style="padding: 4rem 0; background-color: var(--bg-secondary); border-top: 1px solid var(--border);">
       <div class="container">
         <div class="reveal">
-          <span class="section-tag">Foundations</span>
-          <h2 class="section-title">Education & Academic Honors</h2>
+          <span class="section-tag">Foundations & Recognition</span>
+          <h2 class="section-title">Education & Recognized Excellence</h2>
         </div>
 
-          <div class="edu-column edu-cards-grid">
-            
-            <div class="edu-card reveal" data-delay="100">
-              <h3 class="edu-degree">PGDM, Information Technology</h3>
-              <div class="edu-institution">Xavier Institute of Social Service (XISS)</div>
-              <span class="edu-period">2020 – 2022 · Ranchi, India</span>
-              <div style="margin-top: 0.75rem;">
-                <span class="edu-honor">★ Academic Silver Medalist</span>
-              </div>
+        <div class="edu-column edu-cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+          
+          <div class="edu-card reveal" data-delay="100">
+            <h3 class="edu-degree">PGDM — Information Technology</h3>
+            <div class="edu-institution">Xavier Institute of Social Service (XISS)</div>
+            <span class="edu-period">2020 – 2022 · Ranchi, India · CGPA: 8.39 / 10</span>
+            <div style="margin-top: 0.75rem;">
+              <span class="edu-honor"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="vertical-align: -2px; margin-right: 4px; color: var(--accent);"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Rank 2 · Academic Silver Medalist</span>
             </div>
-
-            <div class="edu-card reveal" data-delay="150">
-              <h3 class="edu-degree">B.Sc., Computer Applications</h3>
-              <div class="edu-institution">St. Xavier's College</div>
-              <span class="edu-period">2016 – 2020 · Ranchi, India</span>
-              <div style="margin-top: 0.75rem; color: var(--text-secondary); font-size: 0.85rem;">
-                Computer Science, Database Systems, Algorithms & Application Architecture
-              </div>
-            </div>
-
           </div>
+
+          <div class="edu-card reveal" data-delay="150">
+            <h3 class="edu-degree">B.Sc. — Information Technology</h3>
+            <div class="edu-institution">St. Xavier's College</div>
+            <span class="edu-period">2016 – 2020 · Ranchi, India · 66.28%</span>
+            <div style="margin-top: 0.75rem; color: var(--text-secondary); font-size: 0.85rem;">
+              First Class Distinction · Software Architecture, Algorithms & Database Systems
+            </div>
+          </div>
+
+          <div class="edu-card reveal" data-delay="200">
+            <h3 class="edu-degree">Awards & Certifications</h3>
+            <div class="edu-institution">CleverTap & Corporate Recognition</div>
+            <div style="margin-top: 0.65rem; display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.825rem;">
+              <div style="display: flex; align-items: center; gap: 0.4rem;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>CleverTap Certified:</strong> Lifecycle & Analytics</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.4rem;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path></svg>
+                <span><strong>Pinnacle Award (3×):</strong> Witzeal Excellence</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.4rem;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                <span><strong>Power Award (2×):</strong> High-Impact Speed</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 

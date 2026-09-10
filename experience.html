@@ -76,7 +76,7 @@
   <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true">
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
       <span class="brand-logo">GHANSHYAM</span>
-      <button class="close-mobile-menu" aria-label="Close menu" style="font-size: 1.5rem; color: var(--text-primary);">✕</button>
+      <button class="close-mobile-menu" aria-label="Close menu" style="color: var(--text-primary); cursor: pointer; padding: 0.5rem; display: flex; align-items: center; justify-content: center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
     </div>
     <ul class="mobile-nav-list">
       <li><a href="index.html" class="mobile-nav-link">Home <span>→</span></a></li>
@@ -271,16 +271,46 @@
             <div class="experience-header">
               <div>
                 <h3 class="experience-role">Product Manager</h3>
-                <div class="experience-company">AIVO Technologies</div>
+                <div class="experience-company">AIVO Technologies Pvt. Ltd.</div>
               </div>
               <span class="experience-period">May 2026 – Present · Gurugram, India</span>
             </div>
-            <ul class="experience-highlights">
-              <li><strong>Cross-Functional Pod Leadership:</strong> Lead an 8-member pod (4 AI/Backend Engineers, 2 Product Designers, 2 QA) building 0-to-1 conversational voice products and autonomous agent workflows.</li>
-              <li><strong>MySmartAssistant 0→1 Product Owner:</strong> Steered product from an encrypted document vault to an AI personal assistant, voice AI, call handling, and B2B voice platform; conducted ~500 customer calls, guided 4 product pivots, and revamped onboarding/subscription UX for a +15% retention lift and ₹4–6L/month revenue.</li>
-              <li><strong>Lavola.ai Multilingual Platform:</strong> Formulated outbound voice-calling architecture for automated appointment booking and lead qualification with sub-800ms conversational latency.</li>
-              <li><strong>AI Systems & Evaluation:</strong> Designed prompt evaluation test suites, RAG document-grounding pipelines, and safety guardrails to eliminate hallucination during customer-facing calls.</li>
-            </ul>
+
+            <!-- MySmartAssistant -->
+            <div style="margin-top: 1rem;">
+              <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg>
+                <span>MySmartAssistant — GenAI Voice & Productivity Platform (B2C / B2B)</span>
+              </h4>
+              <ul class="experience-highlights">
+                <li>Took MySA from concept to MVP, owning problem discovery, user validation, product vision, PRDs, prioritization, roadmap, and GTM; validated <strong>200+ target users</strong>, identified voice as the preferred experience based on <strong>3× higher willingness-to-pay vs. chat</strong>, led an <strong>8-member pod</strong>, and shipped the first MVP in <strong>4 weeks</strong>.</li>
+                <li>Turned the MVP into a monetizable SaaS product by designing tiered plans and onboarding experiments, driving <strong>+15% D1 activation</strong> and first revenue within <strong>3 weeks</strong>; subsequently built autonomous voice workflows across <strong>100+ languages</strong>, achieving <strong>~92% task-resolution accuracy</strong> through prompt/RAG optimization and AI guardrails.</li>
+              </ul>
+            </div>
+
+            <!-- GrowthTap -->
+            <div style="margin-top: 1.25rem;">
+              <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>
+                <span>GrowthTap — In-House Analytics & Engagement Platform</span>
+              </h4>
+              <ul class="experience-highlights">
+                <li>Spearheaded a <strong>0-to-1 analytics platform</strong> replacing <strong>$50K+/year</strong> in third-party tools, enabling funnels, cohorts, segmentation, trends, and omnichannel engagement across <strong>Android / iOS / Web / Flutter</strong>.</li>
+                <li>Defined SDK and event-tracking architecture with automated session tracking and offline event batching, reducing integration time by <strong>60%</strong>; partnered with Data Engineering on <strong>Kafka + ClickHouse</strong> pipelines.</li>
+              </ul>
+            </div>
+
+            <!-- Lavola.ai -->
+            <div style="margin-top: 1.25rem;">
+              <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                <span>Lavola.ai — AI Companion Platform</span>
+              </h4>
+              <ul class="experience-highlights">
+                <li>Shaped product vision, roadmap, PRDs, and MVP for an AI companion with <strong>real-time voice calling and multi-persona conversations</strong>, taking the product from ideation to launch with an engineering pod.</li>
+                <li>Built the supporting marketing web platform using <strong>AI-assisted development</strong>, translating product requirements into a launch-ready customer experience.</li>
+              </ul>
+            </div>
           </div>
 
           <!-- Role 2: Witzeal Technologies (APM) -->
@@ -289,20 +319,60 @@
             <div class="experience-header">
               <div>
                 <h3 class="experience-role">Associate Product Manager</h3>
-                <div class="experience-company">Witzeal Technologies</div>
+                <div class="experience-company">Witzeal Technologies Pvt. Ltd.</div>
+                <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); margin-top: 2px;">
+                  BigCash & Big Sports · 50M+ Users · 3L+ DAU
+                </div>
               </div>
-              <span class="experience-period">2022 – 2026 · Gurugram, India</span>
+              <span class="experience-period">June 2022 – March 2026 · Gurugram, India</span>
             </div>
-            <ul class="experience-highlights">
-              <li><strong>Flagship Monetization Scale:</strong> Conceived and launched 15-day MVP of Rocket Skill; diagnosed a ₹3L/day revenue plateau through player calls and funnel queries, and executed 10+ risk/reward experiments up to 100X to scale daily revenue to ₹8L/day (+167%) and DAU from ~20K to 30K–40K.</li>
-              <li><strong>VIP Club Economy:</strong> Discovered high-roller churn drivers through 200+ interviews; redesigned VIP into a 3-tier wagering ladder (₹5K / ₹50K / ₹100K) with milestone nudges, growing active VIPs from 45K to 65K (+44%) and lifting average VIP ARPU from ₹8K to ₹14K (+75%).</li>
-              <li><strong>Real-Time KYC Platform:</strong> Re-architected identity verification from 12–24h OCR flow to direct database lookups with Indian name-matching algorithms (95% accuracy), reducing turnaround to &lt;1 minute and cutting vendor costs by 75% (₹4 to ₹1 per verification).</li>
-              <li><strong>CRM Vertical from 0→1:</strong> Established customer support vertical from scratch (managing 10+ agents), SOPs, and introduced an internal AI Agent Helper, deflecting 40–50% of routine tickets, slashing first response time by 45%, and lifting CSAT from 2/5 to 4.2/5.</li>
-              <li><strong>GrowthTap Analytics Engine:</strong> Architected in-house customer engagement and analytics platform on Apache Kafka and ClickHouse, reducing client SDK integration time by 60% and saving $50K+/year in external SaaS fees.</li>
-              <li><strong>Emergency Regulatory Pivot:</strong> Executed end-to-end transition of BigCash toward Free-to-Play (F2P) within 10 days post-regulation, securing approval and going live on Google Play Store and Apple App Store.</li>
-            </ul>
-            <div class="experience-growth-callout">
-              ★ Promoted from Product Intern to Associate Product Manager based on commercial impact, game economy turnaround, and cross-functional leadership.
+
+            <!-- Revenue & Monetization -->
+            <div style="margin-top: 1rem;">
+              <h4 style="font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--accent); margin-bottom: 0.35rem;">
+                Revenue & Monetization
+              </h4>
+              <ul class="experience-highlights">
+                <li>Grew Rocket Skill daily revenue <strong>167%, from ₹3L→₹8L/day</strong> across two quarters, with <strong>40K DAU</strong>, through 10+ A/B experiments across entry fees, prize structures, and user segmentation to optimize monetization.</li>
+                <li>Drove <strong>+10% WoW GMV</strong> and <strong>+12% purchase conversion</strong> through multiple retention and friction-reduction experiments, while reducing bonus expenditure <strong>20%</strong> through incentive ROI optimization; expanded VIP active users <strong>45K→65K (+44%)</strong> and VIP ARPU <strong>₹8K→₹14K (+75%)</strong> through dynamic 3-tier VIP Club.</li>
+              </ul>
+            </div>
+
+            <!-- Retention & Lifecycle -->
+            <div style="margin-top: 1.25rem;">
+              <h4 style="font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--accent-emerald); margin-bottom: 0.35rem;">
+                Retention & Lifecycle
+              </h4>
+              <ul class="experience-highlights">
+                <li>Improved D7 retention <strong>12%→25%</strong> and D7 active users <strong>22%→48%</strong> through onboarding/friction analysis, personalized engagement, and IPL-led events; increased games/user and ATV by <strong>20% each</strong>.</li>
+                <li>Owned lifecycle engagement for <strong>50M+ users</strong> using CleverTap across push, in-app, WhatsApp, SMS, and email, driving <strong>22% dormant-user reactivation</strong> across 30-day windows.</li>
+              </ul>
+            </div>
+
+            <!-- CRM & AI -->
+            <div style="margin-top: 1.25rem;">
+              <h4 style="font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--accent); margin-bottom: 0.35rem;">
+                CRM & AI Systems
+              </h4>
+              <ul class="experience-highlights">
+                <li>Built CRM operations from scratch after validating historical Freshchat reports, resolution-TAT data, and user feedback; established OKRs, dashboards, SOPs, and a <strong>10+ member team</strong>, reducing TAT from <strong>3–4 days→1–2 hours</strong> and escalations to <strong>&lt;12 hours</strong>.</li>
+                <li>Built an <strong>AI Agent Helper</strong> using ticket context and response templates, improving CSAT <strong>2→4.2/5</strong> and reducing FRT to <strong>&lt;2 min</strong>; subsequently launched an <strong>AI chatbot</strong> achieving <strong>40–50% routine ticket deflection</strong>.</li>
+              </ul>
+            </div>
+
+            <!-- Platform, KYC & Compliance -->
+            <div style="margin-top: 1.25rem;">
+              <h4 style="font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">
+                Platform, KYC & Compliance
+              </h4>
+              <ul class="experience-highlights">
+                <li>Re-engineered KYC from <strong>12–24 hours→&lt;1 minute</strong> and <strong>₹4→₹1 per successful KYC</strong> by introducing automated vendor failover, achieving <strong>98%+ uptime</strong>; improved Indian-name matching to <strong>95% accuracy</strong> and reduced manual reviews by <strong>~97%</strong>.</li>
+                <li>Delivered a compliance feature in <strong>5 days</strong> by aligning Founders, Legal, and Finance under regulatory pressure, enabling a time-sensitive product change without disrupting the customer journey.</li>
+              </ul>
+            </div>
+
+            <div class="experience-growth-callout" style="margin-top: 1.5rem;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="vertical-align: -2px; margin-right: 4px; color: var(--accent);"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Promoted from Product Intern to Associate Product Manager based on commercial impact, game economy turnaround, and cross-functional leadership.
             </div>
           </div>
 
@@ -311,14 +381,13 @@
             <div class="experience-dot"></div>
             <div class="experience-header">
               <div>
-                <h3 class="experience-role">Product & Market Research Intern</h3>
-                <div class="experience-company">Witzeal Technologies</div>
+                <h3 class="experience-role">Product Intern</h3>
+                <div class="experience-company">Witzeal Technologies Pvt. Ltd.</div>
               </div>
-              <span class="experience-period">2021 – 2022 · Gurugram, India</span>
+              <span class="experience-period">May 2021 – May 2022 · Gurugram, India</span>
             </div>
             <ul class="experience-highlights">
-              <li>Conducted 2,000+ qualitative and quantitative user interviews across active, churned, and high-frequency players to diagnose retention and drop-off drivers.</li>
-              <li>Synthesized behavioral research into operational playbooks for customer experience, player onboarding, and gameplay friction.</li>
+              <li>Conducted <strong>2,000+ user interviews</strong>, translating behavioral insights into onboarding and feature-prioritization improvements and earning a Pre-Placement Offer (PPO).</li>
             </ul>
           </div>
 
@@ -336,66 +405,137 @@
           <h2 class="section-title">Skills & Toolkit</h2>
         </div>
 
-        <div class="skills-groups skills-matrix-grid" style="margin-top: 2.5rem;">
+        <div class="skills-groups skills-matrix-grid" style="margin-top: 2.5rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
           
           <div class="skill-category">
-            <div class="skill-cat-title">Product Strategy & Management</div>
+            <div class="skill-cat-title">Product Strategy & Discovery</div>
             <div class="skill-chips">
-              <span class="skill-chip">Product Discovery</span>
-              <span class="skill-chip">PRDs & Specs</span>
+              <span class="skill-chip">Product Vision</span>
+              <span class="skill-chip">User Discovery</span>
               <span class="skill-chip">Roadmapping</span>
-              <span class="skill-chip">2,000+ User Interviews</span>
+              <span class="skill-chip">PRDs & Specs</span>
               <span class="skill-chip">RICE Prioritization</span>
-              <span class="skill-chip">Cross-Functional Leadership</span>
               <span class="skill-chip">GTM Strategy</span>
-              <span class="skill-chip">0-to-1 Delivery</span>
+              <span class="skill-chip">User Lifecycle</span>
+              <span class="skill-chip">OKRs / KPIs</span>
+              <span class="skill-chip">2,000+ Interviews</span>
             </div>
           </div>
 
           <div class="skill-category">
             <div class="skill-cat-title">Growth & Monetization</div>
             <div class="skill-chips">
-              <span class="skill-chip">Pricing Strategy</span>
-              <span class="skill-chip">Game Economy</span>
+              <span class="skill-chip">Experimentation</span>
               <span class="skill-chip">A/B Testing</span>
-              <span class="skill-chip">Cohort Retention</span>
-              <span class="skill-chip">Lifecycle Marketing</span>
-              <span class="skill-chip">Funnel Optimization</span>
+              <span class="skill-chip">Funnels & Cohorts</span>
+              <span class="skill-chip">Retention / LTV</span>
+              <span class="skill-chip">Conversion Optimization</span>
               <span class="skill-chip">ARPU Expansion</span>
-              <span class="skill-chip">VIP Loyalty Systems</span>
+              <span class="skill-chip">Pricing Strategy</span>
+              <span class="skill-chip">Dynamic Monetization</span>
+              <span class="skill-chip">VIP Loyalty Programs</span>
             </div>
           </div>
 
           <div class="skill-category">
-            <div class="skill-cat-title">AI & Voice Systems</div>
+            <div class="skill-cat-title">AI Products</div>
             <div class="skill-chips">
-              <span class="skill-chip">GenAI Voice Agents</span>
-              <span class="skill-chip">Prompt Engineering</span>
+              <span class="skill-chip">GenAI Product Design</span>
+              <span class="skill-chip">Conversational AI</span>
+              <span class="skill-chip">Voice AI (&lt;800ms)</span>
+              <span class="skill-chip">Prompt Design</span>
+              <span class="skill-chip">AI Evaluation</span>
+              <span class="skill-chip">LLM Guardrails</span>
               <span class="skill-chip">RAG Systems</span>
-              <span class="skill-chip">AI Evaluation Loops</span>
-              <span class="skill-chip">AI Safety Guardrails</span>
-              <span class="skill-chip">Query Deflection</span>
-              <span class="skill-chip">Multilingual Voice</span>
+              <span class="skill-chip">Multilingual Workflows</span>
             </div>
           </div>
 
           <div class="skill-category">
-            <div class="skill-cat-title">Technical & Analytics Tools</div>
+            <div class="skill-cat-title">Analytics & Lifecycle</div>
             <div class="skill-chips">
               <span class="skill-chip">SQL</span>
+              <span class="skill-chip">Product Analytics</span>
+              <span class="skill-chip">Behavioral Segmentation</span>
+              <span class="skill-chip">Lifecycle Analytics</span>
+              <span class="skill-chip">Experiment Analysis</span>
+              <span class="skill-chip">CleverTap (Certified)</span>
+              <span class="skill-chip">Google Analytics 4 (GA4)</span>
+              <span class="skill-chip">Mixpanel</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-cat-title">Technical Architecture</div>
+            <div class="skill-chips">
+              <span class="skill-chip">REST APIs & SDKs</span>
+              <span class="skill-chip">System Architecture</span>
               <span class="skill-chip">Apache Kafka</span>
               <span class="skill-chip">ClickHouse</span>
-              <span class="skill-chip">REST APIs</span>
-              <span class="skill-chip">SDK Integrations</span>
-              <span class="skill-chip">CleverTap</span>
-              <span class="skill-chip">Mixpanel</span>
-              <span class="skill-chip">Figma</span>
-              <span class="skill-chip">Jira</span>
+              <span class="skill-chip">Firebase</span>
+              <span class="skill-chip">AI-Assisted Prototyping</span>
+              <span class="skill-chip">Claude / Cursor / Antigravity</span>
             </div>
           </div>
 
         </div>
 
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         6. EDUCATION, HONORS & AWARDS
+         ======================================================================== -->
+    <section class="education-awards-section" style="padding: 4rem 0; border-top: 1px solid var(--border);">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-tag">Credentials</span>
+          <h2 class="section-title">Education & Recognized Excellence</h2>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2.5rem;">
+          
+          <div class="card reveal" data-delay="100" style="padding: 1.75rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-md);">
+            <span class="eyebrow" style="margin-bottom: 0.5rem;">POST-GRADUATE</span>
+            <h3 style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">PGDM — Information Technology</h3>
+            <div style="font-size: 0.9rem; color: var(--accent); font-weight: 600; margin-bottom: 0.5rem;">Xavier Institute of Social Service (XISS), Ranchi</div>
+            <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem;">2020 – 2022 · CGPA: 8.39 / 10</div>
+            <div class="edu-honor" style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.35rem 0.65rem; background: rgba(37, 99, 235, 0.08); border-radius: var(--radius-sm); font-size: 0.8rem; font-weight: 700; color: var(--accent);">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <span>Rank 2 · Academic Silver Medalist</span>
+            </div>
+          </div>
+
+          <div class="card reveal" data-delay="150" style="padding: 1.75rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-md);">
+            <span class="eyebrow" style="margin-bottom: 0.5rem;">UNDERGRADUATE</span>
+            <h3 style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">B.Sc. — Information Technology</h3>
+            <div style="font-size: 0.9rem; color: var(--accent); font-weight: 600; margin-bottom: 0.5rem;">St. Xavier's College, Ranchi</div>
+            <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem;">2016 – 2020 · 66.28%</div>
+            <div style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.35rem 0.65rem; background: var(--bg-secondary); border-radius: var(--radius-sm); font-size: 0.8rem; font-weight: 600; color: var(--text-secondary);">
+              <span>First Class Distinction</span>
+            </div>
+          </div>
+
+          <div class="card reveal" data-delay="200" style="padding: 1.75rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-md);">
+            <span class="eyebrow" style="margin-bottom: 0.5rem;">HONORS & CERTIFICATION</span>
+            <h3 style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Corporate Awards & Certifications</h3>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <div style="display: flex; align-items: center; gap: 0.45rem; font-size: 0.85rem; color: var(--text-primary);">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>CleverTap Certified:</strong> User Lifecycle, Segmentation & Analytics</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.45rem; font-size: 0.85rem; color: var(--text-primary);">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path></svg>
+                <span><strong>Pinnacle Award (3×):</strong> Top Organizational Excellence</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.45rem; font-size: 0.85rem; color: var(--text-primary);">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                <span><strong>Power Award (2×):</strong> High-Impact Delivery & Speed</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
