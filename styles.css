@@ -5002,20 +5002,20 @@ section {
 .cinematic-name-stack {
   display: flex;
   flex-direction: column;
-  gap: 0;
-  margin: 0.3rem 0 0.6rem;
-  line-height: 0.88;
+  gap: 0.05em;
+  margin: 0 0 0.85rem;
+  line-height: 0.95;
   user-select: none;
 }
 
 .blur-text-row {
   display: flex;
   flex-wrap: nowrap;
-  line-height: 0.88;
+  line-height: 0.95;
   font-family: var(--font-display);
-  font-size: clamp(2.8rem, 6.2vw, 6.5rem);
-  font-weight: 900;
-  letter-spacing: -0.04em;
+  font-size: clamp(1.85rem, 3.2vw, 3.25rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
   color: var(--text-primary);
 }
 
