@@ -4748,14 +4748,65 @@ section {
   font-weight: 500;
 }
 
-
 /* --------------------------------------------------------------------------
-   CINEMATIC 3-ROW BLURTEXT HERO & EXECUTIVE OVERVIEW SECTION
+   PURE HTML + CSS CINEMATIC 3-ROW HERO & OVERVIEW
+   100% GPU-Accelerated CSS Keyframes (Zero JS Dependency)
    -------------------------------------------------------------------------- */
+
+@keyframes blurSlideFromTop {
+  0% {
+    opacity: 0;
+    filter: blur(14px);
+    transform: translateY(-36px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+  }
+}
+
+@keyframes blurFadeInPlace {
+  0% {
+    opacity: 0;
+    filter: blur(16px);
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: scale(1);
+  }
+}
+
+@keyframes blurSlideFromBottom {
+  0% {
+    opacity: 0;
+    filter: blur(14px);
+    transform: translateY(36px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroElementFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .hero-visual-intro {
-  padding-top: calc(var(--header-height) + 2.5rem);
+  padding-top: calc(var(--header-height) + 2rem);
   padding-bottom: 3.5rem;
-  min-height: calc(92vh - var(--header-height));
+  min-height: calc(88vh - var(--header-height));
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -4794,91 +4845,251 @@ section {
   }
 }
 
-/* 3-Row Parallel BlurText Stack */
+/* Left Profile Card */
+.hero-profile-col {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 360px;
+  animation: heroElementFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.1s;
+}
+
+.hero-profile-card {
+  width: 100%;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--card-shadow-elevated);
+  transition: transform var(--duration-medium) var(--ease-smooth),
+              box-shadow var(--duration-medium) var(--ease-smooth),
+              border-color var(--duration-medium) var(--ease-smooth);
+  position: relative;
+}
+
+.hero-profile-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 18px 42px -10px rgba(99, 102, 241, 0.22);
+}
+
+.hero-profile-image-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/4.6;
+  overflow: hidden;
+  background-color: var(--bg-secondary);
+}
+
+.hero-profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.hero-profile-card:hover .hero-profile-img {
+  transform: scale(1.025);
+}
+
+.hero-profile-status-pill {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  border-radius: var(--radius-full);
+  padding: 0.35rem 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #10b981;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.hero-profile-meta {
+  padding: 1.15rem 1.15rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  background-color: var(--bg-surface);
+}
+
+.hero-profile-quick-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.45rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0.65rem 0.45rem;
+  text-align: center;
+}
+
+.hero-quick-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.hero-stat-num {
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.hero-stat-num.emerald {
+  color: var(--accent-emerald);
+}
+
+.hero-stat-label {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+.hero-profile-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.hero-profile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.hero-profile-link:hover {
+  color: var(--accent-hover);
+}
+
+.hero-profile-loc {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+/* 3-Row Parallel Animated Typography */
+.hero-typography-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
 .cinematic-name-stack {
   display: flex;
   flex-direction: column;
   gap: 0;
-  margin: 0.35rem 0 0.75rem;
-  line-height: 0.86;
+  margin: 0.3rem 0 0.6rem;
+  line-height: 0.88;
   user-select: none;
 }
 
 .blur-text-row {
   display: flex;
   flex-wrap: nowrap;
-  line-height: 0.86;
+  line-height: 0.88;
   font-family: var(--font-display);
-  font-size: clamp(2.6rem, 5.8vw, 6.2rem);
+  font-size: clamp(2.8rem, 6.2vw, 6.5rem);
   font-weight: 900;
   letter-spacing: -0.04em;
-  color: #FFFFFF;
+  color: var(--text-primary);
 }
 
+/* Row 2: Accent Highlight */
 .blur-text-row.accent-row {
   color: var(--accent);
-  background: linear-gradient(135deg, #818cf8 0%, #6366f1 50%, #4f46e5 100%);
+}
+
+[data-theme="dark"] .blur-text-row.accent-row {
+  background: linear-gradient(135deg, #a5b4fc 0%, #818cf8 50%, #6366f1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+/* Pure CSS Character Animation in Parallel */
 .blur-char {
   display: inline-block;
-  opacity: 0;
-  filter: blur(14px);
   will-change: transform, opacity, filter;
-  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1),
-              filter 0.65s cubic-bezier(0.16, 1, 0.3, 1);
-  transition-delay: calc(var(--char-index) * 35ms);
+  animation-duration: 0.75s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  animation-fill-mode: both;
+  animation-delay: calc(var(--char-index) * 40ms);
 }
 
 /* Row 1: Coming from TOP */
 .blur-text-row[data-direction="top"] .blur-char {
-  transform: translateY(-32px);
+  animation-name: blurSlideFromTop;
 }
 
 /* Row 2: Fading IN PLACE */
 .blur-text-row[data-direction="none"] .blur-char {
-  transform: translateY(0);
+  animation-name: blurFadeInPlace;
 }
 
 /* Row 3: Coming from BOTTOM */
 .blur-text-row[data-direction="bottom"] .blur-char {
-  transform: translateY(32px);
+  animation-name: blurSlideFromBottom;
 }
 
-/* When In-View / Animated */
-.blur-text-row.is-in-view .blur-char,
-body.loaded .blur-text-row .blur-char {
-  opacity: 1 !important;
-  filter: blur(0px) !important;
-  transform: translateY(0) !important;
-}
-
-/* Role Badge */
+/* Sequential Fade-in for Elements below Name */
 .hero-role-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
   padding: 0.55rem 1.1rem;
   border-radius: var(--radius-full);
-  background: rgba(16, 185, 129, 0.08);
-  border: 1px solid rgba(16, 185, 129, 0.28);
-  color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: var(--accent-emerald);
   font-family: var(--font-mono);
   font-size: clamp(0.78rem, 1.1vw, 0.92rem);
   font-weight: 700;
   margin-top: 0.75rem;
-  box-shadow: 0 2px 10px rgba(16, 185, 129, 0.1);
+  box-shadow: 0 2px 10px rgba(16, 185, 129, 0.08);
+  animation: heroElementFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.45s;
 }
 
 .role-badge-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: #10b981;
-  box-shadow: 0 0 10px #10b981;
+  background-color: var(--accent-emerald);
+  box-shadow: 0 0 8px var(--accent-emerald);
+}
+
+.hero-subheadline-anim {
+  animation: heroElementFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.6s;
+}
+
+.hero-actions-anim {
+  animation: heroElementFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.75s;
 }
 
 /* Scroll Cue Link */
@@ -4886,6 +5097,8 @@ body.loaded .blur-text-row .blur-char {
   margin-top: 2.75rem;
   display: flex;
   justify-content: center;
+  animation: heroElementFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.9s;
 }
 
 .scroll-cue-link {
