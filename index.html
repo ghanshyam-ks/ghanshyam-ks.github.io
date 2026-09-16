@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ghanshyam Kumar Singh — Product Manager | Growth, Monetization & AI</title>
-  <meta name="description" content="Product Manager with 4+ years of experience across consumer growth, monetization, B2B SaaS, and GenAI. Scaled products to 50M+ users and 3L+ DAU.">
-  
+  <meta name="description"
+    content="Product Manager with 4+ years of experience across consumer growth, monetization, B2B SaaS, and GenAI. Scaled products to 50M+ users and 3L+ DAU.">
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="revamp.css">
 </head>
+
 <body>
 
   <!-- ========================================================================
@@ -36,32 +42,27 @@
       </nav>
 
       <div class="header-actions">
-        <!-- Theme Toggle -->
-        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light and dark theme">
-          <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-          <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-        </button>
+        <!-- Theme Toggle Switch -->
+        <div class="theme-switch-wrapper" style="margin-right: 15px;">
+          <label class="theme-switch" for="theme-toggle">
+            <input type="checkbox" id="theme-toggle" aria-label="Toggle light and dark theme" />
+            <span class="slider"></span>
+          </label>
+        </div>
 
-        <a href="#contact" class="btn-header-cta">
-          <span>Let's talk</span>
-          <span aria-hidden="true">→</span>
+        <a href="#contact" class="btn-header-cta" aria-label="Let's talk — Contact Ghanshyam" title="Let's talk">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+          <span class="cta-text">Let's talk</span>
+          <span class="cta-arrow" aria-hidden="true">→</span>
         </a>
 
         <!-- Mobile Hamburger Button -->
         <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open navigation menu">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <line x1="3" y1="12" x2="21" y2="12"></line>
             <line x1="3" y1="6" x2="21" y2="6"></line>
             <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -73,19 +74,66 @@
 
   <!-- Mobile Drawer Overlay -->
   <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-      <span class="brand-logo">GHANSHYAM</span>
-      <button class="close-mobile-menu" aria-label="Close menu" style="color: var(--text-primary); cursor: pointer; padding: 0.5rem; display: flex; align-items: center; justify-content: center;">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand-logo" style="text-decoration: none;">
+        <span>GHANSHYAM</span>
+        <span class="brand-badge" style="font-size: 0.7rem; padding: 0.15rem 0.45rem; background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 6px; color: var(--accent); font-weight: 800; letter-spacing: 0.05em; margin-left: 0.4rem;">PM</span>
+      </a>
+      <button class="close-mobile-menu" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
       </button>
     </div>
+
+    <!-- Theme Toggle inside Menu -->
+    <div class="mobile-theme-card">
+      <div class="mobile-theme-meta">
+        <div class="mobile-theme-icon-wrap">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </div>
+        <div>
+          <div class="mobile-theme-title">Theme Mode</div>
+          <div class="mobile-theme-status" id="mobile-theme-status">Dark Mode</div>
+        </div>
+      </div>
+      <label class="theme-switch" for="mobile-theme-toggle">
+        <input type="checkbox" id="mobile-theme-toggle" aria-label="Toggle light and dark theme" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <!-- Nav Links -->
     <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link active">Home <span>→</span></a></li>
       <li><a href="work.html" class="mobile-nav-link">Case Studies <span>→</span></a></li>
       <li><a href="experience.html" class="mobile-nav-link">Experience <span>→</span></a></li>
       <li><a href="about.html" class="mobile-nav-link">About Me <span>→</span></a></li>
       <li><a href="Ghanshyam_Kumar_Singh_Resume.pdf" class="mobile-nav-link" target="_blank">Download Resume <span>→</span></a></li>
-      <li><a href="#contact" class="mobile-nav-link" style="color: var(--accent);">Contact & Connect <span>→</span></a></li>
     </ul>
+
+    <!-- Bottom Drawer CTA -->
+    <div class="mobile-drawer-cta-wrap">
+      <a href="#contact" class="mobile-drawer-cta">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+        </svg>
+        <span>Let's talk — Get in touch</span>
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
   </div>
 
   <main>
@@ -95,19 +143,19 @@
     <section class="hero-section hero-visual-intro" id="hero">
       <div class="container">
         <div class="hero-grid hero-grid-cinematic">
-          
+
           <!-- LEFT SIDE: Profile Card -->
           <div class="hero-profile-col hero-waterfall d-1">
             <div class="hero-profile-card">
               <div class="hero-profile-image-box">
                 <img src="images/profile.jpg" alt="Ghanshyam Kumar Singh" class="hero-profile-img" loading="eager">
               </div>
-              
+
               <div class="hero-profile-meta">
                 <div class="hero-profile-quick-stats">
                   <div class="hero-quick-stat">
                     <span class="hero-stat-num">4+ Yrs</span>
-                    <span class="hero-stat-label">Full-Cycle PM</span>
+                    <span class="hero-stat-label">Product Experience</span>
                   </div>
                   <div class="hero-quick-stat">
                     <span class="hero-stat-num">50M+</span>
@@ -120,13 +168,21 @@
                 </div>
 
                 <div class="hero-profile-actions">
-                  <a href="https://www.linkedin.com/in/ghanshyam-kumar-singh-8730a120a" target="_blank" rel="noopener noreferrer" class="hero-profile-link" title="LinkedIn Profile">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.6a1.66 1.66 0 1 0 0 3.32 1.66 1.66 0 0 0 0-3.32Z"/></svg>
+                  <a href="https://www.linkedin.com/in/ghanshyam-kumar-singh-8730a120a" target="_blank"
+                    rel="noopener noreferrer" class="hero-profile-link" title="LinkedIn Profile">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.6a1.66 1.66 0 1 0 0 3.32 1.66 1.66 0 0 0 0-3.32Z" />
+                    </svg>
                     <span>LinkedIn Profile ↗</span>
                   </a>
                   <span class="hero-profile-loc">
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                    Gurugram, India
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    Bengaluru & Gurugram, India
                   </span>
                 </div>
               </div>
@@ -173,23 +229,33 @@
             <!-- Role Banner Directly Below Name -->
             <div class="hero-role-badge">
               <span class="role-badge-dot"></span>
-              <span>Product Manager | Consumer Growth, Retention, Monetization &amp; 0→1 GenAI</span>
+              <span>Product Manager specializing in</span>
+              <div class="dynamic-text-rotator">
+                <span class="rotator-word active">Consumer Products</span>
+                <span class="rotator-word">Growth & Monetization</span>
+                <span class="rotator-word">Gaming</span>
+                <span class="rotator-word">AI Chatbots & Voice</span>
+                <span class="rotator-word">0→1 AI Products</span>
+                <span class="rotator-word">Platform & Infrastructure</span>
+              </div>
             </div>
 
             <!-- Strategic Tagline -->
-            <h2 class="hero-subheadline hero-subheadline-anim" style="max-width: 680px; margin-top: 1rem; font-size: clamp(1.15rem, 1.8vw, 1.45rem);">
-              I build products that turn ambiguous problems into measurable business outcomes.
+            <h2 class="hero-subheadline hero-subheadline-anim"
+              style="max-width: 680px; margin-top: 1.5rem; font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 500; line-height: 1.4;">
+              I build products that turn ambiguous problems into <span class="highlight-gradient">measurable business
+                outcomes.</span>
             </h2>
 
             <!-- Fast Action Row -->
-            <div class="hero-actions hero-actions-anim" style="margin-top: 1.25rem;">
-              <a href="#executive-overview" class="btn-primary">
-                <span>Explore Executive Overview</span>
-                <span aria-hidden="true">↓</span>
+            <div class="hero-actions hero-actions-anim" style="margin-top: 2rem;">
+              <a href="Ghanshyam_Kumar_Singh_Resume.pdf" class="btn-primary premium-glow" download>
+                <span>Download Resume</span>
+                <span aria-hidden="true" class="btn-arrow">↓</span>
               </a>
-              <a href="#work" class="btn-secondary">
-                <span>Selected Case Studies</span>
-                <span aria-hidden="true">→</span>
+              <a href="#work" class="btn-secondary ghost-hover premium-border">
+                <span>Explore My Works</span>
+                <span aria-hidden="true" class="btn-arrow">→</span>
               </a>
             </div>
 
@@ -200,8 +266,11 @@
         <!-- Scroll Indicator to Section 2 -->
         <div class="hero-scroll-cue">
           <a href="#executive-overview" class="scroll-cue-link" aria-label="Scroll to Executive Overview">
-            <span>Executive Briefing &amp; Proof</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="bounce-svg"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            <span>Explore</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" class="bounce-svg">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
           </a>
         </div>
 
@@ -209,627 +278,422 @@
     </section>
 
     <!-- ========================================================================
-         2. EXECUTIVE OVERVIEW & PROOF CONSOLE (Second Section)
+         2. PRODUCT PHILOSOPHY & METRICS
          ======================================================================== -->
-    <section class="overview-section" id="executive-overview" style="padding: 4.5rem 0 3.5rem; background-color: var(--bg-secondary); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <section class="overview-section" id="executive-overview" style="padding: 4.5rem 0 3.5rem;">
       <div class="container">
-        
-        <div class="overview-header-grid">
-          <div class="reveal">
-            <span class="section-tag">Executive Briefing</span>
-            <h2 class="section-title" style="font-size: clamp(1.8rem, 3vw, 2.5rem);">
-              Turning Ambiguity into Scaled Commercial Outcomes
-            </h2>
-            <p class="section-subtitle" style="max-width: 760px; margin-top: 0.75rem; font-size: 1.05rem; line-height: 1.65;">
-              Product Manager with <strong>4+ years of experience</strong> building and scaling consumer, B2B SaaS, and GenAI products across growth, monetization, retention, and 0-to-1 product development. Worked on platforms serving <strong>50M+ users and 3L+ DAU</strong>, driving <strong>167% daily revenue growth</strong>, <strong>75% VIP ARPU growth</strong>, and lifting <strong>D7 retention from 12% to 25%</strong>.
-            </p>
+        <header class="text-center max-w-3xl reveal" style="margin: 0 auto 1.5rem auto; text-align: center;">
 
-            <div class="hero-pm-pills" style="margin: 1.5rem 0;">
-              <span class="hero-pm-pill">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                4+ Yrs PM
-              </span>
-              <span class="hero-pm-pill">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
-                50M+ Users · 3L+ DAU
-              </span>
-              <span class="hero-pm-pill emerald">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
-                +167% Revenue Scale
-              </span>
-              <span class="hero-pm-pill">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg>
-                0→1 GenAI Voice Pod
-              </span>
-            </div>
+          <h2 class="section-title">
+            Core Maxims</h2>
+        </header>
+        <div class="reveal" data-delay="100">
+          <div class="philosophy-wrapper">
+            <div class="animated-bg-glow"></div>
+            <div class="philosophy-grid">
 
-            <div class="hero-actions" style="margin-bottom: 0;">
-              <a href="#work" class="btn-primary">
-                <span>Explore Selected Work</span>
-                <span aria-hidden="true">↓</span>
-              </a>
-              <a href="Ghanshyam_Kumar_Singh_Resume.pdf" download="Ghanshyam_Kumar_Singh_Resume.pdf" class="btn-secondary">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span>Download Resume</span>
-              </a>
-            </div>
-          </div>
+              <!-- Card 1: Category Creation -->
+              <div class="philosophy-card">
+                <div class="maxim-watermark">01</div>
+                <div class="content-layer">
+                  <div class="card-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="url(#gradient-blue)"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                      </polygon>
+                      <defs>
+                        <linearGradient id="gradient-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stop-color="#38bdf8" />
+                          <stop offset="100%" stop-color="#818cf8" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <h4>"Ship the thing that creates a category, not the thing that improves a metric."</h4>
+                  <p>Calculated bets over incremental optimization. At MySA, launching autonomous call screening created
+                    an entirely new product category in India, driving 60K+ organic downloads in 30 days.</p>
+                </div>
+              </div>
 
-          <!-- Proof Metrics Grid -->
-          <div class="overview-metrics-grid reveal" data-delay="100">
-            <div class="hero-proof-stat">
-              <span class="proof-num" data-count-to="50" data-suffix="M+">50M+</span>
-              <span class="proof-label">Users Served</span>
-            </div>
-            <div class="hero-proof-stat">
-              <span class="proof-num" data-count-to="3" data-suffix="L+">3L+</span>
-              <span class="proof-label">Peak DAU</span>
-            </div>
-            <div class="hero-proof-stat">
-              <span class="proof-num emerald" data-count-to="167" data-prefix="+" data-suffix="%">+167%</span>
-              <span class="proof-label">Daily Revenue</span>
-            </div>
-            <div class="hero-proof-stat">
-              <span class="proof-num emerald">12%→25%</span>
-              <span class="proof-label">D7 Retention</span>
+              <!-- Card 2: Behavioral Data -->
+              <div class="philosophy-card">
+                <div class="maxim-watermark">02</div>
+                <div class="content-layer">
+                  <div class="card-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="url(#gradient-purple)"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M2 12h4l3-9 5 18 3-9h5"></path>
+                      <defs>
+                        <linearGradient id="gradient-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stop-color="#c084fc" />
+                          <stop offset="100%" stop-color="#db2777" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <h4>"The strongest prioritization signal is what users do when nobody is watching."</h4>
+                  <p>Behavioral telemetry always beats declared intent. I identified B2B use cases hidden inside our B2C
+                    consumer app purely by analyzing anomalous account activity, pivoting our entire roadmap.</p>
+                </div>
+              </div>
+
+              <!-- Card 3: Support Queue -->
+              <div class="philosophy-card">
+                <div class="maxim-watermark">03</div>
+                <div class="content-layer">
+                  <div class="card-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="url(#gradient-orange)"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path
+                        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                      </path>
+                      <defs>
+                        <linearGradient id="gradient-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stop-color="#fbbf24" />
+                          <stop offset="100%" stop-color="#ea580c" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <h4>"The best products are built from the support queue, not the roadmap."</h4>
+                  <p>Customer complaints are the most honest source of product truth. The AI triage bots, VIP priority
+                    queues, and KYC overhauls I shipped were all born directly from user frustration.</p>
+                </div>
+              </div>
+
+              <!-- Card 4: Compliance -->
+              <div class="philosophy-card">
+                <div class="maxim-watermark">04</div>
+                <div class="content-layer">
+                  <div class="card-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="url(#gradient-green)"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                      <path d="m9 12 2 2 4-4"></path>
+                      <defs>
+                        <linearGradient id="gradient-green" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stop-color="#34d399" />
+                          <stop offset="100%" stop-color="#059669" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <h4>"Regulations are product features, not blockers."</h4>
+                  <p>When India imposed a 30% TDS tax, competitors panicked. I architected a real-time TDS Refund Engine
+                    in 5 days that turned a compliance crisis into a viral organic acquisition loop.</p>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
-
-        <!-- Quick Impact Telemetry Console -->
-        <div class="hero-impact-console" style="margin-top: 3.5rem;">
-          <div class="impact-console-item">
-            <span class="impact-console-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>
-            </span>
-            <div class="impact-console-text">
-              <span class="impact-console-title">0→1 GenAI Pod Leader</span>
-              <span class="impact-console-sub">MySA Voice AI MVP (4 Wks) · 200+ Target Users · 3× WTP</span>
-            </div>
-          </div>
-          <div class="impact-console-item">
-            <span class="impact-console-icon emerald">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
-            </span>
-            <div class="impact-console-text">
-              <span class="impact-console-title">Growth & Monetization</span>
-              <span class="impact-console-sub">Scaled Rocket Skill ₹3L → ₹8L/Day (+167%) · 40K DAU</span>
-            </div>
-          </div>
-          <div class="impact-console-item">
-            <span class="impact-console-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-            </span>
-            <div class="impact-console-text">
-              <span class="impact-console-title">Retention & Lifecycle</span>
-              <span class="impact-console-sub">D7 Retention 12%→25% · CleverTap 50M+ Users · 22% Reactivation</span>
-            </div>
-          </div>
-          <div class="impact-console-item">
-            <span class="impact-console-icon emerald">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
-            </span>
-            <div class="impact-console-text">
-              <span class="impact-console-title">In-House Analytics (GrowthTap)</span>
-              <span class="impact-console-sub">$50K+/Yr Saved · Kafka & ClickHouse · 60% Faster Integration</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Interactive PM Capabilities Strip -->
-        <div class="pm-capabilities-ribbon">
-          <div class="pm-ribbon-label">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-            <span>Core Focus</span>
-          </div>
-          <div class="pm-ribbon-items">
-            <span class="pm-ribbon-item">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg>
-              GenAI Voice Agents (&lt;800ms)
-            </span>
-            <span class="pm-ribbon-item">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
-              Dynamic Monetization & Pricing
-            </span>
-            <span class="pm-ribbon-item">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><polyline points="16 11 18 13 22 9"></polyline></svg>
-              2,000+ Field Discovery Calls
-            </span>
-            <span class="pm-ribbon-item">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
-              Kafka + ClickHouse Analytics
-            </span>
-            <span class="pm-ribbon-item">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-              10+ A/B Growth Experiments
-            </span>
-            <span class="pm-ribbon-item">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9Z"></path></svg>
-              VIP ARPU Progression (+75%)
-            </span>
-          </div>
-        </div>
-
       </div>
     </section>
 
     <!-- ========================================================================
-         3. SELECTED WORK (Curated Teaser Cards with Direct Subpage Links)
+         3. SELECTED WORK (Horizontal Carousel & Modals)
          ======================================================================== -->
     <section class="work-section" id="work" style="padding-top: 3rem;">
       <div class="container">
-        <div class="reveal">
-          <span class="section-tag">Proof of Work</span>
-          <h2 class="section-title">Selected Product Work</h2>
-          <p class="section-subtitle">
-            Curated product case studies demonstrating problem diagnostics, customer discovery, live experimentation, and verified business outcomes.
-          </p>
-        </div>
 
-        <!-- Featured Case Studies (2 Large Cards) -->
-        <div class="featured-work-grid" style="margin-top: 3rem;">
-          
-          <!-- Featured 1: Rocket Skill -->
-          <a href="case-study-rocketskill.html" class="featured-card reveal" data-delay="100">
-            <div class="featured-card-content">
-              <span class="eyebrow" style="margin-bottom: 0.25rem;">GROWTH · MONETIZATION · 0 TO 1</span>
-              <div class="featured-card-metric">₹3L → ₹8L/day</div>
-              <h3 class="featured-card-title">From a 10X ceiling to ₹8L/day: Scaling Rocket Skill by 167%</h3>
-              
-              <!-- Visual Revenue Telemetry Widget -->
-              <div class="telemetry-compact-row">
-                <div class="telemetry-compact-stat">
-                  <span class="telemetry-label">Stalled Plateau</span>
-                  <span class="telemetry-num plateau">₹3L/day</span>
+        <header class="text-center max-w-3xl reveal" style="margin: 0 auto 1rem auto; text-align: center;">
+
+          <h2 class="section-title">
+            Shipped at Scale.</h2>
+          <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Zero-to-One GenAI,
+            massive consumer growth, and platform infrastructure that moved the needle.</p>
+        </header>
+
+        <div class="carousel-wrapper" style="position: relative; max-width: 1400px; margin: 0 auto;">
+
+          <!-- Navigation Arrows -->
+          <div class="carousel-nav"
+            style="display: flex; justify-content: flex-end; gap: 1rem; margin-bottom: 1.5rem; padding-right: 2rem;">
+            <button onclick="scrollCarousel(-1)" class="carousel-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m15 18-6-6 6-6" />
+              </svg>
+            </button>
+            <button onclick="scrollCarousel(1)" class="carousel-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="carousel-container 3d-carousel reveal" id="works-carousel">
+
+            <!-- Card 1: Rocket Skill -->
+            <div class="card-3d-wrapper" onclick="openCaseModal('modal-rocketskill')">
+              <div class="card-3d-content">
+                <div class="card-icon-box" style="color: #f59e0b;">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+                    <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+                    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+                    <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+                  </svg>
                 </div>
-                <div class="telemetry-mid-indicator">
-                  <span class="telemetry-tag">10+ A/B Runs</span>
-                  <div class="telemetry-line"></div>
-                </div>
-                <div class="telemetry-compact-stat">
-                  <span class="telemetry-label">Scaled Run-Rate</span>
-                  <span class="telemetry-num scaled">₹8L/day <span class="growth-pill">+167%</span></span>
+                <h3>Breaking the Revenue Plateau: Rocket Skill</h3>
+                <div class="carousel-metric" style="margin-bottom: 1rem; color: #f59e0b;">₹8L/Day Net Commission (+167%)</div>
+                <p>Pitched, launched, and scaled a 15-day MVP crash game to ₹8L/day net commission via 10+ A/B monetization experiments with zero promotional burn.</p>
+                <div class="card-footer-cta">
+                  <span class="cta-text">Deep Dive<span class="cta-underline"></span></span>
+                  <svg class="cta-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
                 </div>
               </div>
-
-              <div class="visual-evolution-strip">
-                <span class="evolution-pill-node">15-Day MVP</span>
-                <span class="evolution-arrow-separator">→</span>
-                <span class="evolution-pill-node">Traction</span>
-                <span class="evolution-arrow-separator">→</span>
-                <span class="evolution-pill-node" style="color: #ef4444; border-color: rgba(239,68,68,0.3);">₹3L Plateau</span>
-                <span class="evolution-arrow-separator">→</span>
-                <span class="evolution-pill-node active-pill">100X Scale</span>
-              </div>
-
-              <!-- Visual PM Spec Grid -->
-              <div class="card-spec-grid">
-                <div class="card-spec-item">
-                  <span class="card-spec-k">Revenue Scale</span>
-                  <span class="card-spec-v emerald">+167% Lift</span>
-                </div>
-                <div class="card-spec-item">
-                  <span class="card-spec-k">MVP Velocity</span>
-                  <span class="card-spec-v">15 Days</span>
-                </div>
-                <div class="card-spec-item">
-                  <span class="card-spec-k">Growth Runs</span>
-                  <span class="card-spec-v">10+ A/B Tests</span>
-                </div>
-                <div class="card-spec-item">
-                  <span class="card-spec-k">Scale Lever</span>
-                  <span class="card-spec-v">100X Multiplier</span>
-                </div>
-              </div>
-
-              <div class="featured-card-footer">
-                <span style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-muted);">15-Day MVP · 100X Multiplier · 30K–40K DAU</span>
-                <span class="card-cta-link">Read full case study →</span>
-              </div>
+              <div class="card-3d-shadow"></div>
             </div>
-          </a>
 
-          <!-- Featured 2: MySmartAssistant -->
-          <a href="case-study-mysmartassistant.html" class="featured-card reveal" data-delay="200">
-            <div class="featured-card-content">
-              <span class="eyebrow" style="margin-bottom: 0.25rem;">GENAI · VOICE AI · 0 TO 1 PRODUCT JOURNEY</span>
-              <div class="featured-card-metric">₹4–6L/Mo · 0→1</div>
-              <h3 class="featured-card-title">MySmartAssistant: From document vault to AI assistant & B2B voice</h3>
-              
-              <!-- Visual Architecture Flow Widget -->
-              <div class="architecture-compact-flow">
-                <div class="arch-stage">
-                  <span class="arch-tag">Phase 1</span>
-                  <span class="arch-name">Vault</span>
+            <!-- Card 2: MySA -->
+            <div class="card-3d-wrapper" onclick="openCaseModal('modal-mysa')">
+              <div class="card-3d-content">
+                <div class="card-icon-box" style="color: #00d4ff;">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+                    <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                    <line x1="12" x2="12" y1="19" y2="22" />
+                  </svg>
                 </div>
-                <span class="arch-arrow">→</span>
-                <div class="arch-stage">
-                  <span class="arch-tag">Phase 2</span>
-                  <span class="arch-name">WhatsApp</span>
-                </div>
-                <span class="arch-arrow">→</span>
-                <div class="arch-stage active">
-                  <span class="arch-tag">Live Product</span>
-                  <span class="arch-name">Voice AI</span>
-                  <span class="arch-sub">&lt;800ms</span>
-                </div>
-                <span class="arch-arrow">→</span>
-                <div class="arch-stage enterprise">
-                  <span class="arch-tag">B2B SaaS</span>
-                  <span class="arch-name">Calling API</span>
-                  <span class="arch-sub">₹4–6L/Mo</span>
+                <h3>MySmartAssistant: Autonomous Voice AI Pivot</h3>
+                <div class="carousel-metric" style="margin-bottom: 1rem; color: #00d4ff;">₹1.5 Crore+ in 4 Mos · 20K+ Paid Subs</div>
+                <p>Led 0-to-1 development of autonomous voice AI with Call Assist screener. Scaled to 20K+ paid subscribers and launched B2B enterprise tier with ₹2L+ MRR.</p>
+                <div class="card-footer-cta">
+                  <span class="cta-text">Deep Dive<span class="cta-underline"></span></span>
+                  <svg class="cta-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
                 </div>
               </div>
-
-              <div class="visual-evolution-strip">
-                <span class="evolution-pill-node">Vault</span>
-                <span class="evolution-arrow-separator">→</span>
-                <span class="evolution-pill-node">WhatsApp Bot</span>
-                <span class="evolution-arrow-separator">→</span>
-                <span class="evolution-pill-node active-pill">MySA Live Voice</span>
-                <span class="evolution-arrow-separator">→</span>
-                <span class="evolution-pill-node" style="color: var(--accent-emerald); border-color: rgba(16,185,129,0.3);">B2B Voice Platform</span>
-              </div>
-
-              <!-- Visual PM Spec Grid -->
-              <div class="card-spec-grid">
-                <div class="card-spec-item">
-                  <span class="card-spec-k">B2B ARR</span>
-                  <span class="card-spec-v emerald">₹4–6L/Mo</span>
-                </div>
-                <div class="card-spec-item">
-                  <span class="card-spec-k">Voice Latency</span>
-                  <span class="card-spec-v">&lt;800ms</span>
-                </div>
-                <div class="card-spec-item">
-                  <span class="card-spec-k">Field Discovery</span>
-                  <span class="card-spec-v">200+ Users</span>
-                </div>
-                <div class="card-spec-item">
-                  <span class="card-spec-k">Task Accuracy</span>
-                  <span class="card-spec-v">~92%</span>
-                </div>
-              </div>
-
-              <div class="featured-card-footer">
-                <span style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-muted);">200+ Users · 3× WTP · +15% D1 Activation</span>
-                <span class="card-cta-link">Read full case study →</span>
-              </div>
+              <div class="card-3d-shadow"></div>
             </div>
-          </a>
 
-        </div>
-
-        <!-- 4 Compact Case Study Teasers in 2x2 Grid -->
-        <div class="work-category-group">
-          <div class="work-category-heading reveal">
-            <span>More Product Case Studies</span>
-          </div>
-
-          <div class="compact-work-grid">
-            
-            <!-- Compact 1: VIP Club (With 3-Tier Ladder Diagram) -->
-            <a href="work.html" class="compact-card reveal" data-delay="100">
-              <div>
-                <span class="eyebrow">MONETIZATION & RETENTION</span>
-                <div class="compact-card-metric">+75% VIP ARPU</div>
-                <h4 class="compact-card-title">VIP Club: 3-Tier Wagering Progression</h4>
-                
-                <div class="tier-ladder-diagram">
-                  <div class="tier-ladder-steps">
-                    <div class="tier-step">
-                      <div class="tier-step-name">Bronze</div>
-                      <div class="tier-step-val">₹5K Wager</div>
-                    </div>
-                    <span class="tier-ladder-arrow">→</span>
-                    <div class="tier-step">
-                      <div class="tier-step-name">Silver</div>
-                      <div class="tier-step-val">₹50K Wager</div>
-                    </div>
-                    <span class="tier-ladder-arrow">→</span>
-                    <div class="tier-step highlight">
-                      <div class="tier-step-name">Gold</div>
-                      <div class="tier-step-val">₹100K Wager</div>
-                    </div>
-                  </div>
-                  <div class="tier-ladder-banner">
-                    <span>Progression Milestones</span>
-                    <span>₹8K → ₹14K ARPU</span>
-                  </div>
+            <!-- Card 3: VIP Club -->
+            <div class="card-3d-wrapper" onclick="openCaseModal('modal-vip')">
+              <div class="card-3d-content">
+                <div class="card-icon-box" style="color: #c084fc;">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
                 </div>
-
-                <div class="compact-card-kv-list">
-                  <div class="compact-card-kv-row">
-                    <span class="compact-kv-tag problem">Friction</span>
-                    <span class="compact-kv-text">Static loyalty badge drove 0 wagering urgency for mid-tier players.</span>
-                  </div>
-                  <div class="compact-card-kv-row">
-                    <span class="compact-kv-tag action">Playbook</span>
-                    <span class="compact-kv-text">Built 3-tier milestone progression ladder (Bronze → Silver → Gold).</span>
-                  </div>
-                  <div class="compact-card-kv-row">
-                    <span class="compact-kv-tag impact">Outcome</span>
-                    <span class="compact-kv-text"><strong>+75% ARPU</strong> (₹8K → ₹14K) &amp; <strong>+44% active VIPs</strong> (45K → 65K).</span>
-                  </div>
+                <h3>Dynamic 3-Tier VIP Loyalty Engine</h3>
+                <div class="carousel-metric" style="margin-bottom: 1rem; color: #c084fc;">+75% VIP ARPU · ₹1.5 Cr/Day Deposits</div>
+                <p>Restructured a dead-end ₹5,000 threshold into a 3-tier dynamic loyalty engine (VIP, Plus, Pro), growing active VIP DAU by 44% to 65,000 players.</p>
+                <div class="card-footer-cta">
+                  <span class="cta-text">Deep Dive<span class="cta-underline"></span></span>
+                  <svg class="cta-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
                 </div>
               </div>
-              <span class="card-cta-link">Explore in Work Hub →</span>
-            </a>
+              <div class="card-3d-shadow"></div>
+            </div>
 
-            <!-- Compact 2: CRM + AI (With Copilot Pipeline Flow) -->
-            <a href="work.html" class="compact-card reveal" data-delay="150">
-              <div>
-                <span class="eyebrow">OPERATIONS & AI SYSTEMS</span>
-                <div class="compact-card-metric">CSAT 2/5 → 4.2/5</div>
-                <h4 class="compact-card-title">CRM + AI: Agent Copilot & Ticket Deflection</h4>
-                
-                <div class="pipeline-flow-diagram">
-                  <div class="pipeline-nodes-row">
-                    <div class="pipeline-node">
-                      <div class="pipeline-node-label">User Ticket</div>
-                      <div class="pipeline-node-sub">Inflow</div>
-                    </div>
-                    <span class="pipeline-arrow">→</span>
-                    <div class="pipeline-node active-node">
-                      <div class="pipeline-node-label">AI Copilot</div>
-                      <div class="pipeline-node-sub">&lt;1s Context</div>
-                    </div>
-                    <span class="pipeline-arrow">→</span>
-                    <div class="pipeline-node">
-                      <div class="pipeline-node-label">1-Click Resolve</div>
-                      <div class="pipeline-node-sub">Agent Guided</div>
-                    </div>
-                  </div>
-                  <div class="pipeline-metric-strip">
-                    <span>45% Faster Response</span>
-                    <span>40–50% Deflection</span>
-                  </div>
+            <!-- Card 4: AI Support Copilot -->
+            <div class="card-3d-wrapper" onclick="openCaseModal('modal-crmai')">
+              <div class="card-3d-content">
+                <div class="card-icon-box" style="color: #fb7185;">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                    <circle cx="9" cy="10" r="1"/>
+                    <circle cx="15" cy="10" r="1"/>
+                    <path d="M9.5 13a3.5 3.5 0 0 0 5 0"/>
+                  </svg>
                 </div>
-
-                <div class="compact-card-kv-list">
-                  <div class="compact-card-kv-row">
-                    <span class="compact-kv-tag problem">Friction</span>
-                    <span class="compact-kv-text">Fragmented tools and queue backlog pulled CSAT down to 2/5.</span>
-                  </div>
-                  <div class="compact-card-kv-row">
-                    <span class="compact-kv-tag action">Playbook</span>
-                    <span class="compact-kv-text">Built 0→1 CRM vertical + internal Copilot assisting human agents first.</span>
-                  </div>
-                  <div class="compact-card-kv-row">
-                    <span class="compact-kv-tag impact">Outcome</span>
-                    <span class="compact-kv-text"><strong>CSAT 2/5 → 4.2/5</strong>, <strong>45% faster resolution</strong>, 40–50% deflection.</span>
-                  </div>
+                <h3>AI Support Automation & Copilot Engine</h3>
+                <div class="carousel-metric" style="margin-bottom: 1rem; color: #fb7185;"><2 Min FRT · 50% Deflected · CSAT 4.2</div>
+                <p>Deployed an L1 RAG triage bot and Agent Helper AI Copilot inside Freshchat, deflecting 40–50% of routine tickets and slashing response times from >6h to <2m.</p>
+                <div class="card-footer-cta">
+                  <span class="cta-text">Deep Dive<span class="cta-underline"></span></span>
+                  <svg class="cta-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
                 </div>
               </div>
-              <span class="card-cta-link">Explore in Work Hub →</span>
-            </a>
+              <div class="card-3d-shadow"></div>
+            </div>
 
-            <!-- Compact 3: KYC (With Before/After Verification Split) -->
-            <a href="work.html" class="compact-card reveal" data-delay="200">
-              <div>
-                <span class="eyebrow">PLATFORM & COMPLIANCE</span>
-                <div class="compact-card-metric">&lt;1 Min Verification</div>
-                <h4 class="compact-card-title">KYC Engine: Real-Time Verification Overhaul</h4>
-                
-                <div class="before-after-compact-widget">
-                  <div class="before-after-split-row">
-                    <div class="ba-column old-state">
-                      <span class="ba-col-tag">Old OCR Queue</span>
-                      <div class="ba-col-val">12–24h Wait</div>
-                      <div style="font-size: 0.68rem; color: var(--text-muted); margin-top: 2px;">97% manual review</div>
-                    </div>
-                    <div class="ba-column new-state">
-                      <span class="ba-col-tag">Direct DB Engine</span>
-                      <div class="ba-col-val">&lt;1 Min Instant</div>
-                      <div style="font-size: 0.68rem; color: var(--accent-emerald); margin-top: 2px;">95% name match · -75% cost</div>
-                    </div>
-                  </div>
+            <!-- Card 5: KYC & TDS -->
+            <div class="card-3d-wrapper" onclick="openCaseModal('modal-kyc')">
+              <div class="card-3d-content">
+                <div class="card-icon-box" style="color: #10b981;">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <polyline points="9 12 11 14 15 10"/>
+                  </svg>
                 </div>
-
-                <div class="compact-card-kv-list">
-                  <div class="compact-card-kv-row">
-                    <span class="compact-kv-tag problem">Friction</span>
-                    <span class="compact-kv-text">Single-vendor OCR caused 24h wait queues and dropped first deposits.</span>
-                  </div>
-                  <div class="compact-card-kv-row">
-                    <span class="compact-kv-tag action">Playbook</span>
-                    <span class="compact-kv-text">Direct DB verification engine with multi-vendor automatic fallback.</span>
-                  </div>
-                  <div class="compact-card-kv-row">
-                    <span class="compact-kv-tag impact">Outcome</span>
-                    <span class="compact-kv-text"><strong>&lt;1 Min instant check</strong>, 95% match, <strong>-75% vendor cost</strong>.</span>
-                  </div>
+                <h3>Real-Time Identity & 30% TDS Engine</h3>
+                <div class="carousel-metric" style="margin-bottom: 1rem; color: #10b981;">-97% Review Queue · <1 Min TAT</div>
+                <p>Engineered zero-upload PAN verification with 95% phonetic name-matching and shipped a Section 194BA 30% TDS bonus refund loop in 5 days, cutting review queues by 97%.</p>
+                <div class="card-footer-cta">
+                  <span class="cta-text">Deep Dive<span class="cta-underline"></span></span>
+                  <svg class="cta-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
                 </div>
               </div>
-              <span class="card-cta-link">Explore in Work Hub →</span>
-            </a>
+              <div class="card-3d-shadow"></div>
+            </div>
 
-            <!-- Compact 4: GrowthTap (With Kafka & ClickHouse Stream Diagram) -->
-            <a href="work.html" class="compact-card reveal" data-delay="250">
-              <div>
-                <span class="eyebrow">B2B SAAS & TECHNICAL PRODUCT</span>
-                <div class="compact-card-metric">$50K+/Yr Saved</div>
-                <h4 class="compact-card-title">GrowthTap: In-House Event & Funnel Engine</h4>
-                
-                <div class="pipeline-flow-diagram">
-                  <div class="pipeline-nodes-row">
-                    <div class="pipeline-node">
-                      <div class="pipeline-node-label">App Events</div>
-                      <div class="pipeline-node-sub">50M+ users</div>
-                    </div>
-                    <span class="pipeline-arrow">→</span>
-                    <div class="pipeline-node">
-                      <div class="pipeline-node-label">Kafka Stream</div>
-                      <div class="pipeline-node-sub">Low latency</div>
-                    </div>
-                    <span class="pipeline-arrow">→</span>
-                    <div class="pipeline-node active-node">
-                      <div class="pipeline-node-label">ClickHouse</div>
-                      <div class="pipeline-node-sub">Real-time funnels</div>
-                    </div>
-                  </div>
-                  <div class="pipeline-metric-strip">
-                    <span>Replaced $50K/yr SaaS</span>
-                    <span>60% Faster Integration</span>
-                  </div>
+            <!-- Card 6: GrowthTap -->
+            <div class="card-3d-wrapper" onclick="openCaseModal('modal-growthtap')">
+              <div class="card-3d-content">
+                <div class="card-icon-box" style="color: #818cf8;">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                  </svg>
                 </div>
-
-                <div class="compact-card-kv-list">
-                  <div class="compact-card-kv-row">
-                    <span class="compact-kv-tag problem">Friction</span>
-                    <span class="compact-kv-text">External analytics cost $50K+/yr with delayed multi-minute funnels.</span>
-                  </div>
-                  <div class="compact-card-kv-row">
-                    <span class="compact-kv-tag action">Playbook</span>
-                    <span class="compact-kv-text">Built Kafka + ClickHouse streaming pipeline for 50M+ user profiles.</span>
-                  </div>
-                  <div class="compact-card-kv-row">
-                    <span class="compact-kv-tag impact">Outcome</span>
-                    <span class="compact-kv-text"><strong>$50K+/yr saved</strong>, sub-second funnels, <strong>60% faster integration</strong>.</span>
-                  </div>
+                <h3>GrowthTap: In-House Kafka & ClickHouse</h3>
+                <div class="carousel-metric" style="margin-bottom: 1rem; color: #818cf8;">$50,000/Yr Saved · Sub-Second Ingestion</div>
+                <p>Architected an internal Kafka + ClickHouse event streaming platform tracking 50M+ users with sub-second ingestion, eliminating a $50K/yr SaaS dependency.</p>
+                <div class="card-footer-cta">
+                  <span class="cta-text">Deep Dive<span class="cta-underline"></span></span>
+                  <svg class="cta-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
                 </div>
               </div>
-              <span class="card-cta-link">Explore in Work Hub →</span>
-            </a>
+              <div class="card-3d-shadow"></div>
+            </div>
 
-          </div>
+            <!-- Card 7: Lavola -->
+            <div class="card-3d-wrapper" onclick="openCaseModal('modal-lavola')">
+              <div class="card-3d-content">
+                <div class="card-icon-box" style="color: #f472b6;">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                  </svg>
+                </div>
+                <h3>Lavola.ai: GenAI Companion & Guardrails</h3>
+                <div class="carousel-metric" style="margin-bottom: 1rem; color: #f472b6;">92% Accuracy · <800ms Voice Duplex</div>
+                <p>Designed multi-persona prompt orchestration, duplex voice UI, and strict semantic safety boundaries with crisis escalation protocols for an autonomous GenAI companion.</p>
+                <div class="card-footer-cta">
+                  <span class="cta-text">Deep Dive<span class="cta-underline"></span></span>
+                  <svg class="cta-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+              <div class="card-3d-shadow"></div>
+            </div>
 
-          <!-- Master Work Hub Link -->
-          <div style="text-align: center; margin-top: 2.5rem;">
-            <a href="work.html" class="btn-secondary" style="padding: 0.85rem 1.8rem; font-size: 0.95rem;">
-              <span>Explore All 6 Case Studies in Detail</span>
-              <span aria-hidden="true">→</span>
-            </a>
+            <!-- Card 8: Customer Obsession / Research -->
+            <div class="card-3d-wrapper" onclick="openCaseModal('modal-research')">
+              <div class="card-3d-content">
+                <div class="card-icon-box" style="color: #38bdf8;">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+                  </svg>
+                </div>
+                <h3>D0–D7 Onboarding & Habit-Forming Loops</h3>
+                <div class="carousel-metric" style="margin-bottom: 1rem; color: #38bdf8;">12% → 25% D7 Retention · -20% Bonus Burn</div>
+                <p>Synthesized 2,000+ customer discovery interviews to overhaul new-player activation. Replaced cognitive overload with campaign-to-game journeys, doubling D7 retention to 25%.</p>
+                <div class="card-footer-cta">
+                  <span class="cta-text">Deep Dive<span class="cta-underline"></span></span>
+                  <svg class="cta-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+              <div class="card-3d-shadow"></div>
+            </div>
+
           </div>
         </div>
-
       </div>
     </section>
 
     <!-- ========================================================================
-         4. BY THE NUMBERS SECTION (8 Quantified Impact Cards with Animated Visual Bars)
+         4. CAREER TIMELINE
          ======================================================================== -->
-    <section class="numbers-section" id="by-the-numbers">
-      <div class="container">
-        <div class="reveal">
-          <span class="section-tag">Quantified Impact</span>
-          <h2 class="section-title">By the numbers</h2>
-          <p class="section-subtitle">
-            Measurable commercial and operational outcomes delivered across user scale, revenue growth, and AI adoption.
-          </p>
-        </div>
+    <section class="timeline-section" id="career-timeline"
+      style="padding: 3.5rem 0; position: relative; background: var(--bg-main); overflow: hidden;">
 
-        <div class="numbers-grid">
-          
-          <div class="number-card reveal" data-delay="50">
-            <div class="number-card-top">
-              <span class="number-val" data-count-to="50" data-suffix="M+">50M+</span>
-              <span class="number-icon-badge">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-              </span>
-            </div>
-            <h3 class="number-title">Users Served</h3>
-            <p class="number-desc">Registered users across consumer tech ecosystem.</p>
-            <div class="metric-progress-wrapper">
-              <div class="metric-progress-bar" style="width: 95%;"></div>
+      <div class="container" style="position: relative; z-index: 10;">
+        <header class="text-center max-w-3xl reveal" style="margin: 0 auto 1rem auto; text-align: center;">
+
+          <h2 class="section-title">
+            Evolution & Impact.</h2>
+          <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">4+ years of
+            building, measuring, and scaling products from the ground up.</p>
+        </header>
+
+        <div class="timeline-wrapper" style="position: relative; max-width: 1000px; margin: 0 auto; min-height: 800px;">
+
+          <!-- The continuous SVG line (Hidden on Mobile) -->
+          <svg class="timeline-svg desktop-only" viewBox="0 0 1000 800" preserveAspectRatio="none"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0;">
+            <path d="M 290 150 C 500 150, 550 400, 710 400 C 850 400, 500 650, 290 650" class="timeline-path"
+              stroke="var(--border-color)" stroke-width="2" stroke-dasharray="8 6" fill="none" stroke-linecap="round"
+              vector-effect="non-scaling-stroke" />
+          </svg>
+
+          <!-- Node 1: AIVO -->
+          <div class="timeline-card pos-1 rotate-8" onclick="window.location.href='experience.html'">
+            <div class="timeline-card-inner">
+              <svg class="pin-icon text-orange" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M16 3a1 1 0 0 1 .117 1.993l-.117 .007v4.764l1.894 3.789a1 1 0 0 1 .1 .331l.006 .116v2a1 1 0 0 1 -.883 .993l-.117 .007h-4v4a1 1 0 0 1 -1.993 .117l-.007 -.117v-4h-4a1 1 0 0 1 -.993 -.883l-.007 -.117v-2a1 1 0 0 1 .06 -.34l.046 -.107l1.894 -3.791v-4.762a1 1 0 0 1 -.117 -1.993l.117 -.007h8z" />
+              </svg>
+              <div class="timeline-content orange-theme">
+                <h3>Product Manager</h3>
+                <p class="timeline-company">AIVO Technologies Pvt. Ltd.</p>
+                <p class="timeline-date">May 2026 – Present</p>
+                <p class="timeline-desc">Leading 0-to-1 GenAI and B2B/Consumer Voice AI applications.</p>
+              </div>
             </div>
           </div>
 
-          <div class="number-card reveal" data-delay="100">
-            <div class="number-card-top">
-              <span class="number-val" data-count-to="3" data-suffix="L+">3L+</span>
-              <span class="number-icon-badge">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-              </span>
-            </div>
-            <h3 class="number-title">Peak DAU Handled</h3>
-            <p class="number-desc">Daily active users in high-concurrency environments.</p>
-            <div class="metric-progress-wrapper">
-              <div class="metric-progress-bar" style="width: 80%;"></div>
-            </div>
-          </div>
-
-          <div class="number-card reveal" data-delay="150">
-            <div class="number-card-top">
-              <span class="number-val" data-count-to="167" data-prefix="+" data-suffix="%">+167%</span>
-              <span class="number-icon-badge emerald">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
-              </span>
-            </div>
-            <h3 class="number-title">Daily Revenue Scale</h3>
-            <p class="number-desc">Scaled Rocket Skill daily run-rate from ₹3L to ₹8L/day.</p>
-            <div class="metric-progress-wrapper">
-              <div class="metric-progress-bar emerald" style="width: 100%;"></div>
+          <!-- Node 2: Witzeal APM -->
+          <div class="timeline-card pos-2 rotate-neg-8" onclick="window.location.href='experience.html'">
+            <div class="timeline-card-inner">
+              <svg class="pin-icon text-purple" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M16 3a1 1 0 0 1 .117 1.993l-.117 .007v4.764l1.894 3.789a1 1 0 0 1 .1 .331l.006 .116v2a1 1 0 0 1 -.883 .993l-.117 .007h-4v4a1 1 0 0 1 -1.993 .117l-.007 -.117v-4h-4a1 1 0 0 1 -.993 -.883l-.007 -.117v-2a1 1 0 0 1 .06 -.34l.046 -.107l1.894 -3.791v-4.762a1 1 0 0 1 -.117 -1.993l.117 -.007h8z" />
+              </svg>
+              <div class="timeline-content purple-theme">
+                <h3>Associate Product Manager</h3>
+                <p class="timeline-company">Witzeal Technologies Pvt. Ltd.</p>
+                <p class="timeline-date">Jun 2022 – Mar 2026</p>
+                <p class="timeline-desc">Scaled RMG platform to 50M+ users. Drove monetization, VIP retention (+75%
+                  ARPU), and KYC automation.</p>
+              </div>
             </div>
           </div>
 
-          <div class="number-card reveal" data-delay="200">
-            <div class="number-card-top">
-              <span class="number-val" data-count-to="75" data-prefix="+" data-suffix="%">+75%</span>
-              <span class="number-icon-badge emerald">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9Z"></path><path d="M11 3 8 9l4 13 4-13-3-6"></path></svg>
-              </span>
-            </div>
-            <h3 class="number-title">VIP ARPU Expansion</h3>
-            <p class="number-desc">Shifted average VIP ARPU from ₹8K to ₹14K.</p>
-            <div class="metric-progress-wrapper">
-              <div class="metric-progress-bar emerald" style="width: 75%;"></div>
-            </div>
-          </div>
-
-          <div class="number-card reveal" data-delay="250">
-            <div class="number-card-top">
-              <span class="number-val" style="font-size: 1.65rem;">12%→25%</span>
-              <span class="number-icon-badge emerald">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
-              </span>
-            </div>
-            <h3 class="number-title">D7 Retention Lift</h3>
-            <p class="number-desc">D7 active users expanded 22%→48% via lifecycle engine.</p>
-            <div class="metric-progress-wrapper">
-              <div class="metric-progress-bar emerald" style="width: 85%;"></div>
-            </div>
-          </div>
-
-          <div class="number-card reveal" data-delay="300">
-            <div class="number-card-top">
-              <span class="number-val" data-count-to="22" data-suffix="%">22%</span>
-              <span class="number-icon-badge">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path><path d="M8 16H3v5"></path></svg>
-              </span>
-            </div>
-            <h3 class="number-title">Dormant Reactivation</h3>
-            <p class="number-desc">Reactivated through targeted lifecycle campaigns.</p>
-            <div class="metric-progress-wrapper">
-              <div class="metric-progress-bar" style="width: 45%;"></div>
-            </div>
-          </div>
-
-          <div class="number-card reveal" data-delay="350">
-            <div class="number-card-top">
-              <span class="number-val" data-count-to="60" data-suffix="%">60%</span>
-              <span class="number-icon-badge">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              </span>
-            </div>
-            <h3 class="number-title">Integration Reduction</h3>
-            <p class="number-desc">Reduced client analytics integration time via GrowthTap.</p>
-            <div class="metric-progress-wrapper">
-              <div class="metric-progress-bar" style="width: 65%;"></div>
-            </div>
-          </div>
-
-          <div class="number-card reveal" data-delay="400">
-            <div class="number-card-top">
-              <span class="number-val" data-count-to="100" data-suffix="+">100+</span>
-              <span class="number-icon-badge emerald">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-              </span>
-            </div>
-            <h3 class="number-title">Languages Supported</h3>
-            <p class="number-desc">In autonomous multilingual GenAI voice agents.</p>
-            <div class="metric-progress-wrapper">
-              <div class="metric-progress-bar emerald" style="width: 90%;"></div>
+          <!-- Node 3: Witzeal Intern -->
+          <div class="timeline-card pos-3 rotate-8" onclick="window.location.href='experience.html'">
+            <div class="timeline-card-inner">
+              <svg class="pin-icon text-blue" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M16 3a1 1 0 0 1 .117 1.993l-.117 .007v4.764l1.894 3.789a1 1 0 0 1 .1 .331l.006 .116v2a1 1 0 0 1 -.883 .993l-.117 .007h-4v4a1 1 0 0 1 -1.993 .117l-.007 -.117v-4h-4a1 1 0 0 1 -.993 -.883l-.007 -.117v-2a1 1 0 0 1 .06 -.34l.046 -.107l1.894 -3.791v-4.762a1 1 0 0 1 -.117 -1.993l.117 -.007h8z" />
+              </svg>
+              <div class="timeline-content blue-theme">
+                <h3>Product Intern</h3>
+                <p class="timeline-company">Witzeal Technologies Pvt. Ltd.</p>
+                <p class="timeline-date">May 2021 – May 2022</p>
+                <p class="timeline-desc">Conducted 2,000+ user interviews to map journey friction and reduced
+                  registration drop-offs by 15%.</p>
+              </div>
             </div>
           </div>
 
@@ -838,366 +702,287 @@
     </section>
 
     <!-- ========================================================================
-         5. CAREER & EXPERIENCE SNAPSHOT
+         7. ABOUT ME (Bento Box Layout)
          ======================================================================== -->
-    <section class="experience-section" id="experience" style="padding: 4rem 0;">
-      <div class="container">
-        <div class="reveal">
-          <span class="section-tag">Career History</span>
-          <h2 class="section-title">Professional Experience</h2>
-          <p class="section-subtitle">
-            A track record of taking on broader product scope, moving from qualitative research to monetization, platform reliability, and 0→1 AI systems.
-          </p>
-        </div>
+    <section class="about-section" id="about"
+      style="padding: 3.5rem 0; position: relative; overflow: hidden; background: var(--bg-main);">
+      <!-- Animated Background Radial Gradient -->
+      <div class="bento-bg-glow"></div>
 
-        <div class="career-evolution-stepper" style="margin-top: 3rem;">
-          
-          <!-- Role 1: AIVO -->
-          <div class="career-step-card reveal" data-delay="100">
-            <div class="career-step-left">
-              <div class="career-step-badge">
-                <span class="badge-pulse-dot"></span>
-                <span>Active Role</span>
-              </div>
-              <h3 class="experience-role" style="font-size: 1.25rem;">Product Manager</h3>
-              <div class="experience-company" style="font-size: 1rem;">AIVO Technologies Pvt. Ltd.</div>
-              <span class="experience-period" style="font-size: 0.78rem;">May 2026 – Present · Gurugram</span>
-              <div style="margin-top: 0.5rem; font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">
-                Scope: 8-Member Pod<br>(4 Devs, 2 Des, 2 QA)
-              </div>
-            </div>
+      <div class="container" style="position: relative; z-index: 10;">
+        <header class="text-center max-w-3xl reveal" style="margin: 0 auto 1.5rem auto; text-align: center;">
 
-            <div class="career-step-right">
-              <div class="career-step-highlights-grid">
-                <div class="career-highlight-tile">
-                  <div class="career-highlight-header">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg>
-                    <span>MySmartAssistant Voice AI</span>
-                  </div>
-                  Shipped 4-wk MVP; validated 200+ users (3× higher WTP vs chat); &lt;800ms streaming voice in 100+ languages.
-                </div>
-                <div class="career-highlight-tile">
-                  <div class="career-highlight-header">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>
-                    <span>GrowthTap Platform ($50K+/Yr)</span>
-                  </div>
-                  0→1 analytics platform on Kafka + ClickHouse replacing $50K+/yr tools with -60% integration time.
-                </div>
-                <div class="career-highlight-tile">
-                  <div class="career-highlight-header">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
-                    <span>Lavola.ai AI Companion</span>
-                  </div>
-                  Shaped PRDs & MVP for real-time voice calling and multi-persona conversational platform.
-                </div>
-                <div class="career-highlight-tile">
-                  <div class="career-highlight-header">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
-                    <span>SaaS Monetization & Guardrails</span>
-                  </div>
-                  Structured tiered SaaS plans (+15% D1 activation) and RAG guardrails for ~92% task accuracy.
-                </div>
-              </div>
+          <h2 class="section-title">
+            A Little About Me</h2>
+        </header>
+
+        <div class="bento-grid reveal" data-delay="100">
+
+          <!-- LEFT COLUMN: The Narrative -->
+          <div class="bento-card narrative-card">
+            <svg class="bento-quote-icon" width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+            </svg>
+            <div class="narrative-content">
+              <h3>I didn't start my career building roadmaps.<br />I started by talking to users.</h3>
+              <p>After 2,000+ customer discovery calls across India, my product philosophy became extremely simple:</p>
+
+              <ul class="philosophy-list">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>The best products are built from the support queue</strong>, not the roadmap. Users
+                    rarely tell you the exact solution, but they always show you where your assumptions fail.</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Ship the thing that creates a category</strong>, not the thing that just improves a
+                    metric.</span>
+                </li>
+              </ul>
             </div>
           </div>
 
-          <!-- Role 2: Witzeal APM -->
-          <div class="career-step-card reveal" data-delay="150">
-            <div class="career-step-left">
-              <div class="career-step-badge" style="color: var(--accent-emerald);">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                <span>Track Record</span>
+          <!-- RIGHT COLUMN: The Credentials -->
+          <div class="bento-credentials">
+
+            <div class="bento-card credential-card hover-lift">
+              <div class="cred-icon orange">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
               </div>
-              <h3 class="experience-role" style="font-size: 1.25rem;">Associate Product Manager</h3>
-              <div class="experience-company" style="font-size: 1rem;">Witzeal Technologies Pvt. Ltd.</div>
-              <span class="experience-period" style="font-size: 0.78rem;">June 2022 – March 2026 · Gurugram</span>
-              <div style="margin-top: 0.5rem; font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-emerald); font-weight: 700; display: inline-flex; align-items: center; gap: 0.35rem;">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg>
-                <span>Promoted: Intern → APM</span>
+              <div>
+                <h4>The Genesis: 2,000+ User Calls</h4>
+                <p>Deep qualitative discovery across India that mapped friction points and laid the foundation for every
+                  roadmap I've built since.</p>
               </div>
             </div>
 
-            <div class="career-step-right">
-              <div class="career-step-highlights-grid">
-                <div class="career-highlight-tile">
-                  <div class="career-highlight-header">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path></svg>
-                    <span>Rocket Skill Scale (+167%)</span>
-                  </div>
-                  Shipped 15-day MVP; scaled ₹3L → ₹8L/day via 10+ risk/reward live experiments across 40K DAU.
-                </div>
-                <div class="career-highlight-tile">
-                  <div class="career-highlight-header">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9Z"></path><path d="M11 3 8 9l4 13 4-13-3-6"></path></svg>
-                    <span>VIP Club Progression (+75%)</span>
-                  </div>
-                  Restructured into 3-tier ladder; expanded VIP ARPU ₹8K → ₹14K and active VIPs 45K → 65K (+44%).
-                </div>
-                <div class="career-highlight-tile">
-                  <div class="career-highlight-header">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
-                    <span>Retention &amp; Lifecycle Engine</span>
-                  </div>
-                  Lifted D7 retention 12%→25%, D7 active users 22%→48%, and reactivated 22% dormant players via CleverTap.
-                </div>
-                <div class="career-highlight-tile">
-                  <div class="career-highlight-header">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-                    <span>Real-Time KYC &amp; CRM Vertical</span>
-                  </div>
-                  Re-engineered KYC to &lt;1 min (-75% cost); built 0→1 CRM with AI Copilot (CSAT 2/5 → 4.2/5).
-                </div>
+            <div class="bento-card credential-card hover-lift">
+              <div class="cred-icon purple">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  <polyline points="17 6 23 6 23 12"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h4>Data-Driven: CleverTap Certified</h4>
+                <p>Certified expert in user lifecycle management, behavioral segmentation, and building real-time
+                  analytics platforms (Kafka & ClickHouse).</p>
               </div>
             </div>
+
+            <div class="bento-card credential-card hover-lift">
+              <div class="cred-icon blue">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                  <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                  <path d="M4 22h16"></path>
+                  <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                  <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                  <path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4>Excellence: Honors & Awards</h4>
+                <p>Academic Silver Medalist (PGDM, XISS) alongside 5× Corporate Excellence Awards (Pinnacle & Power) for
+                  hyper-growth execution.</p>
+              </div>
+            </div>
+
           </div>
-
         </div>
 
-        <div style="text-align: center; margin-top: 2.5rem;">
-          <a href="experience.html" class="btn-secondary" style="padding: 0.85rem 1.8rem;">
-            <span>View Full Career Milestones & Skills Matrix</span>
-            <span aria-hidden="true">→</span>
+        <div class="text-center mt-12 reveal" style="text-align: center; margin-top: 3rem;">
+          <a href="about.html" class="btn-primary"
+            style="padding: 0.85rem 1.75rem; border-radius: 999px; box-shadow: 0 10px 30px rgba(99,102,241,0.2);">
+            <span>Read Product Operating System →</span>
           </a>
         </div>
       </div>
     </section>
 
     <!-- ========================================================================
-         6. STRATEGIC JUDGEMENT HIGHLIGHTS (Graphical Decision Canvas)
+         8. EXECUTIVE CONTACT & CONNECT COMMAND CENTER
          ======================================================================== -->
-    <section class="decisions-section" id="decisions" style="padding: 4rem 0; background-color: var(--bg-secondary); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-      <div class="container">
-        <div class="reveal">
-          <span class="section-tag">Strategic Judgement</span>
-          <h2 class="section-title">How I Make Product Trade-Offs</h2>
-          <p class="section-subtitle">
-            Strong product management is about what you choose not to do. High-contrast trade-offs and the signals that drove them.
-          </p>
-        </div>
+    <section class="vip-access-section contact-hub-section" id="contact">
+      <!-- Hidden anchor for backwards-compatibility -->
+      <div id="vip-access" style="position: absolute; top: 0; left: 0; width: 1px; height: 1px; opacity: 0; pointer-events: none;"></div>
 
-        <div class="decision-canvas-grid">
-          
-          <!-- Decision 1: Voice vs Chat -->
-          <div class="decision-canvas-card reveal" data-delay="100">
-            <div>
-              <span class="eyebrow" style="margin-bottom: 0.35rem;">MYSA · DISCOVERY TRADE-OFF</span>
-              <h3 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Voice vs Chat Automation</h3>
-              
-              <div class="decision-path-compare">
-                <div class="decision-path-item rejected" style="display: flex; align-items: center; gap: 0.5rem;">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
-                  <span><strong>Conventional:</strong> Build standard text chatbot app.</span>
-                </div>
-                <div class="decision-path-item chosen" style="display: flex; align-items: center; gap: 0.5rem;">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11.5 14.5 15.5 9.5"></polyline></svg>
-                  <span><strong>Ghanshyam's Move:</strong> Prioritize voice calling MVP first.</span>
-                </div>
-              </div>
+      <!-- Ambient Mesh Glow -->
+      <div class="mesh-glow-bg"></div>
 
-              <div class="decision-signal-box">
-                <strong>Signal:</strong> 200+ user interviews proved SMBs had 3× higher willingness-to-pay for voice because missed calls meant direct lost revenue.
-              </div>
+      <div class="container" style="position: relative; z-index: 10;">
+        <div class="vip-grid contact-hub-grid reveal" data-delay="100">
+
+          <!-- LEFT CANVAS: Executive Channels & Availability -->
+          <div class="vip-canvas invitation-canvas contact-invitation-canvas">
+            <div class="contact-pill-cluster">
+              <span class="status-pill mb-0 inline-flex">
+                <span class="pulse-dot-green"></span>
+                <span class="pill-label">Available for Senior & Lead PM Roles</span>
+              </span>
             </div>
 
-            <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
-              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">Impact:</span>
-              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-emerald); font-weight: 700;">₹4–6L/Mo ARR Expansion</span>
-            </div>
-          </div>
+            <h2 class="vip-headline contact-main-headline">
+              Let's Build Your Next <span class="text-glow">Category-Defining</span> Product
+            </h2>
 
-          <!-- Decision 2: AI Support Sequencing -->
-          <div class="decision-canvas-card reveal" data-delay="150">
-            <div>
-              <span class="eyebrow" style="margin-bottom: 0.35rem;">CRM · AI SEQUENCING</span>
-              <h3 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">AI Support Sequencing</h3>
-              
-              <div class="decision-path-compare">
-                <div class="decision-path-item rejected" style="display: flex; align-items: center; gap: 0.5rem;">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
-                  <span><strong>Conventional:</strong> Expose raw AI bot to end-users.</span>
-                </div>
-                <div class="decision-path-item chosen" style="display: flex; align-items: center; gap: 0.5rem;">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11.5 14.5 15.5 9.5"></polyline></svg>
-                  <span><strong>Ghanshyam's Move:</strong> Deploy AI Copilot to human agents first.</span>
-                </div>
-              </div>
-
-              <div class="decision-signal-box">
-                <strong>Signal:</strong> Agent knowledge was true bottleneck; internal helper trained verified corpus and eliminated hallucination risk.
-              </div>
-            </div>
-
-            <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
-              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">Impact:</span>
-              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-emerald); font-weight: 700;">-45% FRT · CSAT 2/5 → 4.2/5</span>
-            </div>
-          </div>
-
-          <!-- Decision 3: KYC Architecture -->
-          <div class="decision-canvas-card reveal" data-delay="200">
-            <div>
-              <span class="eyebrow" style="margin-bottom: 0.35rem;">PLATFORM · ARCHITECTURE</span>
-              <h3 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">KYC Architecture</h3>
-              
-              <div class="decision-path-compare">
-                <div class="decision-path-item rejected" style="display: flex; align-items: center; gap: 0.5rem;">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
-                  <span><strong>Conventional:</strong> Rely on single third-party OCR API.</span>
-                </div>
-                <div class="decision-path-item chosen" style="display: flex; align-items: center; gap: 0.5rem;">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11.5 14.5 15.5 9.5"></polyline></svg>
-                  <span><strong>Ghanshyam's Move:</strong> Direct DB matching + multi-vendor fallback.</span>
-                </div>
-              </div>
-
-              <div class="decision-signal-box">
-                <strong>Signal:</strong> Vendor downtime caused deposit drop-offs during live events; direct DB lookups ensured 99.9% uptime.
-              </div>
-            </div>
-
-            <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
-              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">Impact:</span>
-              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-emerald); font-weight: 700;">24h → &lt;1 Min · -75% Cost</span>
-            </div>
-          </div>
-
-        </div>
-
-        <div style="text-align: center; margin-top: 2.5rem;">
-          <a href="about.html" class="card-cta-link" style="font-size: 0.95rem;">
-            <span>Read Product Operating System & Academic Background →</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================
-         7. ABOUT ME SNAPSHOT (With Visual Career Genesis)
-         ======================================================================== -->
-    <section class="about-section" id="about" style="padding: 4rem 0;">
-      <div class="container">
-        <div class="reveal">
-          <span class="section-tag">Background</span>
-          <h2 class="section-title">A Little About Me</h2>
-        </div>
-
-        <div class="about-grid" style="margin-top: 2.5rem;">
-          
-          <div class="about-photo-wrapper reveal" data-delay="100">
-            <div class="executive-credentials-card" style="background-color: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 1.6rem 1.4rem; box-shadow: var(--card-shadow); display: flex; flex-direction: column; gap: 1.15rem;">
-              <div style="display: flex; align-items: center; gap: 0.75rem;">
-                <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(99, 102, 241, 0.12); border: 1px solid rgba(99, 102, 241, 0.25); display: flex; align-items: center; justify-content: center; color: var(--accent);">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path></svg>
-                </div>
-                <div>
-                  <div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: var(--text-primary);">Academic &amp; Corporate Honors</div>
-                  <div style="font-size: 0.72rem; color: var(--text-muted); font-family: var(--font-mono);">Recognized Excellence</div>
-                </div>
-              </div>
-
-              <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.85rem;">
-                <div style="display: flex; align-items: flex-start; gap: 0.6rem; padding: 0.6rem 0.75rem; background: rgba(15, 23, 42, 0.4); border-radius: var(--radius-md); border: 1px solid var(--border);">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
-                  <div>
-                    <strong style="color: var(--text-primary); display: block;">Academic Silver Medalist (Rank 2)</strong>
-                    <span style="color: var(--text-muted); font-size: 0.78rem;">PGDM — Information Technology · XISS (CGPA: 8.39/10)</span>
-                  </div>
-                </div>
-
-                <div style="display: flex; align-items: flex-start; gap: 0.6rem; padding: 0.6rem 0.75rem; background: rgba(15, 23, 42, 0.4); border-radius: var(--radius-md); border: 1px solid var(--border);">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
-                  <div>
-                    <strong style="color: var(--text-primary); display: block;">First Class Distinction (66.28%)</strong>
-                    <span style="color: var(--text-muted); font-size: 0.78rem;">B.Sc. — Information Technology · St. Xavier's College</span>
-                  </div>
-                </div>
-
-                <div style="display: flex; align-items: flex-start; gap: 0.6rem; padding: 0.6rem 0.75rem; background: rgba(15, 23, 42, 0.4); border-radius: var(--radius-md); border: 1px solid var(--border);">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <div>
-                    <strong style="color: var(--text-primary); display: block;">CleverTap Certified</strong>
-                    <span style="color: var(--text-muted); font-size: 0.78rem;">User Lifecycle, Segmentation &amp; Behavioral Analytics</span>
-                  </div>
-                </div>
-
-                <div style="display: flex; align-items: flex-start; gap: 0.6rem; padding: 0.6rem 0.75rem; background: rgba(15, 23, 42, 0.4); border-radius: var(--radius-md); border: 1px solid var(--border);">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                  <div>
-                    <strong style="color: var(--text-primary); display: block;">Corporate Excellence Awards</strong>
-                    <span style="color: var(--text-muted); font-size: 0.78rem;">Pinnacle Award (3×) · Power Award (2×)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="about-narrative reveal" data-delay="150">
-            <!-- Visual Career Genesis Stepper -->
-            <div class="visual-stepper" style="margin-bottom: 1.5rem;">
-              <div class="step-card" style="padding: 1rem;">
-                <span class="step-badge-num">Genesis</span>
-                <div class="step-title" style="font-size: 0.85rem;">2,000+ User Calls</div>
-                <div class="step-desc" style="font-size: 0.75rem;">Deep qualitative discovery across India; uncovering friction.</div>
-              </div>
-              <div class="step-card" style="padding: 1rem;">
-                <span class="step-badge-num">Scale</span>
-                <div class="step-title" style="font-size: 0.85rem;">50M+ User Base</div>
-                <div class="step-desc" style="font-size: 0.75rem;">₹8L/day game economy, VIP systems, & Kafka/ClickHouse.</div>
-              </div>
-              <div class="step-card" style="padding: 1rem;">
-                <span class="step-badge-num" style="background-color: rgba(16, 185, 129, 0.1); color: var(--accent-emerald);">Present</span>
-                <div class="step-title" style="font-size: 0.85rem;">0→1 GenAI Pod</div>
-                <div class="step-desc" style="font-size: 0.75rem;">Multilingual voice AI (&lt;800ms), 4 pivots, & B2B ARR.</div>
-              </div>
-            </div>
-
-            <p style="margin-bottom: 0.85rem; font-size: 0.95rem; line-height: 1.55;">
-              <strong>I didn't start my career building roadmaps. I started by talking to users.</strong> 
-              After 2,000+ customer discovery calls across India, my product philosophy is simple: <em>users rarely tell you the exact solution, but they always show you where your assumptions fail.</em>
+            <p class="vip-subtext contact-subtext">
+              Tested across 0→1 GenAI voice platforms (₹1.5Cr+ in 4 months), high-stakes FinTech regulation, and high-throughput data infra serving 50M+ users. Reach out directly through any channel below:
             </p>
 
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.65rem; margin: 1.25rem 0;">
-              <div style="background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.6rem 0.75rem;">
-                <div style="font-family: var(--font-display); font-size: 0.8rem; font-weight: 700; color: var(--text-primary); display: flex; align-items: center; gap: 0.35rem;">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                  Discovery
+            <!-- DIRECT CONTACT CHANNELS (Consolidated 3 Executive Channels) -->
+            <div class="contact-channel-grid">
+              
+              <!-- Channel 1: Email -->
+              <div class="contact-channel-card">
+                <div class="channel-card-main">
+                  <div class="channel-card-icon email-icon-wrap" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                  </div>
+                  <div class="channel-card-info">
+                    <span class="channel-label">Direct Email</span>
+                    <a href="mailto:ghanshyamrock05@gmail.com?subject=Product%20Manager%20Role%20Discussion&body=Hi%20Ghanshyam,%0A%0AI%20reviewed%20your%20product%20portfolio%20and%20would%20like%20to%20connect%20regarding%20a%20Product%20Manager%20role." class="channel-value" title="Send Email">ghanshyamrock05@gmail.com</a>
+                  </div>
                 </div>
-                <div style="font-size: 0.72rem; color: var(--text-secondary); margin-top: 2px;">2,000+ calls before PRDs</div>
-              </div>
-              <div style="background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.6rem 0.75rem;">
-                <div style="font-family: var(--font-display); font-size: 0.8rem; font-weight: 700; color: var(--text-primary); display: flex; align-items: center; gap: 0.35rem;">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
-                  Hypothesis
+                <div class="channel-actions">
+                  <button class="channel-icon-btn copy-email-btn" data-copy-email="ghanshyamrock05@gmail.com" title="Copy Email Address" aria-label="Copy Email Address">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+                  </button>
+                  <a href="mailto:ghanshyamrock05@gmail.com?subject=Product%20Manager%20Role%20Discussion&body=Hi%20Ghanshyam,%0A%0AI%20reviewed%20your%20product%20portfolio%20and%20would%20like%20to%20connect%20regarding%20a%20Product%20Manager%20role." class="channel-icon-btn channel-icon-primary" title="Compose Email" aria-label="Compose Email">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 2L11 13" />
+                      <path d="M22 2L15 22L11 13L2 9L22 2Z" />
+                    </svg>
+                  </a>
                 </div>
-                <div style="font-size: 0.72rem; color: var(--text-secondary); margin-top: 2px;">10+ tests break ceilings</div>
               </div>
-              <div style="background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.6rem 0.75rem;">
-                <div style="font-family: var(--font-display); font-size: 0.8rem; font-weight: 700; color: var(--text-primary); display: flex; align-items: center; gap: 0.35rem;">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect></svg>
-                  Systems
-                </div>
-                <div style="font-size: 0.72rem; color: var(--text-secondary); margin-top: 2px;">Kafka & ClickHouse scale</div>
-              </div>
-            </div>
 
-            <div style="margin-top: 1.25rem; display: flex; gap: 0.65rem; flex-wrap: wrap;">
-              <span class="edu-honor" style="display: inline-flex; align-items: center; gap: 0.45rem;">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
-                <span>Academic Silver Medalist (PGDM, XISS)</span>
-              </span>
-              <span class="edu-honor" style="display: inline-flex; align-items: center; gap: 0.45rem; background: rgba(16, 185, 129, 0.08); color: var(--accent-emerald);">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>CleverTap Certified</span>
-              </span>
-              <span class="edu-honor" style="display: inline-flex; align-items: center; gap: 0.45rem; background: rgba(234, 179, 8, 0.08); color: #b45309;">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path></svg>
-                <span>Pinnacle (3×) & Power (2×) Awards</span>
-              </span>
+              <!-- Channel 2: Phone & WhatsApp Combined in Same Box -->
+              <div class="contact-channel-card contact-channel-phone-wa">
+                <div class="channel-card-main">
+                  <div class="channel-card-icon dual-phone-wa-wrap" aria-hidden="true" title="Call & WhatsApp Available">
+                    <!-- Phone Icon -->
+                    <svg class="icon-phone" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    <!-- WhatsApp Icon -->
+                    <svg class="icon-wa" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.71 4.3 3.79.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.3z"/>
+                    </svg>
+                  </div>
+                  <div class="channel-card-info">
+                    <span class="channel-label">Direct Phone & WhatsApp <span class="response-badge">Fast Response</span></span>
+                    <a href="tel:+918804041515" class="channel-value" title="Call or WhatsApp">+91 8804041515</a>
+                  </div>
+                </div>
+                <div class="channel-actions">
+                  <button class="channel-icon-btn copy-phone-btn" data-copy-phone="+918804041515" title="Copy Phone Number" aria-label="Copy Phone Number">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+                  </button>
+                  <a href="tel:+918804041515" class="channel-icon-btn channel-icon-call" title="Call Directly" aria-label="Call Directly">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  </a>
+                  <a href="https://wa.me/918804041515?text=Hi%20Ghanshyam,%20reviewed%20your%20product%20management%20portfolio%20and%20would%20love%20to%20connect!" target="_blank" rel="noopener noreferrer" class="channel-icon-btn channel-icon-whatsapp" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.71 4.3 3.79.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.3z"/></svg>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Channel 3: LinkedIn -->
+              <div class="contact-channel-card">
+                <div class="channel-card-main">
+                  <div class="channel-card-icon linkedin-icon-wrap" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.6a1.66 1.66 0 1 0 0 3.32 1.66 1.66 0 0 0 0-3.32Z" />
+                    </svg>
+                  </div>
+                  <div class="channel-card-info">
+                    <span class="channel-label">LinkedIn Network <span class="response-badge">Verified PM</span></span>
+                    <a href="https://www.linkedin.com/in/ghanshyam-kumar-singh-8730a120a" target="_blank" rel="noopener noreferrer" class="channel-value" title="LinkedIn Profile">ghanshyam-kumar-singh</a>
+                  </div>
+                </div>
+                <div class="channel-actions">
+                  <a href="https://www.linkedin.com/in/ghanshyam-kumar-singh-8730a120a" target="_blank" rel="noopener noreferrer" class="channel-icon-btn channel-icon-linkedin" title="Open LinkedIn Profile" aria-label="Open LinkedIn Profile">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
             </div>
-            <div style="margin-top: 1.5rem;">
-              <a href="about.html" class="btn-primary" style="padding: 0.75rem 1.4rem;">
-                <span>Read Full Story & Operating System →</span>
-              </a>
+          </div>
+
+          <!-- RIGHT CANVAS: Verified Dossier Blueprint -->
+          <div class="vip-canvas dossier-canvas contact-dossier-canvas">
+            <div class="dossier-card">
+              <div class="dossier-hologram"></div>
+
+              <div class="dossier-header">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <path d="M9 12l2 2 4-4"></path>
+                </svg>
+                <div class="dossier-title">
+                  <h4>Executive Blueprint</h4>
+                  <span>VERIFIED DOSSIER // SEP 2026</span>
+                </div>
+              </div>
+
+              <div class="dossier-body">
+                <div class="d-metric">
+                  <span class="d-label">Scale Impact</span>
+                  <span class="d-value">50,000,000+ Users</span>
+                </div>
+                <div class="d-metric">
+                  <span class="d-label">Revenue Engine</span>
+                  <span class="d-value">₹1.5Cr (4 Mos) / ₹8L Daily</span>
+                </div>
+                <div class="d-metric">
+                  <span class="d-label">Operational Speed</span>
+                  <span class="d-value">-97% Manual Queueing</span>
+                </div>
+                <div class="d-metric">
+                  <span class="d-label">Academic Honor</span>
+                  <span class="d-value">XISS Silver Medalist (Rank 2)</span>
+                </div>
+              </div>
+
+              <div class="dossier-footer-actions">
+                <a href="Ghanshyam_Kumar_Singh_Resume.pdf" download="Ghanshyam_Kumar_Singh_Resume.pdf"
+                  class="btn-laser-scan" title="Download Official Resume PDF">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; margin-right: 6px;">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span class="btn-text" style="text-transform: uppercase;">Download Resume</span>
+                  <div class="laser-line"></div>
+                </a>
+
+                <a href="experience.html" class="btn-dossier-secondary" title="View Career Timeline">
+                  <span>Explore Full Career Timeline <span>→</span></span>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -1205,89 +990,6 @@
       </div>
     </section>
 
-    <!-- ========================================================================
-         8. RESUME DOWNLOAD SECTION
-         ======================================================================== -->
-    <section class="resume-section" id="resume-download" style="padding: 4rem 0; background-color: var(--bg-secondary); border-top: 1px solid var(--border);">
-      <div class="container">
-        <div class="resume-download-box reveal">
-          <span class="section-tag">Recruiter Center</span>
-          <h2 class="section-title" style="font-size: 2rem;">Product Manager Resume</h2>
-          <p class="section-subtitle">
-            The latest comprehensive resume highlighting 4+ years of full-time product management across growth, monetization, B2B SaaS, and 0-to-1 GenAI products.
-          </p>
-
-          <div class="resume-single-card">
-            <div class="resume-single-info">
-              <div class="resume-badge-verified">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                <span>Latest Verified Version (September 2026)</span>
-              </div>
-              <h3 class="resume-single-title">Ghanshyam Kumar Singh — Product Manager</h3>
-              <p class="resume-single-summary">
-                Includes verified metrics: 50M+ users served, 3L+ DAU live ops, Rocket Skill ₹3L→₹8L/day (+167%), VIP Club ARPU expansion ₹8K→₹14K (+75%), D7 retention lift 12%→25%, &lt;1 min automated KYC, GrowthTap internal analytics ($50K+/yr saved), and AIVO GenAI voice pod leadership.
-              </p>
-              <div class="resume-single-tags">
-                <span class="tag-badge">Consumer Growth</span>
-                <span class="tag-badge">Monetization & Pricing</span>
-                <span class="tag-badge">GenAI Voice Products</span>
-                <span class="tag-badge">Retention / LTV</span>
-                <span class="tag-badge">0 → 1 Delivery</span>
-                <span class="tag-badge">B2B SaaS Analytics</span>
-              </div>
-            </div>
-
-            <div class="resume-single-actions">
-              <a href="Ghanshyam_Kumar_Singh_Resume.pdf" download="Ghanshyam_Kumar_Singh_Resume.pdf" class="btn-primary" style="padding: 1rem 1.75rem; font-size: 0.95rem; justify-content: center; width: 100%;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span>Download Resume (PDF)</span>
-              </a>
-              <a href="Ghanshyam_Kumar_Singh_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="padding: 0.85rem 1.5rem; font-size: 0.9rem; justify-content: center; width: 100%;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                <span>Open in New Tab</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================
-         9. CONTACT SECTION (With 1-Click Copy Email)
-         ======================================================================== -->
-    <section class="contact-section" id="contact" style="padding: 4rem 0;">
-      <div class="container">
-        <div class="contact-box reveal">
-          <span class="section-tag">Get in Touch</span>
-          <h2 class="contact-headline">Have an interesting product problem? Let's talk.</h2>
-          <p class="contact-sub">
-            I'm always open to discussing product leadership opportunities, monetization challenges, or GenAI applications.
-          </p>
-
-          <div class="contact-actions">
-            <!-- 1-Click Copy Email Button -->
-            <button class="btn-primary copy-email-btn" data-copy-email="ghanshyamrock05@gmail.com">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-              <span class="email-btn-text-full">Copy Email: ghanshyamrock05@gmail.com</span>
-              <span class="email-btn-text-short">Copy Email Address</span>
-            </button>
-
-            <a href="mailto:ghanshyamrock05@gmail.com" class="btn-secondary" style="padding: 0.95rem 1.4rem;">
-              <span>Send Mail ↗</span>
-            </a>
-
-            <a href="https://www.linkedin.com/in/ghanshyam-kumar-singh-8730a120a" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="padding: 0.95rem 1.6rem;">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.6a1.66 1.66 0 1 0 0 3.32 1.66 1.66 0 0 0 0-3.32Z"/></svg>
-              <span>LinkedIn</span>
-            </a>
-          </div>
-
-          <div style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-muted);">
-            Location: Gurugram, India · Phone: +91 8804041515 · Notice: Serving / 15–30 Days
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <!-- ========================================================================
@@ -1306,13 +1008,606 @@
           <a href="work.html" style="color: var(--text-secondary);">Work</a>
           <a href="experience.html" style="color: var(--text-secondary);">Experience</a>
           <a href="about.html" style="color: var(--text-secondary);">About</a>
+          <a href="#contact" style="color: var(--accent); font-weight: 600;">Contact</a>
           <a href="#" style="color: var(--accent); font-weight: 600;">Back to top ↑</a>
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- ========================================================================
+       11. CASE STUDY MODAL TEMPLATES
+       ======================================================================== -->
+
+<!-- Modal 1: Rocket Skill -->
+    <template id="modal-rocketskill">
+      <div style="padding: 0.5rem 0;">
+        <div class="modal-meta-row">
+          <span class="modal-meta-badge" style="color: #fbbf24; border-color: rgba(251, 191, 36, 0.3); background: rgba(251, 191, 36, 0.1);">Witzeal Technologies · Big Cash</span>
+          <span class="modal-meta-badge" style="color: var(--text-muted); border-color: var(--border); background: transparent;">Associate Product Manager · RMG & Growth</span>
+        </div>
+        <h2 style="font-size: 2.4rem; font-family: var(--font-display); font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.15;">
+          Rocket Skill: 0-to-1 Crash Game Launch & Scaling
+        </h2>
+        <div class="modal-stat-banner" style="color: #fbbf24; border-color: #fbbf24; background: rgba(251, 191, 36, 0.08);">
+          ₹3L → ₹8L/Day Net Commission (+167% Growth) · 40,000 DAU · ~100% Gross Margin
+        </div>
+
+        <div class="modal-metric-grid">
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: #fbbf24;">₹8,00,000</span>
+            <span class="modal-metric-lbl">Peak Daily Net Commission</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val">40,000</span>
+            <span class="modal-metric-lbl">Active Daily Players (DAU)</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: var(--accent-emerald);">0% Burn</span>
+            <span class="modal-metric-lbl">100% Organic In-App Discovery</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val">15 Days</span>
+            <span class="modal-metric-lbl">Concept to Playable MVP</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Strategic Context & Discovery</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem;">
+            Identified an accelerating appetite in the Indian market for short-session, high-tempo multiplier games (e.g. Aviator). Scoped and launched a playable MVP on Big Cash within 15 days, hitting ₹1,00,000/day in two weeks and ₹3,00,000/day by Month 2. However, revenue plateaued because multipliers were artificially capped at 10x, leaving high-rollers without an aspirational jackpot, while flat entry fees failed to separate casual players from high rollers.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Product Execution & Technical Levers</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li><strong>High-Roller Multiplier Curves:</strong> Raised maximum multiplier ceilings to 100x with dynamic probability odds balancing, preserving the 9% platform take rate (rake).</li>
+            <li><strong>10+ A/B Contest Lobby Experiments:</strong> Segmented lobbies by entry fees (low-stake, mid-tier, and high-roller tables), allowing users to self-select by risk appetite.</li>
+            <li><strong>Social Proof & Live Tickers:</strong> Implemented real-time on-screen tickers displaying winning usernames and cash-out multipliers, creating FOMO and social proof.</li>
+            <li><strong>Regulatory Skill Moat:</strong> Indian law strictly prohibits "games of chance" (gambling) but allows "games of skill". Differentiated Rocket Skill by engineering historical multiplier distributions, rolling averages, and a player "Skill Score" into the UI, making decisions data-driven and legally compliant in strictly regulated states.</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Quantified Commercial Impact</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li>Scaled net daily commission from <strong>₹3,00,000 to ₹8,00,000/day (+167% growth)</strong> across two quarters.</li>
+            <li>Doubled active game DAU from <strong>20,000 to 40,000 players</strong>.</li>
+            <li>Delivered <strong>~100% gross margin</strong> on commission with zero paid user acquisition or promotional bonus burn.</li>
+          </ul>
+        </div>
+
+        <div class="modal-lesson-box">
+          <h4>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            PM Hard Lesson: The ₹1 Minimum Bet Failure
+          </h4>
+          <p>
+            When we first raised multiplier ceilings to 100x, we kept the minimum bet at ₹1. Revenue showed zero statistically significant lift because players played 100x tables with ₹1–₹5 bets—thrill-seeking at zero risk. It was only when we coupled the 100x ceiling with segmented minimum bets (₹1 for 10x, ₹5 for 25x, ₹10 for 50x, ₹25 for 100x) that ARPU surged. <em>Takeaway: Aspiration without commitment is entertainment, not monetization.</em>
+          </p>
+        </div>
+      </div>
+    </template>
+
+    <!-- Modal 2: MySmartAssistant -->
+    <template id="modal-mysa">
+      <div style="padding: 0.5rem 0;">
+        <div class="modal-meta-row">
+          <span class="modal-meta-badge" style="color: #38bdf8; border-color: rgba(56, 189, 248, 0.3); background: rgba(56, 189, 248, 0.1);">AIVO Technologies</span>
+          <span class="modal-meta-badge" style="color: var(--text-muted); border-color: var(--border); background: transparent;">Product Manager · GenAI & Voice (Pod of 8)</span>
+        </div>
+        <h2 style="font-size: 2.4rem; font-family: var(--font-display); font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.15;">
+          MySmartAssistant: Autonomous Voice AI & Call Intelligence
+        </h2>
+        <div class="modal-stat-banner" style="color: #38bdf8; border-color: #38bdf8; background: rgba(56, 189, 248, 0.08);">
+          ₹1.5 Crore+ in 4 Months · 20,000+ Paid Subscribers · 100K+ Downloads in 30 Days
+        </div>
+
+        <div class="modal-metric-grid">
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: #38bdf8;">₹1.5 Cr+</span>
+            <span class="modal-metric-lbl">Consumer Revenue (4 Mos)</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val">100,000+</span>
+            <span class="modal-metric-lbl">Downloads within 30 Days</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: var(--accent-emerald);">₹2L+ MRR</span>
+            <span class="modal-metric-lbl">B2B Month 1 Revenue</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val">~92%</span>
+            <span class="modal-metric-lbl">Task Resolution Accuracy</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Strategic Problem & Discovery Insights</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem;">
+            A quantitative audit revealed an 80%+ drop-off in user task completion when relying strictly on mobile push notifications. In 500+ discovery interviews with Indian executives and SMBs, three truths emerged:
+          </p>
+          <div class="modal-callout-quote">
+            "I missed my car insurance renewal because the notification just disappeared in my app clutter. If someone had actually called me, I would have renewed immediately." — SMB Owner, Discovery Interview
+          </div>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li>Push notifications get buried in OS noise; critical deadlines demand direct phone-call escalation.</li>
+            <li>SMB owners lose 2–3 hours every day to spam and sales calls, but cannot turn phones off due to client emergencies.</li>
+            <li>Users demonstrated 3× higher Willingness to Pay (WTP) for voice-assisted phone automation over text-only chat.</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Product Architecture & Levers Shipped</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li><strong>Call Assist (Autonomous Inbound Call Screener):</strong> Cellular call interception where AI answers contextually, screens spam, transcribes intent, and dispatches instant structured summaries to WhatsApp.</li>
+            <li><strong>Autonomous Phone Call Escalation:</strong> Automated escalation matrix: if a push notification is unacknowledged after N minutes, backend initiates an outbound natural-voice phone call.</li>
+            <li><strong>Document Vault & OCR Pipeline:</strong> Users upload policies/RCs; OCR + LLM extracts expiry dates and grace periods, pre-populating renewal schedules.</li>
+            <li><strong>MySA Live (Real-Time Duplex Voice):</strong> Low-latency WebRTC duplex voice interface with natural barge-in support.</li>
+            <li><strong>MySA for Business (7-Day MVP):</strong> Captured organic B2B pull by shipping an enterprise self-serve console with custom RAG knowledge uploads, concurrent call lines, and CRM webhooks in 7 business days.</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Quantified Commercial Impact</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li>Scaled from 40,000 to <strong>100,000+ app downloads in 30 days</strong> of Call Assist launch.</li>
+            <li>Acquired <strong>20,000+ active paid subscribers</strong>, generating <strong>₹1.5 Crore ($180K+) in 4 months</strong>.</li>
+            <li>Closed <strong>20+ B2B enterprise clients</strong> in Month 1, achieving <strong>₹2,00,000+ MRR</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="modal-lesson-box">
+          <h4>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Strategic Prioritization: RICE + MoSCoW Framework
+          </h4>
+          <p>
+            We intentionally deprioritized duplex voice chat (MySA Live) in Sprint 1 to ship Call Assist first. Voice chat was commoditizing rapidly (ChatGPT Voice), whereas Call Assist created an entirely new category in India with 3× higher WTP and organic WhatsApp virality. Call Assist drove 60,000 of the 100,000 downloads in the first 30 days.
+          </p>
+        </div>
+      </div>
+    </template>
+
+    <!-- Modal 3: VIP Club -->
+    <template id="modal-vip">
+      <div style="padding: 0.5rem 0;">
+        <div class="modal-meta-row">
+          <span class="modal-meta-badge" style="color: #c084fc; border-color: rgba(192, 132, 252, 0.3); background: rgba(192, 132, 252, 0.1);">Witzeal Technologies · Big Cash</span>
+          <span class="modal-meta-badge" style="color: var(--text-muted); border-color: var(--border); background: transparent;">Associate Product Manager · Monetization</span>
+        </div>
+        <h2 style="font-size: 2.4rem; font-family: var(--font-display); font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.15;">
+          VIP Club Revamp: Tiered Monetization & Retention Hooks
+        </h2>
+        <div class="modal-stat-banner" style="color: #c084fc; border-color: #c084fc; background: rgba(192, 132, 252, 0.08);">
+          +75% VIP ARPU (₹8,000 → ₹14,000) · 65,000 Active VIP DAU · ₹1.5 Cr/Day Deposits
+        </div>
+
+        <div class="modal-metric-grid">
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: #c084fc;">+75%</span>
+            <span class="modal-metric-lbl">VIP ARPU (₹8K → ₹14K)</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val">65,000</span>
+            <span class="modal-metric-lbl">Active VIP DAU (+44%)</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: var(--accent-emerald);">₹1.5 Cr</span>
+            <span class="modal-metric-lbl">Daily Gross VIP Deposits</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val">81%</span>
+            <span class="modal-metric-lbl">Tier Renewal Retention</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Strategic Context & The Power-Law Reality</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem;">
+            A cohort analysis of Big Cash revealed extreme revenue concentration: <strong>20% of users (VIP) generated 85% of total platform commission and 89% of all deposits</strong>. Yet, high-rollers were stagnating in a legacy, single ₹5,000 wagering threshold. Once reached, there were zero higher milestones, depressing ARPU and leading players to churn to competing platforms.
+          </p>
+          <div class="modal-callout-quote">
+            "I don't care about being VIP. What does it even give me?" — Top Depositor (₹2L+ monthly wagering), Discovery Call
+          </div>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Product Architecture & Levers Shipped</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li><strong>Dynamic 3-Tier Wagering Progression:</strong> Built a milestone engine: Tier 1 VIP (₹5,000/mo), Tier 2 VIP Plus (₹50,000/mo), and Tier 3 VIP Pro (₹1,00,000/mo).</li>
+            <li><strong>Operational & Gameplay Perks:</strong> Escalated daily withdrawal limits, up to 10x multiplier on active weekly gameplay streaks, and dedicated VIP-only tournament tables.</li>
+            <li><strong>Gamification & Discovery:</strong> Placed VIP Club directly in primary bottom navigation; triggered dynamic progress bars when users hit 60% of tier target to stimulate deposit top-ups.</li>
+            <li><strong>Predictive Personalization:</strong> Segmented high-rollers based on betting velocity to deliver dynamic, personalized Add-Cash deposit bonuses.</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Quantified Commercial Impact</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li>VIP ARPU surged by <strong>+75% from ₹8,000 to ₹14,000</strong> within one quarter.</li>
+            <li>Active VIP DAU expanded from <strong>45,000 to 65,000 (+44%)</strong>.</li>
+            <li>VIP daily conversion rate jumped from 1,100 to <strong>1,800 users/day</strong>; tier renewal retention increased from <strong>61% to 81%</strong>.</li>
+            <li>Gross VIP daily deposit volume rose from <strong>₹1.2 Crore/day to ₹1.5 Crore/day</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="modal-lesson-box">
+          <h4>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            Trade-off: Why 4-Tier & 5-Tier Models Were Rejected
+          </h4>
+          <p>
+            We evaluated 4 and 5 tiers, but mobile-first usability testing proved that 3 tiers maximized psychological momentum without cognitive clutter. With 4+ tiers, progress bars became illegible on mobile screens, and tier labels truncated. Furthermore, tiered referral bonuses for VIPs failed completely because high-rollers earn more from game winnings than referral cash. We killed the referral feature within 4 weeks and redirected engineering to exclusive VIP tournament tables.
+          </p>
+        </div>
+      </div>
+    </template>
+
+    <!-- Modal 4: CRM + AI Support Automation -->
+    <template id="modal-crmai">
+      <div style="padding: 0.5rem 0;">
+        <div class="modal-meta-row">
+          <span class="modal-meta-badge" style="color: #fb7185; border-color: rgba(251, 113, 133, 0.3); background: rgba(251, 113, 133, 0.1);">Witzeal Technologies · Big Cash</span>
+          <span class="modal-meta-badge" style="color: var(--text-muted); border-color: var(--border); background: transparent;">Associate Product Manager · Support & AI Ops</span>
+        </div>
+        <h2 style="font-size: 2.4rem; font-family: var(--font-display); font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.15;">
+          End-to-End CRM Revamp & AI Support Automation
+        </h2>
+        <div class="modal-stat-banner" style="color: #fb7185; border-color: #fb7185; background: rgba(251, 113, 133, 0.08);">
+          FRT >6 Hours → <2 Minutes · CSAT 2.0 → 4.2 / 5.0 · 40–50% Autonomous Deflection
+        </div>
+
+        <div class="modal-metric-grid">
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: #fb7185;"><2 Mins</span>
+            <span class="modal-metric-lbl">First Response Time (FRT)</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: var(--accent-emerald);">4.2 / 5</span>
+            <span class="modal-metric-lbl">CSAT Score (Up from 2.0)</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val">40%–50%</span>
+            <span class="modal-metric-lbl">Autonomous Ticket Deflection</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val">1–2 Hours</span>
+            <span class="modal-metric-lbl">Resolution TAT (from 24-48h)</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Strategic Context & Operational Breakdown</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem;">
+            On a platform serving 50M+ users, support operations were on the verge of collapse: users waited over 6 hours for a first human response, and resolution took 24–48 hours. Only 3 human agents were on duty during off-hours to handle thousands of payment disputes and manual KYC tickets. Worse, 40–50% of incoming volume consisted of repetitive low-intent queries ("Where is my balance?") or abusive rants following gaming losses.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Product Execution & Technical Levers</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li><strong>Executive Buy-in Modeling:</strong> Built a predictive model correlating customer support wait times directly with paid player churn, securing executive budget for CRM infrastructure.</li>
+            <li><strong>Intelligent Freshchat Queue Routing:</strong> Integrated automated tier-based routing: VIP and high-deposit players were automatically directed to senior specialist queues with sub-minute SLAs.</li>
+            <li><strong>L1 Autonomous AI Support Bot:</strong> Deployed a conversational triage bot powered by RAG and core game-state APIs to autonomously resolve balance, withdrawal, and rule queries without human touch.</li>
+            <li><strong>Agent Helper AI Copilot:</strong> Built an internal copilot in the agent UI that analyzed real-time game logs, wallet transactions, and ticket context to recommend verified one-click resolutions.</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Quantified Operational Impact</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li>First Response Time (FRT) collapsed from <strong>>6 hours down to under 2 minutes</strong>.</li>
+            <li>Overall CSAT score increased from <strong>2.0 / 5.0 to 4.2 / 5.0</strong>.</li>
+            <li>Standard resolution turnaround dropped from <strong>24–48 hours to 1–2 hours</strong>; complex escalations fell from 4 days to &lt;12 hours.</li>
+            <li>Deflected <strong>40%–50% of routine tickets autonomously</strong>, relieving human agents to focus on fraud and payment edge cases.</li>
+          </ul>
+        </div>
+
+        <div class="modal-lesson-box">
+          <h4>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            PM Philosophy: Ground Truth in Support
+          </h4>
+          <p>
+            "The best products are built from the support queue, not the roadmap." At Witzeal, the support queue was our most unfiltered source of product friction. The AI triage bot, the VIP priority queue, and the KYC overhaul all shipped because of user pain uncovered in support tickets, not stakeholder intuition.
+          </p>
+        </div>
+      </div>
+    </template>
+
+    <!-- Modal 5: KYC Platform & TDS Engine -->
+    <template id="modal-kyc">
+      <div style="padding: 0.5rem 0;">
+        <div class="modal-meta-row">
+          <span class="modal-meta-badge" style="color: #34d399; border-color: rgba(52, 211, 153, 0.3); background: rgba(52, 211, 153, 0.1);">Witzeal Technologies · Big Cash</span>
+          <span class="modal-meta-badge" style="color: var(--text-muted); border-color: var(--border); background: transparent;">Associate Product Manager · FinTech & Compliance</span>
+        </div>
+        <h2 style="font-size: 2.4rem; font-family: var(--font-display); font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.15;">
+          Automated KYC Architecture & Section 194BA TDS Engine
+        </h2>
+        <div class="modal-stat-banner" style="color: #34d399; border-color: #34d399; background: rgba(52, 211, 153, 0.08);">
+          -97% Manual Review Queue · <1 Min Verification · 5-Day Launch of 30% TDS Refund Loop
+        </div>
+
+        <div class="modal-metric-grid">
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: #34d399;">-97%</span>
+            <span class="modal-metric-lbl">Manual Queue (1,500→30/d)</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val"><1 Min</span>
+            <span class="modal-metric-lbl">Auto-Verification TAT</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: var(--accent-emerald);">₹1.00</span>
+            <span class="modal-metric-lbl">Cost / Check (from ₹4.00)</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val">900,000</span>
+            <span class="modal-metric-lbl">Zero-Downtime User Migration</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Regulatory Crisis & Conversion Bottlenecks</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem;">
+            Government mandates required exact legal name matching between bank accounts and PAN cards. Legacy verification forced users to upload physical card photos, creating 12–24 hour delays. Generic name-matching algorithms consistently failed on Indian naming nuances (swapped first/last names, honorifics, initials), pushing 1,000–1,500 legitimate users per day into a manual review backlog. Simultaneously, Section 194BA introduced a flat 30% tax on net winnings from the very first rupee, threatening massive high-roller churn.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Product Architecture & Technical Levers</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li><strong>Zero-Upload Verification:</strong> Eliminated image uploads; users enter PAN & DOB, pulling official legal records from NSDL in &lt;60 seconds.</li>
+            <li><strong>Multi-Vendor Fallback Routing:</strong> Integrated Cashfree ↔ AuthBridge with automated latency/health monitoring, achieving 98%+ uptime and renegotiating costs by 75% (₹4.00 down to ₹1.00/call).</li>
+            <li><strong>Proprietary Indian Name-Matching Algorithm:</strong> Engineered a phonetic and structural algorithm handling initials (G.K. Singh ↔ Ghanshyam Kumar Singh), inversions, and honorific stripping with 95% accuracy.</li>
+            <li><strong>Section 194BA TDS Refund Bonus Engine:</strong> Designed and deployed an automated tax-offset bonus wallet in 5 days. Calculated 30% tax in real time, deducted it for compliance, and instantly credited equivalent bonus cash back to the player's wallet.</li>
+            <li><strong>Zero-Downtime Data Migration:</strong> Successfully migrated 900,000 legacy KYC users to the new compliant flow within 3 weeks without disrupting live tables.</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Quantified Commercial Impact</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li>Slashed manual verification backlog by <strong>97% (from 1,000–1,500 down to 30–50/day)</strong>.</li>
+            <li>Boosted D0 KYC verification completion from <strong>60% to 90%</strong>.</li>
+            <li>Cut verification expenses by <strong>75%</strong> while maintaining <strong>95% name-matching accuracy</strong>.</li>
+            <li>The 30% TDS refund went viral across WhatsApp and YouTube communities, turning a compliance crisis into an organic customer acquisition loop.</li>
+          </ul>
+        </div>
+
+        <div class="modal-lesson-box">
+          <h4>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            PM Philosophy: Regulations Are Product Features
+          </h4>
+          <p>
+            When the 30% tax mandate was announced, competitors passed the full burden onto players. By viewing regulation as a product design challenge, we engineered a promotional refund engine offset by restructured payment fees. We protected company gross margins while cementing player trust as the first platform in India to solve the tax burden.
+          </p>
+        </div>
+      </div>
+    </template>
+
+    <!-- Modal 6: GrowthTap Analytics -->
+    <template id="modal-growthtap">
+      <div style="padding: 0.5rem 0;">
+        <div class="modal-meta-row">
+          <span class="modal-meta-badge" style="color: #818cf8; border-color: rgba(129, 140, 248, 0.3); background: rgba(129, 140, 248, 0.1);">AIVO Technologies</span>
+          <span class="modal-meta-badge" style="color: var(--text-muted); border-color: var(--border); background: transparent;">Product Manager · Data Infrastructure</span>
+        </div>
+        <h2 style="font-size: 2.4rem; font-family: var(--font-display); font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.15;">
+          GrowthTap: Customer Engagement & Product Analytics Engine
+        </h2>
+        <div class="modal-stat-banner" style="color: #818cf8; border-color: #818cf8; background: rgba(129, 140, 248, 0.08);">
+          $50,000/Year SaaS Licensing Eliminated · Sub-Second Latency · 50M+ Users Tracked
+        </div>
+
+        <div class="modal-metric-grid">
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: #818cf8;">$50,000</span>
+            <span class="modal-metric-lbl">Annual SaaS License Saved</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val"><1 Sec</span>
+            <span class="modal-metric-lbl">Event Query Ingestion Latency</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: var(--accent-emerald);">-60%</span>
+            <span class="modal-metric-lbl">Client App Integration Time</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val">15+</span>
+            <span class="modal-metric-lbl">Omnichannel Campaign Templates</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Build vs. Buy Evaluation & Problem</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem;">
+            The company was spending $50,000/year on CleverTap. Attempting to transition to GA4 failed because Firebase-to-BigQuery pipelines suffered a 6-to-12-hour processing lag—making real-time win-back or deposit-drop triggers impossible. Furthermore, GA4 lacked single-user deterministic event timeline tracing and could not trigger instant push/in-app modals based on multi-property nested events.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Product Architecture & Levers Shipped</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li><strong>Apache Kafka + ClickHouse Pipeline:</strong> Architected a high-throughput event broker feeding a columnar ClickHouse database, enabling sub-second analytical querying across tens of millions of raw events.</li>
+            <li><strong>Proprietary Multi-Platform SDKs:</strong> Coordinated the delivery of lightweight SDKs across Android, iOS, Web, and Flutter with offline event batching and automated session tracking, cutting integration time by 60%.</li>
+            <li><strong>Omnichannel Campaign Engine:</strong> Built a campaign composer supporting scheduled and behavioral push, in-app modals, and WhatsApp alerts segmented by real-time event filters.</li>
+            <li><strong>Multi-Tenant Scoping & RBAC:</strong> Engineered Role-Based Access Control and multi-tenant scoping, empowering marketing, product, and QA pods to operate isolated analytical environments.</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Quantified Operational Impact</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li>Eliminated <strong>$50,000/year</strong> in third-party SaaS fees, paying for the underlying infrastructure in weeks.</li>
+            <li>Replaced 6–12 hour data processing lag with <strong>sub-second real-time event streaming</strong>.</li>
+            <li>Unified analytics and lifecycle automation across MySA B2C, MySA Business, and web properties with 100% data ownership.</li>
+          </ul>
+        </div>
+
+        <div class="modal-lesson-box">
+          <h4>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Scope Discipline: What We Intentionally Excluded
+          </h4>
+          <p>
+            We intentionally excluded ML-based churn predictions and visual in-app editors from the MVP. Both would have required dedicated ML training pipelines and bloated SDK size. By sticking to rule-based event triggers on ClickHouse, we delivered 90% of CleverTap's real-world business value in 8 weeks instead of 6+ months.
+          </p>
+        </div>
+      </div>
+    </template>
+
+    <!-- Modal 7: Lavola.ai GenAI Companion -->
+    <template id="modal-lavola">
+      <div style="padding: 0.5rem 0;">
+        <div class="modal-meta-row">
+          <span class="modal-meta-badge" style="color: #f472b6; border-color: rgba(244, 114, 182, 0.3); background: rgba(244, 114, 182, 0.1);">AIVO Technologies</span>
+          <span class="modal-meta-badge" style="color: var(--text-muted); border-color: var(--border); background: transparent;">Product Manager · GenAI & Conversational AI (Pod of 5)</span>
+        </div>
+        <h2 style="font-size: 2.4rem; font-family: var(--font-display); font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.15;">
+          Lavola.ai: Conversational GenAI Companion & Guardrails
+        </h2>
+        <div class="modal-stat-banner" style="color: #f472b6; border-color: #f472b6; background: rgba(244, 114, 182, 0.08);">
+          92% Task Accuracy · Zero PII Leaks · Real-Time Duplex Voice Calling
+        </div>
+
+        <div class="modal-metric-grid">
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: #f472b6;">92%</span>
+            <span class="modal-metric-lbl">Task Resolution Accuracy</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val">&lt;800ms</span>
+            <span class="modal-metric-lbl">Duplex Voice Latency</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: var(--accent-emerald);">0 Leaks</span>
+            <span class="modal-metric-lbl">Strict PII & Brand Safety</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val">3 Personas</span>
+            <span class="modal-metric-lbl">Empathetic / Companion / Mentor</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Strategic Context & User Discovery</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem;">
+            Demographic discovery highlighted acute digital loneliness, chronic workplace stress, and burnout among Gen Z and millennial digital natives. Existing market solutions (traditional rule-based chatbots or generic raw LLM wrappers) felt robotic, lacked persistent conversational memory, suffered high audio latency, and possessed zero distinct personality boundaries or safety guardrails.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Product Architecture & Technical Levers</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li><strong>Multi-Persona Prompt Orchestration:</strong> Engineered system prompts, conversational memory checkpoints, and safety guardrails across three specialized personas (Empathetic Listener, Conversational Companion, and Productivity & Wellness Mentor).</li>
+            <li><strong>Low-Latency Duplex Voice Calling:</strong> Architected real-time, bidirectional voice streaming with natural interruptions and barge-in handling, eliminating the frustrating "walkie-talkie" latency.</li>
+            <li><strong>Hands-On Full-Stack Delivery:</strong> Personally developed and launched the responsive web landing and acquisition interface to bypass engineering bottlenecks and accelerate go-to-market.</li>
+            <li><strong>Crisis Detection & Semantic Guardrails:</strong> Built enterprise safety boundaries, input sanitization pipelines, and real-time sentiment classifiers that automatically redirect crisis queries to verified professional helplines with zero PII leaks.</li>
+            <li><strong>Dynamic Subscription Paywalls:</strong> Formulated tiered monetization models gated by daily voice minutes, persona access depth, and premium audio features.</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Quantified Commercial & Safety Impact</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li>Delivered <strong>92% task resolution accuracy</strong> in closed beta testing environments.</li>
+            <li>Zero PII leakage and zero prompt injection vulnerabilities recorded during red-team audits.</li>
+            <li>Sub-800ms speech-to-speech response latency achieved across mobile web sessions.</li>
+          </ul>
+        </div>
+
+        <div class="modal-lesson-box">
+          <h4>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            PM Craft: The Cold-Start Empathy Paradox
+          </h4>
+          <p>
+            Early beta testing revealed that users felt alienated if the AI was too clinical, but felt uncomfortable if the AI was excessively cheerful. We solved this by implementing an adaptive sentiment calibration loop: the AI mirrors the user's emotional tempo in the first 3 conversation turns before gradually introducing grounded supportive guidance.
+          </p>
+        </div>
+      </div>
+    </template>
+
+    <!-- Modal 8: Qualitative Research & D0-D7 Retention -->
+    <template id="modal-research">
+      <div style="padding: 0.5rem 0;">
+        <div class="modal-meta-row">
+          <span class="modal-meta-badge" style="color: #60a5fa; border-color: rgba(96, 165, 250, 0.3); background: rgba(96, 165, 250, 0.1);">Witzeal Technologies · Big Cash</span>
+          <span class="modal-meta-badge" style="color: var(--text-muted); border-color: var(--border); background: transparent;">Associate PM (from Intern) · Growth & Research</span>
+        </div>
+        <h2 style="font-size: 2.4rem; font-family: var(--font-display); font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.15;">
+          D0–D7 Onboarding & 2,000+ Qualitative Discovery
+        </h2>
+        <div class="modal-stat-banner" style="color: #60a5fa; border-color: #60a5fa; background: rgba(96, 165, 250, 0.08);">
+          D7 Retention Doubled (12% → 25%) · 2,000+ Discovery Calls · -20% Bonus Burn
+        </div>
+
+        <div class="modal-metric-grid">
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: #60a5fa;">12% → 25%</span>
+            <span class="modal-metric-lbl">D7 Player Retention</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val">2,000+</span>
+            <span class="modal-metric-lbl">1-on-1 Discovery Calls</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: var(--accent-emerald);">-20%</span>
+            <span class="modal-metric-lbl">Bonus Burn Reduction</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val">+10% WoW</span>
+            <span class="modal-metric-lbl">Gross Merchandise Value (GMV)</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Discovery Insights: The Cognitive Overload Problem</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem;">
+            Deep funnel analysis showed severe drop-offs between signup (D0) and Day 7. Conducting over 2,000 qualitative user interviews across India revealed extreme cognitive overload: new players were confronted by 15+ game lobbies, lacked confidence in real-money contests, and experienced zero psychological momentum to return on Day 1 or Day 2.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Product Strategy & Growth Experiments</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li><strong>Campaign-to-Game Journey Mapping:</strong> Matched initial lobby views to the specific acquisition channel (e.g. Poker ad clickers were routed directly to Poker tutorials), dramatically slashing bounce rate.</li>
+            <li><strong>Dynamic Add-Cash Recommendation Engine:</strong> Built personalized deposit bonus tiers segmented by acquisition channel, device type, and geographical tier.</li>
+            <li><strong>Habit-Forming Streak Mechanics:</strong> Engineered 7-day progressive login streak rewards with multiplier escalations and micro-milestone quests.</li>
+            <li><strong>Guided Practice Overlays:</strong> Built interactive tooltips directing first-time players toward practice tables to build confidence before staking cash.</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Quantified Commercial Impact</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li>D7 Player Retention doubled from <strong>12% to 25% (+10% WoW improvement)</strong>.</li>
+            <li>Active D7 Users lifted from <strong>22% to 48%</strong>, driving a <strong>+10% WoW increase in GMV</strong>.</li>
+            <li>Drove <strong>+12% purchase conversion</strong> and <strong>+10% new user Add-Cash conversion</strong>.</li>
+            <li>Cut promotional bonus burn by <strong>20%</strong> via targeted incentive eligibility gates.</li>
+          </ul>
+        </div>
+
+        <div class="modal-lesson-box">
+          <h4>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            PM Hard Lesson: The ₹4–5 Lakh Bonus Burn Failure
+          </h4>
+          <p>
+            During an early retention push, I disbursed blanket deposit bonuses across dormant users, burning ₹4–5 Lakhs in days. Multi-accounting users claimed bonuses across 3–4 accounts and withdrew immediately. This taught me that <em>generosity without segmentation is just waste</em>. I subsequently enforced mandatory single-account device fingerprinting and 4-tier predictive bonus eligibility, reducing overall bonus burn by 20% while lifting reactivation.
+          </p>
+        </div>
+      </div>
+    </template>
+
   <!-- Scripts -->
   <script src="app.js"></script>
+  <script src="revamp.js"></script>
 </body>
+
 </html>

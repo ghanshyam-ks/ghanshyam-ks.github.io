@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +13,7 @@
   
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="revamp.css">
 </head>
 <body>
 
@@ -37,27 +38,21 @@
       </nav>
 
       <div class="header-actions">
-        <!-- Theme Toggle -->
-        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light and dark theme">
-          <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-          <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-        </button>
+        <!-- Theme Toggle Switch -->
+        <div class="theme-switch-wrapper" style="margin-right: 15px;">
+          <label class="theme-switch" for="theme-toggle">
+            <input type="checkbox" id="theme-toggle" aria-label="Toggle light and dark theme" />
+            <span class="slider"></span>
+          </label>
+        </div>
 
-        <a href="index.html#contact" class="btn-header-cta">
-          <span>Let's talk</span>
-          <span aria-hidden="true">→</span>
+        <a href="index.html#contact" class="btn-header-cta" aria-label="Let's talk — Contact Ghanshyam" title="Let's talk">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+          <span class="cta-text">Let's talk</span>
+          <span class="cta-arrow" aria-hidden="true">→</span>
         </a>
 
         <!-- Mobile Hamburger Button -->
@@ -74,18 +69,66 @@
 
   <!-- Mobile Drawer Overlay -->
   <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-      <span class="brand-logo">GHANSHYAM</span>
-      <button class="close-mobile-menu" aria-label="Close menu" style="color: var(--text-primary); cursor: pointer; padding: 0.5rem; display: flex; align-items: center; justify-content: center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand-logo" style="text-decoration: none;">
+        <span>GHANSHYAM</span>
+        <span class="brand-badge" style="font-size: 0.7rem; padding: 0.15rem 0.45rem; background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 6px; color: var(--accent); font-weight: 800; letter-spacing: 0.05em; margin-left: 0.4rem;">PM</span>
+      </a>
+      <button class="close-mobile-menu" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
     </div>
+
+    <!-- Theme Toggle inside Menu -->
+    <div class="mobile-theme-card">
+      <div class="mobile-theme-meta">
+        <div class="mobile-theme-icon-wrap">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </div>
+        <div>
+          <div class="mobile-theme-title">Theme Mode</div>
+          <div class="mobile-theme-status" id="mobile-theme-status">Dark Mode</div>
+        </div>
+      </div>
+      <label class="theme-switch" for="mobile-theme-toggle">
+        <input type="checkbox" id="mobile-theme-toggle" aria-label="Toggle light and dark theme" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <!-- Nav Links -->
     <ul class="mobile-nav-list">
       <li><a href="index.html" class="mobile-nav-link">Home <span>→</span></a></li>
       <li><a href="work.html" class="mobile-nav-link">Case Studies <span>→</span></a></li>
       <li><a href="experience.html" class="mobile-nav-link">Experience <span>→</span></a></li>
-      <li><a href="about.html" class="mobile-nav-link">About Me <span>→</span></a></li>
+      <li><a href="about.html" class="mobile-nav-link active">About Me <span>→</span></a></li>
       <li><a href="Ghanshyam_Kumar_Singh_Resume.pdf" class="mobile-nav-link" target="_blank">Download Resume <span>→</span></a></li>
-      <li><a href="index.html#contact" class="mobile-nav-link" style="color: var(--accent);">Contact & Connect <span>→</span></a></li>
     </ul>
+
+    <!-- Bottom Drawer CTA -->
+    <div class="mobile-drawer-cta-wrap">
+      <a href="index.html#contact" class="mobile-drawer-cta">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+        </svg>
+        <span>Let's talk — Get in touch</span>
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
   </div>
 
   <main>
@@ -111,7 +154,7 @@
     <!-- ========================================================================
          3. PERSONAL NARRATIVE & PHOTO
          ======================================================================== -->
-    <section class="about-section" style="padding: 4rem 0;">
+    <section class="about-section" style="padding: 2.5rem 0;">
       <div class="container">
         <div class="about-grid">
           
@@ -146,10 +189,10 @@
     <!-- ========================================================================
          4. THE 5-STEP PRODUCT OPERATING SYSTEM
          ======================================================================== -->
-    <section class="how-i-work-section" style="padding: 4rem 0; background-color: var(--bg-secondary); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <section class="how-i-work-section" style="padding: 2.5rem 0; background-color: var(--bg-secondary); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
       <div class="container">
         <div class="reveal">
-          <span class="section-tag">Methodology</span>
+
           <h2 class="section-title">My Product Operating System</h2>
           <p class="section-subtitle">
             A repeatable framework for moving from ambiguous customer signals to durable commercial outcomes.
@@ -205,10 +248,10 @@
     <!-- ========================================================================
          5. STRATEGIC JUDGEMENT & TRADE-OFFS
          ======================================================================== -->
-    <section class="decisions-section" style="padding: 4rem 0;">
+    <section class="decisions-section" style="padding: 2.5rem 0;">
       <div class="container">
         <div class="reveal">
-          <span class="section-tag">Strategic Judgement</span>
+
           <h2 class="section-title">How I Make Product Trade-offs</h2>
           <p class="section-subtitle">
             Strong product management is defined by what you choose <em>not</em> to build. Real trade-offs and the signals that drove them.
@@ -264,10 +307,10 @@
     <!-- ========================================================================
          6. EDUCATION & ACADEMIC HONORS
          ======================================================================== -->
-    <section class="education-skills-section" style="padding: 4rem 0; background-color: var(--bg-secondary); border-top: 1px solid var(--border);">
+    <section class="education-skills-section" style="padding: 2.5rem 0; background-color: var(--bg-secondary); border-top: 1px solid var(--border);">
       <div class="container">
         <div class="reveal">
-          <span class="section-tag">Foundations & Recognition</span>
+
           <h2 class="section-title">Education & Recognized Excellence</h2>
         </div>
 
@@ -317,10 +360,10 @@
     <!-- ========================================================================
          7. WHAT I WANT TO BUILD NEXT
          ======================================================================== -->
-    <section class="looking-for-section" style="padding: 4rem 0;">
+    <section class="looking-for-section" style="padding: 2.5rem 0;">
       <div class="container">
         <div class="reveal">
-          <span class="section-tag">Future Conviction</span>
+
           <h2 class="section-title">What I Want to Build Next</h2>
         </div>
 
@@ -353,7 +396,11 @@
         <div class="footer-credo">
           Build. Measure. Learn. Scale.
         </div>
-        <div>
+        <div style="display: flex; gap: 1.25rem;">
+          <a href="work.html" style="color: var(--text-secondary);">Work</a>
+          <a href="experience.html" style="color: var(--text-secondary);">Experience</a>
+          <a href="about.html" style="color: var(--text-secondary);">About</a>
+          <a href="index.html#contact" style="color: var(--accent); font-weight: 600;">Contact</a>
           <a href="#" style="color: var(--accent); font-weight: 600;">Back to top ↑</a>
         </div>
       </div>
@@ -361,5 +408,6 @@
   </footer>
 
   <script src="app.js"></script>
+  <script src="revamp.js"></script>
 </body>
 </html>

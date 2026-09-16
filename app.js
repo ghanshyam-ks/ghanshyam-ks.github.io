@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTimelineAnimation();
   initNavTracking();
   initEmailCopy();
+  initContactAnchorScroll();
   initWorkFilters();
   initFloatingNav();
   initCaseStudyToc();
@@ -32,14 +33,24 @@ function initTheme() {
   const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
   applyTheme(initialTheme);
 
-  function toggle() {
-    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    applyTheme(newTheme);
-  }
+  // Listen to system preference changes if no saved theme
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    if (!localStorage.getItem('portfolio-theme')) {
+      applyTheme(e.matches ? 'dark' : 'light');
+    }
+  });
 
-  if (toggleBtn) toggleBtn.addEventListener('click', toggle);
-  if (mobileToggleBtn) mobileToggleBtn.addEventListener('click', toggle);
+  if (toggleBtn) {
+    toggleBtn.addEventListener('change', (e) => {
+      applyTheme(e.target.checked ? 'dark' : 'light');
+    });
+  }
+  
+  if (mobileToggleBtn) {
+    mobileToggleBtn.addEventListener('change', (e) => {
+      applyTheme(e.target.checked ? 'dark' : 'light');
+    });
+  }
 }
 
 function applyTheme(theme) {
@@ -48,7 +59,19 @@ function applyTheme(theme) {
   
   const toggleBtn = document.getElementById('theme-toggle');
   if (toggleBtn) {
+    toggleBtn.checked = (theme === 'dark');
     toggleBtn.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
+  }
+
+  const mobileToggleBtn = document.getElementById('mobile-theme-toggle');
+  if (mobileToggleBtn) {
+    mobileToggleBtn.checked = (theme === 'dark');
+    mobileToggleBtn.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
+  }
+
+  const mobileThemeStatus = document.getElementById('mobile-theme-status');
+  if (mobileThemeStatus) {
+    mobileThemeStatus.textContent = (theme === 'dark') ? 'Dark Mode' : 'Light Mode';
   }
 }
 
@@ -77,7 +100,7 @@ function initHeaderScroll() {
 function initMobileMenu() {
   const openBtn = document.getElementById('mobile-menu-btn');
   const overlay = document.getElementById('mobile-overlay');
-  const closeBtns = document.querySelectorAll('.close-mobile-menu, .mobile-nav-link');
+  const closeBtns = document.querySelectorAll('.close-mobile-menu, .mobile-nav-link, .mobile-drawer-cta');
 
   if (!openBtn || !overlay) return;
 
@@ -245,11 +268,12 @@ function initNavTracking() {
 }
 
 /* --------------------------------------------------------------------------
-   8. 1-CLICK EMAIL COPY TO CLIPBOARD
+   8. 1-CLICK CLIPBOARD COPY (Email & Phone)
    -------------------------------------------------------------------------- */
 function initEmailCopy() {
-  const copyBtns = document.querySelectorAll('[data-copy-email]');
-  if (!copyBtns.length) return;
+  const copyEmailBtns = document.querySelectorAll('[data-copy-email]');
+  const copyPhoneBtns = document.querySelectorAll('[data-copy-phone]');
+  if (!copyEmailBtns.length && !copyPhoneBtns.length) return;
 
   // Create toast element once
   let toast = document.getElementById('portfolio-toast');
@@ -261,28 +285,46 @@ function initEmailCopy() {
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="20 6 9 17 4 12"></polyline>
       </svg>
-      <span>Email copied to clipboard!</span>
+      <span>Copied to clipboard!</span>
     `;
     document.body.appendChild(toast);
   }
 
-  copyBtns.forEach(btn => {
+  function copyToClipboard(text, successMsg) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(successMsg);
+      }).catch(() => {
+        fallbackCopy(text, successMsg);
+      });
+    } else {
+      fallbackCopy(text, successMsg);
+    }
+  }
+
+  function fallbackCopy(text, successMsg) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    showToast(successMsg);
+  }
+
+  copyEmailBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       const email = btn.getAttribute('data-copy-email') || 'ghanshyamrock05@gmail.com';
-      
-      navigator.clipboard.writeText(email).then(() => {
-        showToast('Email copied to clipboard: ' + email);
-      }).catch(() => {
-        // Fallback
-        const textarea = document.createElement('textarea');
-        textarea.value = email;
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textarea);
-        showToast('Email copied to clipboard!');
-      });
+      copyToClipboard(email, 'Email copied to clipboard: ' + email);
+    });
+  });
+
+  copyPhoneBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const phone = btn.getAttribute('data-copy-phone') || '+91 8804041515';
+      copyToClipboard(phone, 'Phone number copied: ' + phone);
     });
   });
 
@@ -293,6 +335,45 @@ function initEmailCopy() {
     setTimeout(() => {
       toast.classList.remove('show');
     }, 2800);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   8B. CONTACT ANCHOR SMOOTH SCROLL & EXECUTIVE PULSE
+   -------------------------------------------------------------------------- */
+function initContactAnchorScroll() {
+  function checkAndHighlightContact() {
+    if (window.location.hash === '#contact' || window.location.hash === '#vip-access') {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+        contactSection.classList.add('target-active');
+        setTimeout(() => {
+          contactSection.classList.remove('target-active');
+        }, 2200);
+      }
+    }
+  }
+
+  // Handle in-page smooth clicks to #contact
+  document.querySelectorAll('a[href="#contact"], a[href="#vip-access"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const target = document.getElementById('contact');
+      if (target) {
+        e.preventDefault();
+        history.pushState(null, '', '#contact');
+        target.scrollIntoView({ behavior: 'smooth' });
+        target.classList.add('target-active');
+        setTimeout(() => {
+          target.classList.remove('target-active');
+        }, 2200);
+      }
+    });
+  });
+
+  // Run on initial page load if hash exists
+  if (window.location.hash === '#contact' || window.location.hash === '#vip-access') {
+    setTimeout(checkAndHighlightContact, 150);
   }
 }
 
@@ -377,11 +458,10 @@ function initCaseStudyToc() {
   sections.forEach(sec => observer.observe(sec));
 }
 
-
-
-  // --------------------------------------------------------------------------
-  // Cinematic Parallel BlurText Animation Trigger
-  // --------------------------------------------------------------------------
+// --------------------------------------------------------------------------
+// Cinematic Parallel BlurText Animation Trigger
+// --------------------------------------------------------------------------
+document.addEventListener('DOMContentLoaded', () => {
   const blurRows = document.querySelectorAll('.blur-text-row');
   if (blurRows.length > 0) {
     const triggerBlurAnimation = () => {
@@ -395,3 +475,4 @@ function initCaseStudyToc() {
       setTimeout(triggerBlurAnimation, 80);
     });
   }
+});

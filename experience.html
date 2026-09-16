@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +13,7 @@
   
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="revamp.css">
 </head>
 <body>
 
@@ -37,27 +38,21 @@
       </nav>
 
       <div class="header-actions">
-        <!-- Theme Toggle -->
-        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light and dark theme">
-          <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-          <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-        </button>
+        <!-- Theme Toggle Switch -->
+        <div class="theme-switch-wrapper" style="margin-right: 15px;">
+          <label class="theme-switch" for="theme-toggle">
+            <input type="checkbox" id="theme-toggle" aria-label="Toggle light and dark theme" />
+            <span class="slider"></span>
+          </label>
+        </div>
 
-        <a href="index.html#contact" class="btn-header-cta">
-          <span>Let's talk</span>
-          <span aria-hidden="true">→</span>
+        <a href="index.html#contact" class="btn-header-cta" aria-label="Let's talk — Contact Ghanshyam" title="Let's talk">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+          <span class="cta-text">Let's talk</span>
+          <span class="cta-arrow" aria-hidden="true">→</span>
         </a>
 
         <!-- Mobile Hamburger Button -->
@@ -74,23 +69,71 @@
 
   <!-- Mobile Drawer Overlay -->
   <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-      <span class="brand-logo">GHANSHYAM</span>
-      <button class="close-mobile-menu" aria-label="Close menu" style="color: var(--text-primary); cursor: pointer; padding: 0.5rem; display: flex; align-items: center; justify-content: center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand-logo" style="text-decoration: none;">
+        <span>GHANSHYAM</span>
+        <span class="brand-badge" style="font-size: 0.7rem; padding: 0.15rem 0.45rem; background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 6px; color: var(--accent); font-weight: 800; letter-spacing: 0.05em; margin-left: 0.4rem;">PM</span>
+      </a>
+      <button class="close-mobile-menu" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
     </div>
+
+    <!-- Theme Toggle inside Menu -->
+    <div class="mobile-theme-card">
+      <div class="mobile-theme-meta">
+        <div class="mobile-theme-icon-wrap">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </div>
+        <div>
+          <div class="mobile-theme-title">Theme Mode</div>
+          <div class="mobile-theme-status" id="mobile-theme-status">Dark Mode</div>
+        </div>
+      </div>
+      <label class="theme-switch" for="mobile-theme-toggle">
+        <input type="checkbox" id="mobile-theme-toggle" aria-label="Toggle light and dark theme" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <!-- Nav Links -->
     <ul class="mobile-nav-list">
       <li><a href="index.html" class="mobile-nav-link">Home <span>→</span></a></li>
       <li><a href="work.html" class="mobile-nav-link">Case Studies <span>→</span></a></li>
-      <li><a href="experience.html" class="mobile-nav-link">Experience <span>→</span></a></li>
+      <li><a href="experience.html" class="mobile-nav-link active">Experience <span>→</span></a></li>
       <li><a href="about.html" class="mobile-nav-link">About Me <span>→</span></a></li>
       <li><a href="Ghanshyam_Kumar_Singh_Resume.pdf" class="mobile-nav-link" target="_blank">Download Resume <span>→</span></a></li>
-      <li><a href="index.html#contact" class="mobile-nav-link" style="color: var(--accent);">Contact & Connect <span>→</span></a></li>
     </ul>
+
+    <!-- Bottom Drawer CTA -->
+    <div class="mobile-drawer-cta-wrap">
+      <a href="index.html#contact" class="mobile-drawer-cta">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+        </svg>
+        <span>Let's talk — Get in touch</span>
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
   </div>
 
   <main>
     <!-- ========================================================================
-         2. SUBPAGE HEADER
+         2. SUBPAGE HEADER & EXECUTIVE POSITIONING
          ======================================================================== -->
     <header class="subpage-header">
       <div class="container">
@@ -100,24 +143,87 @@
           <span class="breadcrumb-current">Professional Experience</span>
         </nav>
 
-        <span class="eyebrow">CAREER PROGRESSION</span>
-        <h1 class="subpage-title">Experience & Track Record</h1>
+        <span class="eyebrow">CAREER TRACK RECORD & VERIFIED METRICS</span>
+        <h1 class="subpage-title">Experience & Career Journey</h1>
         <p class="subpage-subtitle">
-          A continuous evolution from user discovery and quantitative experimentation to leading 0-to-1 GenAI product pods and scaling platforms serving 50M+ users.
+          A continuous evolution from 2,000+ customer discovery interviews to architecting 0-to-1 GenAI platforms, high-throughput analytics engines, and scaling monetization systems serving 50M+ users.
         </p>
+
+        <!-- Executive Philosophy Banner -->
+        <div class="executive-quote-card" style="margin-top: 2rem; padding: 1.25rem 1.5rem; background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(168, 85, 247, 0.04)); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 14px; display: flex; align-items: center; gap: 1rem;">
+          <div style="font-size: 1.75rem; color: #818cf8; line-height: 1; font-family: Georgia, serif;">“</div>
+          <div>
+            <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1rem; font-weight: 700; color: var(--text-primary); letter-spacing: -0.01em;">
+              I build products that turn ambiguous problems into measurable business outcomes.
+            </div>
+            <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.25rem;">
+              Product Philosophy · Tested across 0→1 applied AI, high-stakes FinTech regulation, and 50M+ consumer scale
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Executive Archetypes Grid -->
+        <div class="executive-pillars-grid">
+          <div class="executive-pillar-card">
+            <div>
+              <div class="pillar-eyebrow" style="color: #60a5fa;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg>
+                <span>0→1 GenAI & Voice AI</span>
+              </div>
+              <div class="pillar-title">Applied AI & Autonomous Agents</div>
+              <div class="pillar-desc">
+                Commercializing applied LLMs, duplex voice UI (&lt;800ms), RAG knowledge pipelines, and cellular call screening.
+              </div>
+            </div>
+            <span class="pillar-metrics-tag" style="background: rgba(59, 130, 246, 0.1); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.2);">
+              ₹1.5 Cr+ Revenue · 100K+ Installs · 8-Person Pod
+            </span>
+          </div>
+
+          <div class="executive-pillar-card">
+            <div>
+              <div class="pillar-eyebrow" style="color: #34d399;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                <span>Growth & Monetization</span>
+              </div>
+              <div class="pillar-title">High-Scale Consumer Economics</div>
+              <div class="pillar-desc">
+                Engineering multi-tiered VIP loyalty architectures, real-time crash games, dynamic pricing, and D0–D7 activation funnels.
+              </div>
+            </div>
+            <span class="pillar-metrics-tag" style="background: rgba(16, 185, 129, 0.1); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.2);">
+              +75% VIP ARPU · ₹8L/Day Run-Rate · 50M+ Scale
+            </span>
+          </div>
+
+          <div class="executive-pillar-card">
+            <div>
+              <div class="pillar-eyebrow" style="color: #c084fc;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                <span>Data Platform & FinTech</span>
+              </div>
+              <div class="pillar-title">Technical Agility & Regulatory Ops</div>
+              <div class="pillar-desc">
+                Deploying internal Kafka + ClickHouse data stacks, zero-upload KYC with Indian name matching, and rapid tax engines.
+              </div>
+            </div>
+            <span class="pillar-metrics-tag" style="background: rgba(168, 85, 247, 0.1); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.2);">
+              $50K/Yr Saved · 5-Day TDS · -97% Queue
+            </span>
+          </div>
+        </div>
       </div>
     </header>
 
     <!-- ========================================================================
-         3. CAREER EVOLUTION TIMELINE
+         3. CAREER EVOLUTION TIMELINE (5 Signature Milestones)
          ======================================================================== -->
-    <section class="journey-section" style="padding: 4rem 0;">
+    <section class="journey-section" style="padding: 2.5rem 0;">
       <div class="container">
         <div class="reveal">
-          <span class="section-tag">Career Milestones</span>
-          <h2 class="section-title">Progression by Responsibility</h2>
+          <h2 class="section-title">Career Evolution Timeline</h2>
           <p class="section-subtitle">
-            Every step in my career has been about taking ownership of a larger, more ambiguous product challenge.
+            Every career milestone has marked a step toward solving larger, more complex, and commercially critical product challenges.
           </p>
         </div>
 
@@ -131,121 +237,89 @@
             </svg>
           </div>
 
-          <!-- Desktop Grid Timeline (7 Nodes) -->
+          <!-- Desktop Grid Timeline (5 Nodes matching Master Work Repository) -->
           <div class="timeline-desktop">
             <div class="timeline-node">
               <div class="timeline-dot"></div>
               <span class="timeline-year">2021</span>
-              <h3 class="timeline-phase">USER RESEARCH</h3>
-              <span class="timeline-role-pill">Product Intern</span>
-              <p class="timeline-desc">2,000+ user interviews across active & churned players, discovery, and retention diagnostics.</p>
-            </div>
-
-            <div class="timeline-node">
-              <div class="timeline-dot"></div>
-              <span class="timeline-year">2022</span>
-              <h3 class="timeline-phase">LIFECYCLE & GROWTH</h3>
-              <span class="timeline-role-pill">APM — Witzeal</span>
-              <p class="timeline-desc">Owned lifecycle communication, user segmentation, push, in-app, WhatsApp, OBD, and retargeting.</p>
+              <h3 class="timeline-phase">USER DISCOVERY</h3>
+              <span class="timeline-role-pill" style="background: rgba(59, 130, 246, 0.1); color: #60a5fa;">Intern · "I listen"</span>
+              <p class="timeline-desc">2,000+ qualitative discovery calls, diagnosing onboarding friction and earning PPO.</p>
             </div>
 
             <div class="timeline-node">
               <div class="timeline-dot"></div>
               <span class="timeline-year">2022–2023</span>
-              <h3 class="timeline-phase">CRM & CUSTOMER CX</h3>
-              <span class="timeline-role-pill">Vertical Lead</span>
-              <p class="timeline-desc">Built 0→1 CRM vertical from scratch — SOPs, agent operations, and introduced AI Agent Helper.</p>
+              <h3 class="timeline-phase">GROWTH & MONETIZATION</h3>
+              <span class="timeline-role-pill" style="background: rgba(16, 185, 129, 0.1); color: #34d399;">APM · "I monetize"</span>
+              <p class="timeline-desc">Scaled Rocket Skill to ₹8L/day (+167%), revamped 3-tier VIP Club (+75% ARPU), doubled D7 retention (12%→25%).</p>
             </div>
 
             <div class="timeline-node">
               <div class="timeline-dot"></div>
-              <span class="timeline-year">2023–2025</span>
-              <h3 class="timeline-phase">MONETIZATION</h3>
-              <span class="timeline-role-pill">Game Economy</span>
-              <p class="timeline-desc">Owned VIP Club, Rocket Skill, and Ludo; pricing strategy, game economy, live-ops, and monetization.</p>
+              <span class="timeline-year">2023–2024</span>
+              <h3 class="timeline-phase">REGULATORY CRISIS</h3>
+              <span class="timeline-role-pill" style="background: rgba(245, 158, 11, 0.1); color: #fbbf24;">APM · "I navigate"</span>
+              <p class="timeline-desc">Shipped 5-day Section 194BA 30% TDS Refund Engine; built automated KYC with 95% Indian name-matching (-97% queue).</p>
             </div>
 
             <div class="timeline-node">
               <div class="timeline-dot"></div>
               <span class="timeline-year">2024–2026</span>
-              <h3 class="timeline-phase">PLATFORM & COMPLIANCE</h3>
-              <span class="timeline-role-pill">Platform PM</span>
-              <p class="timeline-desc">Rebuilt KYC verification to &lt;1 min with Indian name-matching, multi-vendor fallback & compliance.</p>
+              <h3 class="timeline-phase">PLATFORM & INFRA</h3>
+              <span class="timeline-role-pill" style="background: rgba(168, 85, 247, 0.1); color: #c084fc;">Platform PM · "I build"</span>
+              <p class="timeline-desc">Architected GrowthTap (Kafka+ClickHouse) saving $50K/yr; migrated 900K KYC users with zero downtime; built 0→1 CRM.</p>
             </div>
 
             <div class="timeline-node">
               <div class="timeline-dot"></div>
-              <span class="timeline-year">2025</span>
-              <h3 class="timeline-phase">REGULATORY PIVOT</h3>
-              <span class="timeline-role-pill">Transition Lead</span>
-              <p class="timeline-desc">Shifted flagship product toward F2P within 10 days post-regulation; launched on Play Store & App Store.</p>
-            </div>
-
-            <div class="timeline-node">
-              <div class="timeline-dot"></div>
-              <span class="timeline-year">2026</span>
-              <h3 class="timeline-phase">GENAI & 0 TO 1</h3>
-              <span class="timeline-role-pill">Product Manager — AIVO</span>
-              <p class="timeline-desc">Leading an 8-member pod across GenAI voice calling, conversational AI, B2B SaaS analytics, and agents.</p>
+              <span class="timeline-year">2026–Present</span>
+              <h3 class="timeline-phase">0-TO-1 GENAI & VOICE</h3>
+              <span class="timeline-role-pill" style="background: rgba(59, 130, 246, 0.15); color: #818cf8;">PM — AIVO · "I create"</span>
+              <p class="timeline-desc">Leading 8-member pod across MySA Voice AI (₹1.5 Cr+ in 4 mos), MySA Business (₹2L+ MRR), and Lavola companion.</p>
             </div>
           </div>
 
-          <!-- Mobile Vertical Timeline -->
+          <!-- Mobile Vertical Timeline (5 Nodes) -->
           <div class="timeline-mobile">
             <div class="timeline-mobile-item">
               <div class="timeline-mobile-dot"></div>
               <span class="timeline-year">2021</span>
-              <h3 class="timeline-phase">USER RESEARCH</h3>
-              <span class="timeline-role-pill">Product Intern — Witzeal</span>
-              <p class="timeline-desc">2,000+ qualitative user interviews across active and churned players, discovery, and retention diagnostics.</p>
-            </div>
-
-            <div class="timeline-mobile-item">
-              <div class="timeline-mobile-dot"></div>
-              <span class="timeline-year">2022</span>
-              <h3 class="timeline-phase">LIFECYCLE & GROWTH</h3>
-              <span class="timeline-role-pill">APM — Witzeal</span>
-              <p class="timeline-desc">Owned lifecycle communication, segmentation, push, in-app, WhatsApp, OBD, and retargeting across the ecosystem.</p>
+              <h3 class="timeline-phase">USER DISCOVERY</h3>
+              <span class="timeline-role-pill" style="background: rgba(59, 130, 246, 0.1); color: #60a5fa;">Product Intern · "I listen"</span>
+              <p class="timeline-desc">Conducted 2,000+ qualitative user interviews across active and churned players, diagnosing onboarding friction and earning Pre-Placement Offer (PPO).</p>
             </div>
 
             <div class="timeline-mobile-item">
               <div class="timeline-mobile-dot"></div>
               <span class="timeline-year">2022–2023</span>
-              <h3 class="timeline-phase">CRM & CUSTOMER EXPERIENCE</h3>
-              <span class="timeline-role-pill">Witzeal</span>
-              <p class="timeline-desc">Built 0→1 CRM vertical from scratch — SOPs, agent operations, and introduced Agent Helper AI.</p>
+              <h3 class="timeline-phase">GROWTH & MONETIZATION</h3>
+              <span class="timeline-role-pill" style="background: rgba(16, 185, 129, 0.1); color: #34d399;">Associate Product Manager · "I monetize"</span>
+              <p class="timeline-desc">Scaled Rocket Skill to ₹8L/day (+167%), revamped 3-tier VIP Club (+75% ARPU, ₹1.5 Cr/day deposits), doubled D7 retention (12%→25%), and managed 50M+ CleverTap lifecycle.</p>
             </div>
 
             <div class="timeline-mobile-item">
               <div class="timeline-mobile-dot"></div>
-              <span class="timeline-year">2023–2025</span>
-              <h3 class="timeline-phase">MONETIZATION & GAME ECONOMY</h3>
-              <span class="timeline-role-pill">Witzeal</span>
-              <p class="timeline-desc">Owned VIP Club, Rocket Skill, and Ludo; pricing, game economy, retention, live-ops, and monetization.</p>
+              <span class="timeline-year">2023–2024</span>
+              <h3 class="timeline-phase">REGULATORY CRISIS & FINTECH</h3>
+              <span class="timeline-role-pill" style="background: rgba(245, 158, 11, 0.1); color: #fbbf24;">Associate Product Manager · "I navigate chaos"</span>
+              <p class="timeline-desc">Shipped 5-day Section 194BA 30% TDS Refund Engine during national regulatory shift; engineered automated KYC with 95% accurate Indian name-matching (-97% queue).</p>
             </div>
 
             <div class="timeline-mobile-item">
               <div class="timeline-mobile-dot"></div>
               <span class="timeline-year">2024–2026</span>
-              <h3 class="timeline-phase">PLATFORM & COMPLIANCE</h3>
-              <span class="timeline-role-pill">Witzeal</span>
-              <p class="timeline-desc">Rebuilt KYC verification (&lt;1 min) with Indian name-matching and multi-vendor fallback.</p>
+              <h3 class="timeline-phase">PLATFORM & DATA INFRASTRUCTURE</h3>
+              <span class="timeline-role-pill" style="background: rgba(168, 85, 247, 0.1); color: #c084fc;">Platform Product Manager · "I build infra"</span>
+              <p class="timeline-desc">Architected GrowthTap internal analytics engine (Apache Kafka + ClickHouse) eliminating $50,000/yr in CleverTap licenses; migrated 900K legacy KYC users with zero downtime; built 0→1 CRM vertical.</p>
             </div>
 
             <div class="timeline-mobile-item">
               <div class="timeline-mobile-dot"></div>
-              <span class="timeline-year">2025</span>
-              <h3 class="timeline-phase">REGULATORY EXECUTION</h3>
-              <span class="timeline-role-pill">Witzeal</span>
-              <p class="timeline-desc">Shifted flagship product toward F2P within 10 days post-regulation; launched on Play Store & App Store.</p>
-            </div>
-
-            <div class="timeline-mobile-item">
-              <div class="timeline-mobile-dot"></div>
-              <span class="timeline-year">2026</span>
-              <h3 class="timeline-phase">GENAI & 0 TO 1</h3>
-              <span class="timeline-role-pill">Product Manager — AIVO</span>
-              <p class="timeline-desc">Leading an 8-member pod across GenAI voice calling, conversational AI, B2B SaaS analytics, and agents.</p>
+              <span class="timeline-year">2026–Present</span>
+              <h3 class="timeline-phase">0-TO-1 GENAI & VOICE AI</h3>
+              <span class="timeline-role-pill" style="background: rgba(59, 130, 246, 0.15); color: #818cf8;">Product Manager — AIVO · "I create from 0"</span>
+              <p class="timeline-desc">Leading an 8-member cross-functional pod shipping MySmartAssistant Voice AI (₹1.5 Cr+ consumer revenue in 4 months), MySA for Business B2B SaaS (₹2L+ MRR in Month 1), and Lavola.ai companion.</p>
             </div>
           </div>
 
@@ -256,139 +330,269 @@
     <!-- ========================================================================
          4. DETAILED ROLE HISTORIES
          ======================================================================== -->
-    <section class="experience-section" style="padding: 4rem 0;">
+    <section class="experience-section" style="padding: 2.5rem 0;">
       <div class="container">
         <div class="reveal">
-          <span class="section-tag">Work History</span>
           <h2 class="section-title">Roles & Verified Impact</h2>
+          <p class="section-subtitle">
+            Comprehensive breakdown of responsibilities, technical interventions, and commercial outcomes across enterprise and high-scale consumer products.
+          </p>
         </div>
 
         <div class="experience-timeline" style="margin-top: 3rem;">
           
-          <!-- Role 1: AIVO Technologies -->
+          <!-- ==================================================================
+               ROLE 1: AIVO TECHNOLOGIES PVT. LTD. (Product Manager)
+               ================================================================== -->
           <div class="experience-item reveal" data-delay="100" id="role-aivo">
             <div class="experience-dot"></div>
             <div class="experience-header">
               <div>
                 <h3 class="experience-role">Product Manager</h3>
                 <div class="experience-company">AIVO Technologies Pvt. Ltd.</div>
+                <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); margin-top: 3px;">
+                  Generative AI Platforms · Autonomous Voice AI · B2B SaaS · Big Data Infrastructure
+                </div>
               </div>
               <span class="experience-period">May 2026 – Present · Gurugram, India</span>
             </div>
 
-            <!-- MySmartAssistant -->
-            <div style="margin-top: 1rem;">
-              <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg>
-                <span>MySmartAssistant — GenAI Voice & Productivity Platform (B2C / B2B)</span>
-              </h4>
+            <!-- Project 1: MySmartAssistant (B2C) -->
+            <div class="exp-project-block">
+              <div class="exp-project-header">
+                <h4 class="exp-project-title">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg>
+                  <span>MySmartAssistant (MySA) — Autonomous Voice & Call Intelligence Platform</span>
+                </h4>
+                <div class="exp-tags-row">
+                  <span class="exp-tag exp-tag-blue">0-to-1 MVP</span>
+                  <span class="exp-tag exp-tag-blue">Voice AI (&lt;800ms)</span>
+                  <span class="exp-tag exp-tag-emerald">₹1.5 Cr+ Revenue</span>
+                  <span class="exp-tag exp-tag-purple">100K+ Downloads</span>
+                </div>
+              </div>
               <ul class="experience-highlights">
-                <li>Took MySA from concept to MVP, owning problem discovery, user validation, product vision, PRDs, prioritization, roadmap, and GTM; validated <strong>200+ target users</strong>, identified voice as the preferred experience based on <strong>3× higher willingness-to-pay vs. chat</strong>, led an <strong>8-member pod</strong>, and shipped the first MVP in <strong>4 weeks</strong>.</li>
-                <li>Turned the MVP into a monetizable SaaS product by designing tiered plans and onboarding experiments, driving <strong>+15% D1 activation</strong> and first revenue within <strong>3 weeks</strong>; subsequently built autonomous voice workflows across <strong>100+ languages</strong>, achieving <strong>~92% task-resolution accuracy</strong> through prompt/RAG optimization and AI guardrails.</li>
+                <li>Spearheaded 0-to-1 product lifecycle from user discovery (<strong>500+ discovery interviews</strong> identifying 80%+ push notification failure and <strong>3× higher willingness-to-pay for voice vs chat</strong>) to vision, PRDs, roadmap, and GTM; led an <strong>8-member cross-functional pod</strong> (4 SEs, 2 Designers, 2 QAs) delivering MVP in <strong>4 weeks</strong>.</li>
+                <li>Engineered <strong>Call Assist (Autonomous Inbound Call Screener)</strong> intercepting cellular phone calls with conversational AI, screening callers contextually, filtering spam/telemarketers, and dispatching instant structured summaries and recordings via WhatsApp.</li>
+                <li>Architected <strong>Phone-Call Escalation Matrix</strong> triggering automated outbound conversational voice calls when critical push notifications go unacknowledged, alongside OCR+LLM document vault extracting dates from insurance/vehicle policies to pre-populate recurring smart schedules.</li>
+                <li>Deployed <strong>MySA Live duplex voice UI (&lt;800ms)</strong> with full barge-in; authored prompt engineering frameworks, evaluation benchmarks, and safety guardrails across <strong>100+ languages</strong>, achieving <strong>~92% task-resolution accuracy</strong>.</li>
+                <li><strong>Verified Business Impact:</strong> Grew from 40,000 to <strong>100,000+ app downloads in 30 days</strong> of Call Assist launch; scaled to <strong>20,000+ active paid subscribers</strong> generating <strong>₹1.5 Crore+ ($180K+) consumer revenue</strong> in 4 months; lifted D1 activation by <strong>+15%</strong>.</li>
               </ul>
             </div>
 
-            <!-- GrowthTap -->
-            <div style="margin-top: 1.25rem;">
-              <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>
-                <span>GrowthTap — In-House Analytics & Engagement Platform</span>
-              </h4>
+            <!-- Project 2: MySA for Business (B2B) -->
+            <div class="exp-project-block">
+              <div class="exp-project-header">
+                <h4 class="exp-project-title">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                  <span>MySA for Business — Autonomous B2B Voice AI Agents</span>
+                </h4>
+                <div class="exp-tags-row">
+                  <span class="exp-tag exp-tag-emerald">B2B SaaS</span>
+                  <span class="exp-tag exp-tag-blue">7-Day MVP</span>
+                  <span class="exp-tag exp-tag-emerald">₹2,00,000+ MRR</span>
+                  <span class="exp-tag exp-tag-purple">20+ Clients</span>
+                </div>
+              </div>
               <ul class="experience-highlights">
-                <li>Spearheaded a <strong>0-to-1 analytics platform</strong> replacing <strong>$50K+/year</strong> in third-party tools, enabling funnels, cohorts, segmentation, trends, and omnichannel engagement across <strong>Android / iOS / Web / Flutter</strong>.</li>
-                <li>Defined SDK and event-tracking architecture with automated session tracking and offline event batching, reducing integration time by <strong>60%</strong>; partnered with Data Engineering on <strong>Kafka + ClickHouse</strong> pipelines.</li>
+                <li>Capitalized on organic SMB demand by scoping, designing, and launching the enterprise self-serve console in <strong>7 business days</strong>, reusing core voice orchestration microservices with a focused 4-member engineering pod.</li>
+                <li>Shipped no-code conversational workflow builder, domain-specific RAG knowledge ingestion (PDF, DOCX, URLs), persona parameter controls (tone, pace, accent), and CRM webhook synchronization (HubSpot, Google Sheets).</li>
+                <li>Configured 24/7 inbound AI support with live human sentiment-drop transfer, and automated outbound dialers qualifying web leads within <strong>60 seconds</strong> of form submission.</li>
+                <li><strong>Verified Business Impact:</strong> Formulated a 3-tier usage-based SaaS pricing model (call minutes, concurrency, custom numbers), onboarding <strong>20+ corporate and SMB enterprise clients</strong> and generating <strong>₹2,00,000+ ($2,400+) MRR</strong> in Month 1.</li>
               </ul>
             </div>
 
-            <!-- Lavola.ai -->
-            <div style="margin-top: 1.25rem;">
-              <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
-                <span>Lavola.ai — AI Companion Platform</span>
-              </h4>
+            <!-- Project 3: GrowthTap -->
+            <div class="exp-project-block">
+              <div class="exp-project-header">
+                <h4 class="exp-project-title">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>
+                  <span>GrowthTap — Customer Engagement & Product Analytics Engine</span>
+                </h4>
+                <div class="exp-tags-row">
+                  <span class="exp-tag exp-tag-purple">Platform Infra</span>
+                  <span class="exp-tag exp-tag-blue">Kafka + ClickHouse</span>
+                  <span class="exp-tag exp-tag-emerald">$50,000/Yr Saved</span>
+                  <span class="exp-tag exp-tag-blue">Sub-Second Ingestion</span>
+                </div>
+              </div>
               <ul class="experience-highlights">
-                <li>Shaped product vision, roadmap, PRDs, and MVP for an AI companion with <strong>real-time voice calling and multi-persona conversations</strong>, taking the product from ideation to launch with an engineering pod.</li>
-                <li>Built the supporting marketing web platform using <strong>AI-assisted development</strong>, translating product requirements into a launch-ready customer experience.</li>
+                <li>Led Build vs. Buy evaluation replacing CleverTap to eliminate $50,000/year recurring SaaS overhead after GA4/Firebase failed on 6–12 hour latency and lacked single-user deterministic session tracing.</li>
+                <li>Partnered with Data Engineering to deploy an <strong>Apache Kafka + ClickHouse</strong> columnar data pipeline, delivering <strong>sub-second real-time streaming ingestion</strong> and instant analytical queries across tens of millions of raw events without aggregation bottlenecks.</li>
+                <li>Coordinated delivery of custom lightweight SDKs across <strong>Android, iOS, Web, and Flutter</strong> featuring automatic session detection, offline event batching, and crash breadcrumbs, cutting client integration time by <strong>60%</strong>.</li>
+                <li>Engineered native campaign composer supporting real-time behavioral triggers (Push, In-App Modals, WhatsApp) and multi-tenant Role-Based Access Control (RBAC) across multiple business units.</li>
+                <li><strong>Verified Business Impact:</strong> Completely eliminated <strong>$50,000/year in SaaS licensing ($0 license)</strong> while providing sub-second data availability powering analytics across all AIVO consumer and B2B products.</li>
+              </ul>
+            </div>
+
+            <!-- Project 4: Lavola.ai -->
+            <div class="exp-project-block">
+              <div class="exp-project-header">
+                <h4 class="exp-project-title">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                  <span>Lavola.ai — Conversational Generative AI Companion</span>
+                </h4>
+                <div class="exp-tags-row">
+                  <span class="exp-tag exp-tag-purple">Conversational AI</span>
+                  <span class="exp-tag exp-tag-blue">Duplex Voice</span>
+                  <span class="exp-tag exp-tag-amber">Crisis Guardrails</span>
+                  <span class="exp-tag exp-tag-blue">AI-Assisted Web</span>
+                </div>
+              </div>
+              <ul class="experience-highlights">
+                <li>Defined product vision, PRDs, and multi-persona prompt architecture (Empathetic Listener, Conversational Companion, Productivity & Wellness Mentor) with real-time bidirectional voice calling and natural barge-in interruptions.</li>
+                <li>Personally developed and launched the responsive web landing and acquisition interface using AI-assisted prototyping, bypassing engineering constraints to accelerate time-to-market.</li>
+                <li>Architected multi-layer content safety filters and crisis-detection escalation guardrails redirecting distressed users to professional helplines with a <strong>zero-incident safety record</strong>.</li>
               </ul>
             </div>
           </div>
 
-          <!-- Role 2: Witzeal Technologies (APM) -->
+          <!-- ==================================================================
+               ROLE 2: WITZEAL TECHNOLOGIES PVT. LTD. (Associate Product Manager)
+               ================================================================== -->
           <div class="experience-item reveal" data-delay="150" id="role-witzeal">
             <div class="experience-dot"></div>
             <div class="experience-header">
               <div>
                 <h3 class="experience-role">Associate Product Manager</h3>
                 <div class="experience-company">Witzeal Technologies Pvt. Ltd.</div>
-                <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); margin-top: 2px;">
-                  BigCash & Big Sports · 50M+ Users · 3L+ DAU
+                <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); margin-top: 3px;">
+                  Big Cash & Big Sports · 50M+ Registered Users · 300,000+ Daily Active Users (DAU)
                 </div>
               </div>
               <span class="experience-period">June 2022 – March 2026 · Gurugram, India</span>
             </div>
 
-            <!-- Revenue & Monetization -->
-            <div style="margin-top: 1rem;">
-              <h4 style="font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--accent); margin-bottom: 0.35rem;">
-                Revenue & Monetization
-              </h4>
+            <!-- Pillar 1: Revenue & Monetization -->
+            <div class="exp-project-block">
+              <div class="exp-project-header">
+                <h4 class="exp-project-title" style="color: #60a5fa;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                  <span>Revenue, Pricing & Game Economy (Rocket Skill & VIP Club)</span>
+                </h4>
+                <div class="exp-tags-row">
+                  <span class="exp-tag exp-tag-blue">Rocket Skill (+167%)</span>
+                  <span class="exp-tag exp-tag-emerald">₹8L/Day Commission</span>
+                  <span class="exp-tag exp-tag-purple">VIP ARPU (+75%)</span>
+                  <span class="exp-tag exp-tag-emerald">₹1.5 Cr/Day Deposits</span>
+                </div>
+              </div>
               <ul class="experience-highlights">
-                <li>Grew Rocket Skill daily revenue <strong>167%, from ₹3L→₹8L/day</strong> across two quarters, with <strong>40K DAU</strong>, through 10+ A/B experiments across entry fees, prize structures, and user segmentation to optimize monetization.</li>
-                <li>Drove <strong>+10% WoW GMV</strong> and <strong>+12% purchase conversion</strong> through multiple retention and friction-reduction experiments, while reducing bonus expenditure <strong>20%</strong> through incentive ROI optimization; expanded VIP active users <strong>45K→65K (+44%)</strong> and VIP ARPU <strong>₹8K→₹14K (+75%)</strong> through dynamic 3-tier VIP Club.</li>
+                <li><strong>Rocket Skill Crash Game (0-to-1 Launch & Scale):</strong> Ideated, scoped, and launched a playable multiplier crash game MVP in <strong>15 days</strong>; scaled daily net commission by <strong>+167% from ₹3,00,000/day to ₹8,00,000/day</strong> (from 9% platform rake) with <strong>40,000 DAU</strong> across two quarters.</li>
+                <li>Overcame a post-launch growth plateau by analyzing bet distributions, elevating multiplier curves up to <strong>100x</strong> with dynamic probability balancing, running <strong>10+ A/B experiments</strong> on entry fees and prize tiers, and adding live cash-out social proof tickers (with zero promotional bonus burn).</li>
+                <li><strong>VIP Club Revamp (Tiered Monetization Engine):</strong> Transformed an uninspiring single ₹5,000 threshold into an aspirational 3-tier loyalty club (VIP at ₹5K, VIP Plus at ₹50K, VIP Pro at ₹1,00,000 monthly wagering) with escalating withdrawal limits, up to 10x weekly streak multipliers, and exclusive high-roller tables.</li>
+                <li><strong>Verified Business Impact:</strong> Lifted VIP ARPU by <strong>+75% from ₹8,000 to ₹14,000</strong> within a single quarter; expanded active VIP DAU by <strong>+44% (45,000 to 65,000)</strong>; increased daily VIP conversions from 1,100 to 1,800/day; and surged VIP daily deposits from <strong>₹1.2 Crore/day to ₹1.5 Crore/day</strong> (VIP driving 85% of total platform commission).</li>
               </ul>
             </div>
 
-            <!-- Retention & Lifecycle -->
-            <div style="margin-top: 1.25rem;">
-              <h4 style="font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--accent-emerald); margin-bottom: 0.35rem;">
-                Retention & Lifecycle
-              </h4>
+            <!-- Pillar 2: Retention, Growth & Lifecycle -->
+            <div class="exp-project-block">
+              <div class="exp-project-header">
+                <h4 class="exp-project-title" style="color: #34d399;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                  <span>Retention, Growth & Lifecycle Funnels (D0–D7 & 50M+ Lifecycle)</span>
+                </h4>
+                <div class="exp-tags-row">
+                  <span class="exp-tag exp-tag-emerald">D7 Retention (12%→25%)</span>
+                  <span class="exp-tag exp-tag-blue">50M+ Lifecycle</span>
+                  <span class="exp-tag exp-tag-emerald">+10% WoW GMV</span>
+                  <span class="exp-tag exp-tag-purple">-20% Bonus Burn</span>
+                </div>
+              </div>
               <ul class="experience-highlights">
-                <li>Improved D7 retention <strong>12%→25%</strong> and D7 active users <strong>22%→48%</strong> through onboarding/friction analysis, personalized engagement, and IPL-led events; increased games/user and ATV by <strong>20% each</strong>.</li>
-                <li>Owned lifecycle engagement for <strong>50M+ users</strong> using CleverTap across push, in-app, WhatsApp, SMS, and email, driving <strong>22% dormant-user reactivation</strong> across 30-day windows.</li>
+                <li><strong>First 7 Days (D0–D7) Onboarding Optimization:</strong> Diagnosed drop-offs via 200+ discovery calls; implemented campaign-to-lobby journey mapping, dynamic Add-Cash recommendation engine, contextual practice mode tooltips, and 7-day habit streak rewards.</li>
+                <li><strong>Verified Funnel Lift:</strong> Doubled D7 player retention from <strong>12% to 25%</strong> (+10% WoW GMV growth), increased D7 active users from <strong>22% to 48%</strong>, drove <strong>+12% purchase conversion</strong>, and cut promotional bonus burn by <strong>20%</strong> through incentive ROI segmentation.</li>
+                <li><strong>Omnichannel Lifecycle Automation:</strong> Managed end-to-end user engagement for <strong>50M+ registered users</strong> using CleverTap across Push, In-App, WhatsApp, and SMS, driving <strong>22% dormant-user reactivation</strong> across 30-day windows.</li>
+                <li><strong>Casual & F2P Gaming:</strong> Shipped asynchronous solo Ludo tournament mode, scaling DAU from <strong>7,000 to 20,000</strong> with rewarded video ad monetization; integrated AyeT Studios offer-wall SDKs.</li>
               </ul>
             </div>
 
-            <!-- CRM & AI -->
-            <div style="margin-top: 1.25rem;">
-              <h4 style="font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--accent); margin-bottom: 0.35rem;">
-                CRM & AI Systems
-              </h4>
+            <!-- Pillar 3: CRM & AI Support Systems -->
+            <div class="exp-project-block">
+              <div class="exp-project-header">
+                <h4 class="exp-project-title" style="color: #c084fc;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                  <span>Customer Experience, CRM Overhaul & AI Support Automation</span>
+                </h4>
+                <div class="exp-tags-row">
+                  <span class="exp-tag exp-tag-purple">0→1 CRM Vertical</span>
+                  <span class="exp-tag exp-tag-emerald">FRT &gt;6h → &lt;2m</span>
+                  <span class="exp-tag exp-tag-emerald">CSAT 2.0 → 4.2/5</span>
+                  <span class="exp-tag exp-tag-blue">40–50% Deflection</span>
+                </div>
+              </div>
               <ul class="experience-highlights">
-                <li>Built CRM operations from scratch after validating historical Freshchat reports, resolution-TAT data, and user feedback; established OKRs, dashboards, SOPs, and a <strong>10+ member team</strong>, reducing TAT from <strong>3–4 days→1–2 hours</strong> and escalations to <strong>&lt;12 hours</strong>.</li>
-                <li>Built an <strong>AI Agent Helper</strong> using ticket context and response templates, improving CSAT <strong>2→4.2/5</strong> and reducing FRT to <strong>&lt;2 min</strong>; subsequently launched an <strong>AI chatbot</strong> achieving <strong>40–50% routine ticket deflection</strong>.</li>
+                <li><strong>0→1 CRM Vertical:</strong> Built customer support vertical from scratch; created predictive data model linking support wait times directly to churn to secure executive buy-in; established OKRs, SOPs, and dashboards for a <strong>10+ member operations team</strong>.</li>
+                <li>Slashed Resolution TAT from <strong>24–48 hours down to 1–2 hours</strong>, and reduced complex VIP/payment escalations from 3–4 days to <strong>&lt;12 hours</strong>.</li>
+                <li><strong>AI Support Automation:</strong> Built an internal <strong>Agent Helper AI Copilot</strong> consuming real-time game logs, wallet state, and ticket context to recommend one-click resolution copy, reducing agent drafting time to seconds.</li>
+                <li>Developed an autonomous <strong>L1 RAG triage bot</strong> resolving balance inquiries, withdrawal status, and rule FAQs, achieving <strong>40%–50% routine ticket deflection</strong> autonomously.</li>
+                <li><strong>Verified Business Impact:</strong> Slashed First Response Time (FRT) from <strong>>6 hours to under 2 minutes</strong>, boosting CSAT from <strong>2.0 / 5.0 to 4.2 / 5.0</strong>.</li>
               </ul>
             </div>
 
-            <!-- Platform, KYC & Compliance -->
-            <div style="margin-top: 1.25rem;">
-              <h4 style="font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">
-                Platform, KYC & Compliance
-              </h4>
+            <!-- Pillar 4: FinTech & Regulatory Compliance -->
+            <div class="exp-project-block">
+              <div class="exp-project-header">
+                <h4 class="exp-project-title" style="color: #fbbf24;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                  <span>FinTech, KYC Architecture & Regulatory Compliance</span>
+                </h4>
+                <div class="exp-tags-row">
+                  <span class="exp-tag exp-tag-amber">5-Day TDS Engine</span>
+                  <span class="exp-tag exp-tag-emerald">Zero-Upload KYC (&lt;1m)</span>
+                  <span class="exp-tag exp-tag-blue">95% Name Match</span>
+                  <span class="exp-tag exp-tag-emerald">-97% Manual Queue</span>
+                </div>
+              </div>
               <ul class="experience-highlights">
-                <li>Re-engineered KYC from <strong>12–24 hours→&lt;1 minute</strong> and <strong>₹4→₹1 per successful KYC</strong> by introducing automated vendor failover, achieving <strong>98%+ uptime</strong>; improved Indian-name matching to <strong>95% accuracy</strong> and reduced manual reviews by <strong>~97%</strong>.</li>
-                <li>Delivered a compliance feature in <strong>5 days</strong> by aligning Founders, Legal, and Finance under regulatory pressure, enabling a time-sensitive product change without disrupting the customer journey.</li>
+                <li><strong>Automated KYC & Multi-Vendor Fallback:</strong> Replaced 12–24h manual photo OCR with Zero-Upload PAN/DOB verification (&lt;1 min auto-approval); built smart failover between Cashfree and AuthBridge with automated latency monitoring, maintaining <strong>98%+ uptime</strong> and negotiating unit costs down by <strong>-75% (₹4.00 down to ₹1.00 per check)</strong>; lifted D0 KYC completion from <strong>60% to 90%</strong>.</li>
+                <li><strong>Proprietary Indian Name-Matching Algorithm:</strong> Engineered custom rule-based phonetic and structural name-matching engine (initials expansion, first/last name transposition, honorific stripping), achieving <strong>95% accuracy</strong> and slashing the manual review queue by <strong>80% (from 1,000–1,500 down to 30–50 requests/day, a -97% reduction)</strong>.</li>
+                <li><strong>Section 194BA 30% TDS Refund Bonus Engine:</strong> When the Indian Government mandated a 30% tax on all net winnings from ₹1, conceptualized and delivered the <strong>TDS Bonus Refund Engine in 5 business days</strong>, aligning Founders, Legal, Finance, and Tech.</li>
+                <li>Deducted the legal 30% tax but instantly credited the exact amount back as an in-game bonus funded by rebalanced withdrawal fees; Big Cash became the <strong>first mover in India</strong>, turning compliance into an organic acquisition loop that went viral across player communities and prevented high-roller churn.</li>
+                <li><strong>Zero-Downtime Data Migration:</strong> Successfully planned and executed a phased migration of <strong>900,000 legacy KYC users</strong> to the new TDS-compliant mandatory name-matching flow within 3 weeks with zero downtime across live tables.</li>
               </ul>
             </div>
 
             <div class="experience-growth-callout" style="margin-top: 1.5rem;">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="vertical-align: -2px; margin-right: 4px; color: var(--accent);"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Promoted from Product Intern to Associate Product Manager based on commercial impact, game economy turnaround, and cross-functional leadership.
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="vertical-align: -2px; margin-right: 4px; color: #fbbf24;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> 
+              <strong>Rapid Progression:</strong> Promoted from Product Intern to Associate Product Manager based on commercial turnaround of core game mechanics, 2,000+ customer discovery interviews, and high-velocity cross-functional execution.
             </div>
           </div>
 
-          <!-- Role 3: Witzeal Technologies (Intern) -->
+          <!-- ==================================================================
+               ROLE 3: WITZEAL TECHNOLOGIES PVT. LTD. (Product Intern)
+               ================================================================== -->
           <div class="experience-item reveal" data-delay="200" id="role-intern">
             <div class="experience-dot"></div>
             <div class="experience-header">
               <div>
                 <h3 class="experience-role">Product Intern</h3>
                 <div class="experience-company">Witzeal Technologies Pvt. Ltd.</div>
+                <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); margin-top: 3px;">
+                  Qualitative Research · User Behavioral Diagnostics · Funnel Discovery
+                </div>
               </div>
               <span class="experience-period">May 2021 – May 2022 · Gurugram, India</span>
             </div>
-            <ul class="experience-highlights">
-              <li>Conducted <strong>2,000+ user interviews</strong>, translating behavioral insights into onboarding and feature-prioritization improvements and earning a Pre-Placement Offer (PPO).</li>
-            </ul>
+            
+            <div class="exp-project-block" style="margin-top: 0.75rem;">
+              <div class="exp-project-header">
+                <h4 class="exp-project-title" style="color: #60a5fa;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                  <span>Customer Discovery Foundation & User Research Practice</span>
+                </h4>
+                <div class="exp-tags-row">
+                  <span class="exp-tag exp-tag-blue">2,000+ Interviews</span>
+                  <span class="exp-tag exp-tag-emerald">-15% Signup Drop-off</span>
+                  <span class="exp-tag exp-tag-purple">PPO Offer</span>
+                </div>
+              </div>
+              <ul class="experience-highlights">
+                <li>Conducted <strong>over 2,000 one-on-one qualitative user discovery interviews</strong> across active, casual, and churned players across India to establish Witzeal's foundational customer research practice.</li>
+                <li>Built custom interview guides, tagging taxonomies, and emotional friction maps; directly translated behavioral insights into onboarding flow redesigns that cut signup drop-off by <strong>15%</strong> and introduced low-stake practice game modes.</li>
+                <li>Earned a <strong>Pre-Placement Offer (PPO)</strong> to Associate Product Manager based on actionable research depth, customer empathy, and speed of cross-functional execution.</li>
+              </ul>
+            </div>
           </div>
 
         </div>
@@ -396,85 +600,110 @@
     </section>
 
     <!-- ========================================================================
-         5. SKILLS MATRIX
+         5. SKILLS & COMPETENCY MATRIX (5 Domains from Master Work Repository)
          ======================================================================== -->
-    <section class="education-skills-section" style="padding: 4rem 0 6rem; background-color: var(--bg-secondary); border-top: 1px solid var(--border);">
+    <section class="education-skills-section" style="padding: 2.5rem 0 4.5rem; background-color: var(--bg-secondary); border-top: 1px solid var(--border);">
       <div class="container">
         <div class="reveal">
-          <span class="section-tag">Competencies</span>
-          <h2 class="section-title">Skills & Toolkit</h2>
+          <h2 class="section-title">Technical & Functional Competency Matrix</h2>
+          <p class="section-subtitle">
+            Structured skill taxonomy spanning Generative AI architectures, high-scale growth levers, columnar data pipelines, and regulatory FinTech ops.
+          </p>
         </div>
 
         <div class="skills-groups skills-matrix-grid" style="margin-top: 2.5rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
           
+          <!-- Domain 1: GenAI & LLMs -->
           <div class="skill-category">
-            <div class="skill-cat-title">Product Strategy & Discovery</div>
-            <div class="skill-chips">
-              <span class="skill-chip">Product Vision</span>
-              <span class="skill-chip">User Discovery</span>
-              <span class="skill-chip">Roadmapping</span>
-              <span class="skill-chip">PRDs & Specs</span>
-              <span class="skill-chip">RICE Prioritization</span>
-              <span class="skill-chip">GTM Strategy</span>
-              <span class="skill-chip">User Lifecycle</span>
-              <span class="skill-chip">OKRs / KPIs</span>
-              <span class="skill-chip">2,000+ Interviews</span>
+            <div class="skill-cat-title" style="display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg>
+              <span>Generative AI & LLM Systems</span>
             </div>
-          </div>
-
-          <div class="skill-category">
-            <div class="skill-cat-title">Growth & Monetization</div>
             <div class="skill-chips">
-              <span class="skill-chip">Experimentation</span>
-              <span class="skill-chip">A/B Testing</span>
-              <span class="skill-chip">Funnels & Cohorts</span>
-              <span class="skill-chip">Retention / LTV</span>
-              <span class="skill-chip">Conversion Optimization</span>
-              <span class="skill-chip">ARPU Expansion</span>
-              <span class="skill-chip">Pricing Strategy</span>
-              <span class="skill-chip">Dynamic Monetization</span>
-              <span class="skill-chip">VIP Loyalty Programs</span>
-            </div>
-          </div>
-
-          <div class="skill-category">
-            <div class="skill-cat-title">AI Products</div>
-            <div class="skill-chips">
-              <span class="skill-chip">GenAI Product Design</span>
-              <span class="skill-chip">Conversational AI</span>
-              <span class="skill-chip">Voice AI (&lt;800ms)</span>
-              <span class="skill-chip">Prompt Design</span>
-              <span class="skill-chip">AI Evaluation</span>
+              <span class="skill-chip">Duplex Voice (&lt;800ms)</span>
+              <span class="skill-chip">WebRTC Audio</span>
+              <span class="skill-chip">RAG Architecture</span>
+              <span class="skill-chip">Prompt Engineering</span>
               <span class="skill-chip">LLM Guardrails</span>
-              <span class="skill-chip">RAG Systems</span>
-              <span class="skill-chip">Multilingual Workflows</span>
+              <span class="skill-chip">Call Screening AI</span>
+              <span class="skill-chip">AI Support Bots</span>
+              <span class="skill-chip">Agent Helper Copilot</span>
+              <span class="skill-chip">Multi-Persona Prompts</span>
+              <span class="skill-chip">Multilingual (100+ Langs)</span>
             </div>
           </div>
 
+          <!-- Domain 2: Growth & Monetization -->
           <div class="skill-category">
-            <div class="skill-cat-title">Analytics & Lifecycle</div>
+            <div class="skill-cat-title" style="display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              <span>Growth & Monetization</span>
+            </div>
             <div class="skill-chips">
-              <span class="skill-chip">SQL</span>
-              <span class="skill-chip">Product Analytics</span>
-              <span class="skill-chip">Behavioral Segmentation</span>
-              <span class="skill-chip">Lifecycle Analytics</span>
-              <span class="skill-chip">Experiment Analysis</span>
-              <span class="skill-chip">CleverTap (Certified)</span>
-              <span class="skill-chip">Google Analytics 4 (GA4)</span>
-              <span class="skill-chip">Mixpanel</span>
+              <span class="skill-chip">A/B Testing & Exps</span>
+              <span class="skill-chip">Funnels & Cohorts</span>
+              <span class="skill-chip">D0–D7 Activation</span>
+              <span class="skill-chip">VIP Loyalty (3-Tier)</span>
+              <span class="skill-chip">Crash Game Odds</span>
+              <span class="skill-chip">SaaS Usage Billing</span>
+              <span class="skill-chip">Bonus Burn ROI (-20%)</span>
+              <span class="skill-chip">ARPU Expansion (+75%)</span>
+              <span class="skill-chip">Offer Walls & Ads</span>
             </div>
           </div>
 
+          <!-- Domain 3: Data & Platform Architecture -->
           <div class="skill-category">
-            <div class="skill-cat-title">Technical Architecture</div>
+            <div class="skill-cat-title" style="display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+              <span>Data & Platform Infra</span>
+            </div>
             <div class="skill-chips">
-              <span class="skill-chip">REST APIs & SDKs</span>
-              <span class="skill-chip">System Architecture</span>
               <span class="skill-chip">Apache Kafka</span>
-              <span class="skill-chip">ClickHouse</span>
-              <span class="skill-chip">Firebase</span>
-              <span class="skill-chip">AI-Assisted Prototyping</span>
-              <span class="skill-chip">Claude / Cursor / Antigravity</span>
+              <span class="skill-chip">ClickHouse DB</span>
+              <span class="skill-chip">SDK Architecture</span>
+              <span class="skill-chip">Event Taxonomy</span>
+              <span class="skill-chip">Multi-Tenant RBAC</span>
+              <span class="skill-chip">Build vs. Buy</span>
+              <span class="skill-chip">Zero-Downtime Migration</span>
+              <span class="skill-chip">SQL Analytics</span>
+              <span class="skill-chip">CleverTap / Mixpanel</span>
+            </div>
+          </div>
+
+          <!-- Domain 4: FinTech & Regulatory Compliance -->
+          <div class="skill-category">
+            <div class="skill-cat-title" style="display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+              <span>FinTech & Compliance</span>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip">Zero-Upload KYC (&lt;1m)</span>
+              <span class="skill-chip">Gateway Failover Routing</span>
+              <span class="skill-chip">Indian Name-Matching (95%)</span>
+              <span class="skill-chip">Section 194BA TDS Engine</span>
+              <span class="skill-chip">Net Winnings Engines</span>
+              <span class="skill-chip">Cashfree / AuthBridge</span>
+              <span class="skill-chip">Stripe / Razorpay</span>
+              <span class="skill-chip">Fraud & Dispute Triage</span>
+            </div>
+          </div>
+
+          <!-- Domain 5: Product Strategy & Leadership -->
+          <div class="skill-category">
+            <div class="skill-cat-title" style="display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <span>Strategy & Leadership</span>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip">Product Vision & Strategy</span>
+              <span class="skill-chip">0-to-1 Delivery</span>
+              <span class="skill-chip">2,000+ Interviews</span>
+              <span class="skill-chip">PRDs & Specs</span>
+              <span class="skill-chip">RICE & MoSCoW</span>
+              <span class="skill-chip">8-Person Pod Leadership</span>
+              <span class="skill-chip">Executive Buy-In</span>
+              <span class="skill-chip">Agile / Scrum Sprint Lead</span>
             </div>
           </div>
 
@@ -484,17 +713,20 @@
     </section>
 
     <!-- ========================================================================
-         6. EDUCATION, HONORS & AWARDS
+         6. EDUCATION, HONORS & CERTIFICATIONS
          ======================================================================== -->
-    <section class="education-awards-section" style="padding: 4rem 0; border-top: 1px solid var(--border);">
+    <section class="education-awards-section" style="padding: 2.5rem 0; border-top: 1px solid var(--border);">
       <div class="container">
         <div class="reveal">
-          <span class="section-tag">Credentials</span>
           <h2 class="section-title">Education & Recognized Excellence</h2>
+          <p class="section-subtitle">
+            Academic distinction and organizational recognition for product leadership and execution speed.
+          </p>
         </div>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2.5rem;">
           
+          <!-- Card 1: PGDM -->
           <div class="card reveal" data-delay="100" style="padding: 1.75rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-md);">
             <span class="eyebrow" style="margin-bottom: 0.5rem;">POST-GRADUATE</span>
             <h3 style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">PGDM — Information Technology</h3>
@@ -506,6 +738,7 @@
             </div>
           </div>
 
+          <!-- Card 2: B.Sc. IT -->
           <div class="card reveal" data-delay="150" style="padding: 1.75rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-md);">
             <span class="eyebrow" style="margin-bottom: 0.5rem;">UNDERGRADUATE</span>
             <h3 style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">B.Sc. — Information Technology</h3>
@@ -516,21 +749,26 @@
             </div>
           </div>
 
+          <!-- Card 3: Awards & Certifications -->
           <div class="card reveal" data-delay="200" style="padding: 1.75rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-md);">
-            <span class="eyebrow" style="margin-bottom: 0.5rem;">HONORS & CERTIFICATION</span>
+            <span class="eyebrow" style="margin-bottom: 0.5rem;">HONORS & CERTIFICATIONS</span>
             <h3 style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Corporate Awards & Certifications</h3>
-            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <div style="display: flex; flex-direction: column; gap: 0.6rem;">
               <div style="display: flex; align-items: center; gap: 0.45rem; font-size: 0.85rem; color: var(--text-primary);">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 <span><strong>CleverTap Certified:</strong> User Lifecycle, Segmentation & Analytics</span>
               </div>
               <div style="display: flex; align-items: center; gap: 0.45rem; font-size: 0.85rem; color: var(--text-primary);">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path></svg>
-                <span><strong>Pinnacle Award (3×):</strong> Top Organizational Excellence</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path></svg>
+                <span><strong>Pinnacle Award (3× Winner):</strong> Top Product Leadership & Revenue Delivery</span>
               </div>
               <div style="display: flex; align-items: center; gap: 0.45rem; font-size: 0.85rem; color: var(--text-primary);">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-                <span><strong>Power Award (2×):</strong> High-Impact Delivery & Speed</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                <span><strong>Power Award (2× Winner):</strong> High-Impact Speed & Regulatory Delivery</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.45rem; font-size: 0.85rem; color: var(--text-primary);">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg>
+                <span><strong>AI-Assisted Prototyping:</strong> Advanced Rapid Full-Stack Prototyping</span>
               </div>
             </div>
           </div>
@@ -540,7 +778,7 @@
     </section>
 
     <!-- Bottom CTA Bar -->
-    <section style="padding: 4rem 0; text-align: center;">
+    <section style="padding: 2.5rem 0; text-align: center;">
       <div class="container" style="max-width: 680px;">
         <h2 style="font-family: var(--font-display); font-size: 1.85rem; font-weight: 800; margin-bottom: 0.75rem;">Looking for full CV details?</h2>
         <p style="color: var(--text-secondary); margin-bottom: 2rem;">
@@ -564,7 +802,11 @@
         <div class="footer-credo">
           Build. Measure. Learn. Scale.
         </div>
-        <div>
+        <div style="display: flex; gap: 1.25rem;">
+          <a href="work.html" style="color: var(--text-secondary);">Work</a>
+          <a href="experience.html" style="color: var(--text-secondary);">Experience</a>
+          <a href="about.html" style="color: var(--text-secondary);">About</a>
+          <a href="index.html#contact" style="color: var(--accent); font-weight: 600;">Contact</a>
           <a href="#" style="color: var(--accent); font-weight: 600;">Back to top ↑</a>
         </div>
       </div>
@@ -572,5 +814,6 @@
   </footer>
 
   <script src="app.js"></script>
+  <script src="revamp.js"></script>
 </body>
 </html>

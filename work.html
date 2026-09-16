@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +13,7 @@
   
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="revamp.css">
 </head>
 <body>
 
@@ -37,27 +38,21 @@
       </nav>
 
       <div class="header-actions">
-        <!-- Theme Toggle -->
-        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light and dark theme">
-          <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-          <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-        </button>
+        <!-- Theme Toggle Switch -->
+        <div class="theme-switch-wrapper" style="margin-right: 15px;">
+          <label class="theme-switch" for="theme-toggle">
+            <input type="checkbox" id="theme-toggle" aria-label="Toggle light and dark theme" />
+            <span class="slider"></span>
+          </label>
+        </div>
 
-        <a href="index.html#contact" class="btn-header-cta">
-          <span>Let's talk</span>
-          <span aria-hidden="true">→</span>
+        <a href="index.html#contact" class="btn-header-cta" aria-label="Let's talk — Contact Ghanshyam" title="Let's talk">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+          <span class="cta-text">Let's talk</span>
+          <span class="cta-arrow" aria-hidden="true">→</span>
         </a>
 
         <!-- Mobile Hamburger Button -->
@@ -74,329 +69,1172 @@
 
   <!-- Mobile Drawer Overlay -->
   <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-      <span class="brand-logo">GHANSHYAM</span>
-      <button class="close-mobile-menu" aria-label="Close menu" style="color: var(--text-primary); cursor: pointer; padding: 0.5rem; display: flex; align-items: center; justify-content: center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand-logo" style="text-decoration: none;">
+        <span>GHANSHYAM</span>
+        <span class="brand-badge" style="font-size: 0.7rem; padding: 0.15rem 0.45rem; background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 6px; color: var(--accent); font-weight: 800; letter-spacing: 0.05em; margin-left: 0.4rem;">PM</span>
+      </a>
+      <button class="close-mobile-menu" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
     </div>
+
+    <!-- Theme Toggle inside Menu -->
+    <div class="mobile-theme-card">
+      <div class="mobile-theme-meta">
+        <div class="mobile-theme-icon-wrap">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </div>
+        <div>
+          <div class="mobile-theme-title">Theme Mode</div>
+          <div class="mobile-theme-status" id="mobile-theme-status">Dark Mode</div>
+        </div>
+      </div>
+      <label class="theme-switch" for="mobile-theme-toggle">
+        <input type="checkbox" id="mobile-theme-toggle" aria-label="Toggle light and dark theme" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <!-- Nav Links -->
     <ul class="mobile-nav-list">
       <li><a href="index.html" class="mobile-nav-link">Home <span>→</span></a></li>
-      <li><a href="work.html" class="mobile-nav-link">Case Studies <span>→</span></a></li>
+      <li><a href="work.html" class="mobile-nav-link active">Case Studies <span>→</span></a></li>
       <li><a href="experience.html" class="mobile-nav-link">Experience <span>→</span></a></li>
       <li><a href="about.html" class="mobile-nav-link">About Me <span>→</span></a></li>
       <li><a href="Ghanshyam_Kumar_Singh_Resume.pdf" class="mobile-nav-link" target="_blank">Download Resume <span>→</span></a></li>
-      <li><a href="index.html#contact" class="mobile-nav-link" style="color: var(--accent);">Contact & Connect <span>→</span></a></li>
     </ul>
+
+    <!-- Bottom Drawer CTA -->
+    <div class="mobile-drawer-cta-wrap">
+      <a href="index.html#contact" class="mobile-drawer-cta">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+        </svg>
+        <span>Let's talk — Get in touch</span>
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
   </div>
 
   <main>
     <!-- ========================================================================
-         2. SUBPAGE HEADER
+         2. SUBPAGE HEADER (Cinematic)
          ======================================================================== -->
-    <header class="subpage-header">
-      <div class="container">
-        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
-          <a href="index.html" class="breadcrumb-link">Home</a>
-          <span class="breadcrumb-separator">/</span>
-          <span class="breadcrumb-current">Work & Case Studies</span>
-        </nav>
+    <header class="subpage-header" style="position: relative; overflow: hidden; padding-top: calc(var(--header-height) + 2.5rem); padding-bottom: 2.5rem;">
+      <div class="subpage-glow-blob" aria-hidden="true"></div>
+      
+      <div class="container" style="position: relative; z-index: 2; text-align: center;">
+        <!-- Animated Title (Clean, Centered, No Overlaps) -->
+        <div class="work-hero-stack">
+          <div class="blur-text-row" data-direction="top" aria-label="SHIPPED">
+            <span class="blur-char" style="--char-index: 0;">S</span>
+            <span class="blur-char" style="--char-index: 1;">H</span>
+            <span class="blur-char" style="--char-index: 2;">I</span>
+            <span class="blur-char" style="--char-index: 3;">P</span>
+            <span class="blur-char" style="--char-index: 4;">P</span>
+            <span class="blur-char" style="--char-index: 5;">E</span>
+            <span class="blur-char" style="--char-index: 6;">D</span>
+          </div>
+          <div class="blur-text-row accent-row" data-direction="bottom" aria-label="AT SCALE">
+            <span class="blur-char" style="--char-index: 0;">A</span>
+            <span class="blur-char" style="--char-index: 1;">T</span>
+            <span style="display: inline-block; width: 0.4em;"></span>
+            <span class="blur-char" style="--char-index: 2;">S</span>
+            <span class="blur-char" style="--char-index: 3;">C</span>
+            <span class="blur-char" style="--char-index: 4;">A</span>
+            <span class="blur-char" style="--char-index: 5;">L</span>
+            <span class="blur-char" style="--char-index: 6;">E</span>
+          </div>
+        </div>
 
-        <span class="eyebrow">PORTFOLIO DIRECTORY</span>
-        <h1 class="subpage-title">Selected Product Work</h1>
-        <p class="subpage-subtitle">
-          Six end-to-end product cases demonstrating problem diagnostics, customer discovery, live experimentation, technical architecture, and quantified commercial impact.
+        <p class="subpage-subtitle" style="max-width: 720px; margin: 0 auto; color: var(--text-muted); font-size: 1.15rem; line-height: 1.65;">
+          From ambiguous user friction to <span style="color: var(--text-primary); font-weight: 600;">measurable commercial outcomes</span>. A deep dive into zero-to-one product launches, hyper-growth scaling, and platform architecture.
         </p>
 
         <!-- Category Filters -->
-        <div class="filter-bar">
-          <button class="filter-btn active" data-filter="all">All Case Studies (6)</button>
-          <button class="filter-btn" data-filter="growth">Growth & Monetization</button>
-          <button class="filter-btn" data-filter="ai">0 to 1 & GenAI</button>
-          <button class="filter-btn" data-filter="platform">Platform & Systems</button>
+        <div class="filter-bar" style="margin-top: 2.75rem; justify-content: center; gap: 0.75rem; flex-wrap: wrap;">
+          <button class="filter-btn active" data-filter="all">All Cases (8)</button>
+          <button class="filter-btn" data-filter="growth">Growth & Monetization (3)</button>
+          <button class="filter-btn" data-filter="ai">0→1 & GenAI (3)</button>
+          <button class="filter-btn" data-filter="platform">Platform & FinTech (3)</button>
         </div>
       </div>
     </header>
 
     <!-- ========================================================================
-         3. CASE STUDIES DIRECTORY
+         3. BENTO GRID DIRECTORY (8 Synchronized Executive Case Studies)
          ======================================================================== -->
-    <section class="work-section" style="padding: 4rem 0 6rem;">
+    <section class="work-section" style="padding: 2.5rem 0 6rem; position: relative; z-index: 2;">
       <div class="container">
         
-        <!-- Grid of Case Studies -->
-        <div style="display: flex; flex-direction: column; gap: 3rem;">
+        <div class="work-bento-grid">
 
-          <!-- Case 1: Rocket Skill (Flagship) -->
-          <div class="featured-card work-hub-featured-card" data-category="growth">
-            <div class="featured-card-content">
-              <span class="eyebrow">GROWTH · MONETIZATION · 0 TO 1</span>
-              <div class="featured-card-metric">₹3L → ₹8L/day</div>
-              <h2 class="featured-card-title">From a 10X ceiling to ₹8L/day: Scaling Rocket Skill by 167%</h2>
-              
-              <div class="visual-evolution-strip" style="margin: 0.5rem 0 1rem;">
-                <span class="evolution-pill-node">15-Day MVP</span>
-                <span class="evolution-arrow-separator"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
-                <span class="evolution-pill-node">Traction</span>
-                <span class="evolution-arrow-separator"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
-                <span class="evolution-pill-node" style="color: #ef4444; border-color: rgba(239,68,68,0.3);">₹3L Plateau</span>
-                <span class="evolution-arrow-separator"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
-                <span class="evolution-pill-node active-pill">100X Scale (₹8L/day)</span>
+          <!-- Case 1: Rocket Skill (Col-6 Flagship) -->
+          <article class="work-bento-card col-6 theme-gold" data-category="growth" onclick="openCaseModal('modal-rocketskill')">
+            <div class="card-glow-bloom"></div>
+            <div class="card-main-content">
+              <div class="card-top-header">
+                <div class="card-identity-cluster">
+                  <div class="card-icon-emblem">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+                      <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+                      <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+                      <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+                    </svg>
+                  </div>
+                  <div class="card-meta-titles">
+                    <span class="card-eyebrow-pill">
+                      <span class="pulse-indicator"></span>
+                      0→1 CRASH GAME · MONETIZATION
+                    </span>
+                    <span class="card-company-tag">Witzeal · Big Cash</span>
+                  </div>
+                </div>
+                <span class="card-index-marker">№ 01</span>
               </div>
 
-              <p class="featured-card-snippet">
-                Pitched and launched a 15-day MVP on BigCash, diagnosed a ₹3L/day revenue plateau through player calls and funnel queries, and executed 10+ risk/reward experiments up to 100X to scale daily revenue to ₹8L.
+              <h3 class="card-title">Breaking the Revenue Plateau: Rocket Skill</h3>
+              <p class="card-desc">
+                Pitched, scoped, and shipped a 15-day MVP crash game on Big Cash. Diagnosed an early plateau via anomalous funnel queries and launched 10+ risk-reward monetization experiments to scale net commission to ₹8L/day with zero promotional burn.
               </p>
-              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
-                <span class="tag-badge">15-Day MVP</span>
-                <span class="tag-badge">₹3L → ₹8L/Day (+167%)</span>
-                <span class="tag-badge">~20K → 30K–40K DAU</span>
-                <span class="tag-badge">10+ A/B Tests</span>
-                <span class="tag-badge">100X Multiplier</span>
-              </div>
-              <div class="featured-card-footer">
-                <span style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-muted);">BigCash · Witzeal</span>
-                <a href="case-study-rocketskill.html" class="btn-primary" style="padding: 0.6rem 1.25rem; font-size: 0.875rem;">
-                  <span>Read Full Case Study</span>
-                  <span aria-hidden="true">→</span>
-                </a>
+
+              <div class="card-impact-slab">
+                <div class="impact-stat-group">
+                  <span class="impact-headline">₹8,00,000 / day</span>
+                  <span class="impact-badge">+167% Growth</span>
+                </div>
+                <span class="impact-caption">Peak Net Platform Commission · ~100% Margin · 0% Promo Burn</span>
               </div>
             </div>
-          </div>
 
-          <!-- Case 2: MySmartAssistant (Flagship) -->
-          <div class="featured-card work-hub-featured-card" data-category="ai">
-            <div class="featured-card-content">
-              <span class="eyebrow">GENAI · VOICE AI · 0 TO 1 PRODUCT JOURNEY</span>
-              <div class="featured-card-metric">₹4–6L/Mo · 0→1</div>
-              <h2 class="featured-card-title">MySmartAssistant: From document vault to AI personal assistant & B2B voice</h2>
-              
-              <div class="visual-evolution-strip" style="margin: 0.5rem 0 1rem;">
-                <span class="evolution-pill-node">Vault</span>
-                <span class="evolution-arrow-separator"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
-                <span class="evolution-pill-node">WhatsApp Bot</span>
-                <span class="evolution-arrow-separator"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
-                <span class="evolution-pill-node active-pill">MySA Live Voice</span>
-                <span class="evolution-arrow-separator"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
-                <span class="evolution-pill-node" style="color: var(--accent-emerald); border-color: rgba(16,185,129,0.3);">B2B Voice Platform</span>
+            <div class="card-footer-area">
+              <div class="card-tags">
+                <span class="tag-badge">15-Day MVP Launch</span>
+                <span class="tag-badge">Odds Curve Balancing</span>
+                <span class="tag-badge">Zero Bonus Burn</span>
+              </div>
+              <div class="card-bottom-bar">
+                <span class="card-role-chip">Associate PM · RMG & Growth</span>
+                <span class="card-cta-action">
+                  <span>Read Executive Brief</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case 2: MySmartAssistant (Col-6 Flagship) -->
+          <article class="work-bento-card col-6 theme-cyan" data-category="ai" onclick="openCaseModal('modal-mysa')">
+            <div class="card-glow-bloom"></div>
+            <div class="card-main-content">
+              <div class="card-top-header">
+                <div class="card-identity-cluster">
+                  <div class="card-icon-emblem">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+                      <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                      <line x1="12" x2="12" y1="19" y2="22"/>
+                    </svg>
+                  </div>
+                  <div class="card-meta-titles">
+                    <span class="card-eyebrow-pill">
+                      <span class="pulse-indicator"></span>
+                      0→1 GENAI PLATFORM · VOICE AI
+                    </span>
+                    <span class="card-company-tag">AIVO Technologies</span>
+                  </div>
+                </div>
+                <span class="card-index-marker">№ 02</span>
               </div>
 
-              <p class="featured-card-snippet">
-                Validated 200+ target users, identified voice as preferred experience (3× higher WTP vs chat), led an 8-member pod, shipped 4-week MVP (+15% D1 activation), and built autonomous voice workflows in 100+ languages (~92% accuracy).
+              <h3 class="card-title">MySmartAssistant: Autonomous Voice AI Pivot</h3>
+              <p class="card-desc">
+                Identified an 80%+ task drop-off on mobile push notifications across 500+ discovery interviews. Engineered an autonomous phone call screener (Call Assist) with duplex WebRTC voice and RAG memory, scaling to 100K+ downloads in 30 days.
               </p>
-              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
-                <span class="tag-badge">200+ Target Users</span>
-                <span class="tag-badge">3× Higher WTP</span>
-                <span class="tag-badge">4-Week MVP</span>
-                <span class="tag-badge">8-Member Pod</span>
-                <span class="tag-badge">+15% D1 Activation</span>
-                <span class="tag-badge">~92% Accuracy</span>
-              </div>
-              <div class="featured-card-footer">
-                <span style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-muted);">AIVO Technologies · 2026</span>
-                <a href="case-study-mysmartassistant.html" class="btn-primary" style="padding: 0.6rem 1.25rem; font-size: 0.875rem;">
-                  <span>Read Full Case Study</span>
-                  <span aria-hidden="true">→</span>
-                </a>
-              </div>
-            </div>
-          </div>
 
-          <!-- 2x2 Grid for Remaining 4 Case Studies (Pictorial Showcase) -->
-          <div class="compact-work-grid">
-            
-            <!-- Case 3: VIP Club (With Tier Ladder Diagram) -->
-            <div class="compact-card" data-category="growth">
-              <div>
-                <span class="eyebrow">MONETIZATION & RETENTION</span>
-                <div class="compact-card-metric">+75% VIP ARPU</div>
-                <h3 class="compact-card-title">VIP Club: 3-Tier Wagering Progression</h3>
-                
-                <div class="tier-ladder-diagram">
-                  <div class="tier-ladder-steps">
-                    <div class="tier-step">
-                      <div class="tier-step-name">Bronze</div>
-                      <div class="tier-step-val">₹5K Wager</div>
-                    </div>
-                    <span class="tier-ladder-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
-                    <div class="tier-step">
-                      <div class="tier-step-name">Silver</div>
-                      <div class="tier-step-val">₹50K Wager</div>
-                    </div>
-                    <span class="tier-ladder-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
-                    <div class="tier-step highlight">
-                      <div class="tier-step-name">Gold</div>
-                      <div class="tier-step-val">₹100K Wager</div>
-                    </div>
-                  </div>
-                  <div class="tier-ladder-banner">
-                    <span>Progression Milestones</span>
-                    <span>₹8K → ₹14K ARPU</span>
-                  </div>
+              <div class="card-impact-slab">
+                <div class="impact-stat-group">
+                  <span class="impact-headline">₹1.5 Crore+ in 4 Mos</span>
+                  <span class="impact-badge">20K+ Paid Subs</span>
                 </div>
-
-                <p class="compact-card-desc">
-                  Transformed a static loyalty badge into an active 3-tier progression system with personalized loss-back credits and milestone nudges, growing active VIPs 45K→65K (+44%) and expanding ARPU by +75%.
-                </p>
-              </div>
-              <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid var(--border);">
-                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">45K → 65K VIPs</span>
-                <a href="experience.html#role-witzeal" class="card-cta-link">View in Experience →</a>
+                <span class="impact-caption">Direct B2C Revenue · ₹2L+ Month-1 B2B MRR · 100K+ Downloads</span>
               </div>
             </div>
 
-            <!-- Case 4: CRM + AI (With Copilot Pipeline Flow) -->
-            <div class="compact-card" data-category="ai platform">
-              <div>
-                <span class="eyebrow">OPERATIONS & AI SYSTEMS</span>
-                <div class="compact-card-metric">CSAT 2/5 → 4.2/5</div>
-                <h3 class="compact-card-title">CRM + AI: Agent Copilot & Ticket Deflection</h3>
-                
-                <div class="pipeline-flow-diagram">
-                  <div class="pipeline-nodes-row">
-                    <div class="pipeline-node">
-                      <div class="pipeline-node-label">User Ticket</div>
-                      <div class="pipeline-node-sub">Inflow</div>
-                    </div>
-                    <span class="pipeline-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
-                    <div class="pipeline-node active-node">
-                      <div class="pipeline-node-label">AI Copilot</div>
-                      <div class="pipeline-node-sub">&lt;1s Context</div>
-                    </div>
-                    <span class="pipeline-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
-                    <div class="pipeline-node">
-                      <div class="pipeline-node-label">1-Click Resolve</div>
-                      <div class="pipeline-node-sub">Agent Guided</div>
-                    </div>
+            <div class="card-footer-area">
+              <div class="card-tags">
+                <span class="tag-badge">Call Assist Screener</span>
+                <span class="tag-badge">Duplex WebRTC Voice</span>
+                <span class="tag-badge">92% Task Accuracy</span>
+              </div>
+              <div class="card-bottom-bar">
+                <span class="card-role-chip">Product Manager · GenAI & Voice</span>
+                <span class="card-cta-action">
+                  <span>Read Executive Brief</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case 3: VIP Club Gamification (Col-4) -->
+          <article class="work-bento-card col-4 theme-purple" data-category="growth" onclick="openCaseModal('modal-vip')">
+            <div class="card-glow-bloom"></div>
+            <div class="card-main-content">
+              <div class="card-top-header">
+                <div class="card-identity-cluster">
+                  <div class="card-icon-emblem">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
                   </div>
-                  <div class="pipeline-metric-strip">
-                    <span>45% Faster Response</span>
-                    <span>40–50% Deflection</span>
+                  <div class="card-meta-titles">
+                    <span class="card-eyebrow-pill">
+                      <span class="pulse-indicator"></span>
+                      RETENTION & GAMIFICATION
+                    </span>
+                    <span class="card-company-tag">Witzeal · Big Cash</span>
                   </div>
                 </div>
-
-                <p class="compact-card-desc">
-                  Rebuilt support from scratch (10+ agents) and deployed an internal AI Agent Helper before exposing automation to users, slashing response times by 45% and lifting CSAT from 2/5 to 4.2/5.
-                </p>
+                <span class="card-index-marker">№ 03</span>
               </div>
-              <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid var(--border);">
-                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">40–50% Deflection</span>
-                <a href="experience.html#role-witzeal" class="card-cta-link">View in Experience →</a>
+
+              <h3 class="card-title">Dynamic 3-Tier VIP Loyalty Engine</h3>
+              <p class="card-desc">
+                Discovered that 20% of high-rollers drove 85% of platform revenue. Restructured a dead-end ₹5,000 threshold into a 3-tier wagering progression (VIP, Plus, Pro), growing active VIP DAU by 44% to 65,000 players.
+              </p>
+
+              <div class="card-impact-slab">
+                <div class="impact-stat-group">
+                  <span class="impact-headline">+75% VIP ARPU</span>
+                  <span class="impact-badge">₹14,000 / Player</span>
+                </div>
+                <span class="impact-caption">₹1.5 Cr/Day VIP Deposits · 45K → 65K VIP DAU · 81% Renewal</span>
               </div>
             </div>
 
-            <!-- Case 5: KYC Platform (With Before/After Verification Split) -->
-            <div class="compact-card" data-category="platform">
-              <div>
-                <span class="eyebrow">PLATFORM & COMPLIANCE</span>
-                <div class="compact-card-metric">&lt;1 Min Verification</div>
-                <h3 class="compact-card-title">KYC Platform: Real-Time Identity Engine</h3>
-                
-                <div class="before-after-compact-widget">
-                  <div class="before-after-split-row">
-                    <div class="ba-column old-state">
-                      <span class="ba-col-tag">Old OCR Queue</span>
-                      <div class="ba-col-val">12–24h Wait</div>
-                      <div style="font-size: 0.65rem; color: var(--text-muted); margin-top: 2px;">97% manual review</div>
-                    </div>
-                    <div class="ba-column new-state">
-                      <span class="ba-col-tag">Direct DB Engine</span>
-                      <div class="ba-col-val">&lt;1 Min Instant</div>
-                      <div style="font-size: 0.65rem; color: var(--accent-emerald); margin-top: 2px;">95% name match · -75% cost</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="compact-card-kv-list">
-                  <div class="compact-card-kv-row">
-                    <span class="compact-kv-tag problem">Friction</span>
-                    <span class="compact-kv-text">12–24h OCR wait and high drop-offs during live gaming events.</span>
-                  </div>
-                  <div class="compact-card-kv-row">
-                    <span class="compact-kv-tag action">Playbook</span>
-                    <span class="compact-kv-text">Direct DB verification + automated multi-vendor failover architecture.</span>
-                  </div>
-                  <div class="compact-card-kv-row">
-                    <span class="compact-kv-tag impact">Outcome</span>
-                    <span class="compact-kv-text"><strong>&lt;1 Min instant check</strong>, 95% match, <strong>-75% vendor cost (₹4→₹1)</strong>.</span>
-                  </div>
-                </div>
+            <div class="card-footer-area">
+              <div class="card-tags">
+                <span class="tag-badge">Power-Law Economics</span>
+                <span class="tag-badge">3-Tier Progression</span>
+                <span class="tag-badge">81% VIP Renewal</span>
               </div>
-              <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid var(--border);">
-                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">98%+ Uptime</span>
-                <a href="experience.html#role-witzeal" class="card-cta-link">View in Experience →</a>
+              <div class="card-bottom-bar">
+                <span class="card-role-chip">Associate PM · Monetization</span>
+                <span class="card-cta-action">
+                  <span>Read Brief</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case 4: CRM Revamp & AI Support Automation (Col-4) -->
+          <article class="work-bento-card col-4 theme-rose" data-category="ai platform" onclick="openCaseModal('modal-crmai')">
+            <div class="card-glow-bloom"></div>
+            <div class="card-main-content">
+              <div class="card-top-header">
+                <div class="card-identity-cluster">
+                  <div class="card-icon-emblem">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                      <circle cx="9" cy="10" r="1"/>
+                      <circle cx="15" cy="10" r="1"/>
+                      <path d="M9.5 13a3.5 3.5 0 0 0 5 0"/>
+                    </svg>
+                  </div>
+                  <div class="card-meta-titles">
+                    <span class="card-eyebrow-pill">
+                      <span class="pulse-indicator"></span>
+                      AI OPERATIONS & TRIAGE
+                    </span>
+                    <span class="card-company-tag">Witzeal · Big Cash</span>
+                  </div>
+                </div>
+                <span class="card-index-marker">№ 04</span>
+              </div>
+
+              <h3 class="card-title">AI Support Automation & Copilot Engine</h3>
+              <p class="card-desc">
+                Correlated customer support wait times directly with paid player churn. Deployed an autonomous L1 RAG triage bot and Agent Helper AI Copilot inside Freshchat, deflecting 40–50% of routine tickets while slashing response times.
+              </p>
+
+              <div class="card-impact-slab">
+                <div class="impact-stat-group">
+                  <span class="impact-headline">&lt;2 Min FRT</span>
+                  <span class="impact-badge">CSAT 4.2 / 5.0</span>
+                </div>
+                <span class="impact-caption">First Response Time (>6h → &lt;2m) · 50% Auto Deflected</span>
               </div>
             </div>
 
-            <!-- Case 6: GrowthTap Analytics (With Kafka/ClickHouse Flow) -->
-            <div class="compact-card" data-category="platform growth">
-              <div>
-                <span class="eyebrow">B2B SAAS & TECHNICAL PRODUCT</span>
-                <div class="compact-card-metric">$50K+/Yr Saved</div>
-                <h3 class="compact-card-title">GrowthTap: In-House Event & Funnel Stack</h3>
-                
-                <div class="pipeline-flow-diagram">
-                  <div class="pipeline-nodes-row">
-                    <div class="pipeline-node">
-                      <div class="pipeline-node-label">App Events</div>
-                      <div class="pipeline-node-sub">50M+ users</div>
-                    </div>
-                    <span class="pipeline-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
-                    <div class="pipeline-node">
-                      <div class="pipeline-node-label">Kafka Stream</div>
-                      <div class="pipeline-node-sub">Low latency</div>
-                    </div>
-                    <span class="pipeline-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
-                    <div class="pipeline-node active-node">
-                      <div class="pipeline-node-label">ClickHouse</div>
-                      <div class="pipeline-node-sub">Real-time funnels</div>
-                    </div>
-                  </div>
-                  <div class="pipeline-metric-strip">
-                    <span>Replaced $50K/yr SaaS</span>
-                    <span>60% Faster Integration</span>
-                  </div>
-                </div>
-
-                <div class="compact-card-kv-list">
-                  <div class="compact-card-kv-row">
-                    <span class="compact-kv-tag problem">Friction</span>
-                    <span class="compact-kv-text">Third-party analytics tools cost $50K+/yr with high query latency.</span>
-                  </div>
-                  <div class="compact-card-kv-row">
-                    <span class="compact-kv-tag action">Playbook</span>
-                    <span class="compact-kv-text">0-to-1 event platform on Kafka + ClickHouse with offline event batching.</span>
-                  </div>
-                  <div class="compact-card-kv-row">
-                    <span class="compact-kv-tag impact">Outcome</span>
-                    <span class="compact-kv-text"><strong>$50K+/yr saved</strong>, sub-second funnels, <strong>60% faster integration</strong>.</span>
-                  </div>
-                </div>
+            <div class="card-footer-area">
+              <div class="card-tags">
+                <span class="tag-badge">L1 RAG Triage Bot</span>
+                <span class="tag-badge">Agent Helper Copilot</span>
+                <span class="tag-badge">Predictive Churn Model</span>
               </div>
-              <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid var(--border);">
-                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">AIVO Technologies</span>
-                <a href="experience.html#role-aivo" class="card-cta-link">View in Experience →</a>
+              <div class="card-bottom-bar">
+                <span class="card-role-chip">Associate PM · Support & AI</span>
+                <span class="card-cta-action">
+                  <span>Read Brief</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case 5: KYC Platform & TDS Engine (Col-4) -->
+          <article class="work-bento-card col-4 theme-emerald" data-category="platform" onclick="openCaseModal('modal-kyc')">
+            <div class="card-glow-bloom"></div>
+            <div class="card-main-content">
+              <div class="card-top-header">
+                <div class="card-identity-cluster">
+                  <div class="card-icon-emblem">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                      <polyline points="9 12 11 14 15 10"/>
+                    </svg>
+                  </div>
+                  <div class="card-meta-titles">
+                    <span class="card-eyebrow-pill">
+                      <span class="pulse-indicator"></span>
+                      FINTECH & COMPLIANCE
+                    </span>
+                    <span class="card-company-tag">Witzeal · Big Cash</span>
+                  </div>
+                </div>
+                <span class="card-index-marker">№ 05</span>
+              </div>
+
+              <h3 class="card-title">Real-Time Identity & 30% TDS Engine</h3>
+              <p class="card-desc">
+                Engineered zero-upload PAN verification with multi-vendor failover and a custom Indian phonetic name-matching algorithm (95% match rate). Shipped a Section 194BA TDS bonus refund loop in 5 days, turning compliance into an acquisition loop.
+              </p>
+
+              <div class="card-impact-slab">
+                <div class="impact-stat-group">
+                  <span class="impact-headline">-97% Review Queue</span>
+                  <span class="impact-badge">&lt;1 Min TAT</span>
+                </div>
+                <span class="impact-caption">Manual Queue: 1,500 → 30/day · -75% Vendor Verification Cost</span>
               </div>
             </div>
 
-          </div>
+            <div class="card-footer-area">
+              <div class="card-tags">
+                <span class="tag-badge">Phonetic Name Match</span>
+                <span class="tag-badge">Cashfree / AuthBridge</span>
+                <span class="tag-badge">5-Day Regulatory Launch</span>
+              </div>
+              <div class="card-bottom-bar">
+                <span class="card-role-chip">Associate PM · FinTech & Risk</span>
+                <span class="card-cta-action">
+                  <span>Read Brief</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case 6: GrowthTap Analytics (Col-4 Platform Flagship) -->
+          <article class="work-bento-card col-4 theme-indigo" data-category="platform" onclick="openCaseModal('modal-growthtap')">
+            <div class="card-glow-bloom"></div>
+            <div class="card-main-content">
+              <div class="card-top-header">
+                <div class="card-identity-cluster">
+                  <div class="card-icon-emblem">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                      <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                      <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                    </svg>
+                  </div>
+                  <div class="card-meta-titles">
+                    <span class="card-eyebrow-pill">
+                      <span class="pulse-indicator"></span>
+                      DATA INFRASTRUCTURE
+                    </span>
+                    <span class="card-company-tag">AIVO Technologies</span>
+                  </div>
+                </div>
+                <span class="card-index-marker">№ 06</span>
+              </div>
+
+              <h3 class="card-title">GrowthTap: In-House Kafka & ClickHouse</h3>
+              <p class="card-desc">
+                Conducted Build vs. Buy analysis replacing costly CleverTap SaaS subscriptions. Partnered with data engineering to deploy an Apache Kafka + ClickHouse columnar pipeline delivering sub-second ingestion, real-time segmentation, and lightweight SDKs.
+              </p>
+
+              <div class="card-impact-slab">
+                <div class="impact-stat-group">
+                  <span class="impact-headline">$50,000 / year</span>
+                  <span class="impact-badge">Saved Overhead</span>
+                </div>
+                <span class="impact-caption">Zero SaaS License · Sub-Second Ingestion (vs 6-12h GA4)</span>
+              </div>
+            </div>
+
+            <div class="card-footer-area">
+              <div class="card-tags">
+                <span class="tag-badge">ClickHouse Columnar</span>
+                <span class="tag-badge">Apache Kafka Pipeline</span>
+                <span class="tag-badge">Multi-Tenant RBAC</span>
+              </div>
+              <div class="card-bottom-bar">
+                <span class="card-role-chip">Product Manager · Data Infra</span>
+                <span class="card-cta-action">
+                  <span>Read Brief</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case 7: Lavola.ai GenAI Companion (Col-4) -->
+          <article class="work-bento-card col-4 theme-magenta" data-category="ai" onclick="openCaseModal('modal-lavola')">
+            <div class="card-glow-bloom"></div>
+            <div class="card-main-content">
+              <div class="card-top-header">
+                <div class="card-identity-cluster">
+                  <div class="card-icon-emblem">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                    </svg>
+                  </div>
+                  <div class="card-meta-titles">
+                    <span class="card-eyebrow-pill">
+                      <span class="pulse-indicator"></span>
+                      GENAI COMPANION
+                    </span>
+                    <span class="card-company-tag">AIVO Technologies</span>
+                  </div>
+                </div>
+                <span class="card-index-marker">№ 07</span>
+              </div>
+
+              <h3 class="card-title">Lavola.ai: GenAI Companion & Guardrails</h3>
+              <p class="card-desc">
+                Designed a multi-persona conversational companion platform featuring duplex voice, adaptive prompt orchestration, and semantic safety boundaries. Engineered crisis escalation protocols and dynamic paywalls for closed beta.
+              </p>
+
+              <div class="card-impact-slab">
+                <div class="impact-stat-group">
+                  <span class="impact-headline">92% Accuracy</span>
+                  <span class="impact-badge">&lt;800ms Duplex</span>
+                </div>
+                <span class="impact-caption">Closed Beta Task Resolution · Zero PII Leaks · Crisis Escalation</span>
+              </div>
+            </div>
+
+            <div class="card-footer-area">
+              <div class="card-tags">
+                <span class="tag-badge">Multi-Persona Framework</span>
+                <span class="tag-badge">Semantic Guardrails</span>
+                <span class="tag-badge">Duplex Voice UI</span>
+              </div>
+              <div class="card-bottom-bar">
+                <span class="card-role-chip">Product Manager · GenAI</span>
+                <span class="card-cta-action">
+                  <span>Read Brief</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case 8: D0–D7 Retention & User Discovery (Col-4) -->
+          <article class="work-bento-card col-4 theme-blue" data-category="growth" onclick="openCaseModal('modal-research')">
+            <div class="card-glow-bloom"></div>
+            <div class="card-main-content">
+              <div class="card-top-header">
+                <div class="card-identity-cluster">
+                  <div class="card-icon-emblem">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+                    </svg>
+                  </div>
+                  <div class="card-meta-titles">
+                    <span class="card-eyebrow-pill">
+                      <span class="pulse-indicator"></span>
+                      RETENTION & DISCOVERY
+                    </span>
+                    <span class="card-company-tag">Witzeal · Big Cash</span>
+                  </div>
+                </div>
+                <span class="card-index-marker">№ 08</span>
+              </div>
+
+              <h3 class="card-title">D0–D7 Onboarding & Habit-Forming Loops</h3>
+              <p class="card-desc">
+                Synthesized insights from 2,000+ qualitative customer discovery interviews to overhaul new-player activation. Replaced cognitive overload with campaign-to-game journey mapping, progressive 7-day streak rewards, and dynamic deposit nudges.
+              </p>
+
+              <div class="card-impact-slab">
+                <div class="impact-stat-group">
+                  <span class="impact-headline">12% → 25% D7 Ret</span>
+                  <span class="impact-badge">+10% WoW</span>
+                </div>
+                <span class="impact-caption">D7 Player Retention Doubled · -20% Promotional Bonus Burn</span>
+              </div>
+            </div>
+
+            <div class="card-footer-area">
+              <div class="card-tags">
+                <span class="tag-badge">2,000+ User Interviews</span>
+                <span class="tag-badge">7-Day Habit Streaks</span>
+                <span class="tag-badge">-20% Promo Burn</span>
+              </div>
+              <div class="card-bottom-bar">
+                <span class="card-role-chip">Associate PM · Growth & Discovery</span>
+                <span class="card-cta-action">
+                  <span>Read Brief</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </span>
+              </div>
+            </div>
+          </article>
 
         </div>
 
       </div>
     </section>
 
-    <!-- Bottom CTA Bar -->
-    <section style="background-color: var(--bg-secondary); border-top: 1px solid var(--border); padding: 4rem 0;">
-      <div class="container" style="text-align: center; max-width: 680px;">
-        <h2 style="font-family: var(--font-display); font-size: 1.85rem; font-weight: 800; margin-bottom: 0.75rem;">Want to discuss a specific case in detail?</h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">
-          I'm happy to walk through experiment design docs, PRDs, and architecture trade-offs.
+    <!-- ========================================================================
+         4. GRAND FINALE CTA
+         ======================================================================== -->
+    <section class="bottom-cta-section" style="padding: 6rem 0; position: relative; overflow: hidden; border-top: 1px solid var(--border);">
+      <div class="animated-bg-glow" style="background: radial-gradient(circle at center, rgba(56, 189, 248, 0.15), transparent 70%); width: 100%; height: 100%; top: 0; left: 0;"></div>
+      
+      <div class="container text-center reveal" style="position: relative; z-index: 2; max-width: 800px; margin: 0 auto;">
+        <span class="eyebrow" style="margin-bottom: 1.5rem;">OPEN FOR NEW OPPORTUNITIES</span>
+        <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 700; line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -0.02em;">
+          Ready to scale your next product? Let's build something <span class="highlight-gradient">exceptional.</span>
+        </h2>
+        
+        <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto 3rem auto; line-height: 1.6;">
+          Whether it's finding the 0-to-1 wedge or unlocking the next 100X growth multiplier, I'm always looking for ambitious teams solving complex problems.
         </p>
+        
         <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-          <a href="index.html#contact" class="btn-primary">Let's talk →</a>
-          <a href="Ghanshyam_Kumar_Singh_Resume.pdf" download="Ghanshyam_Kumar_Singh_Resume.pdf" class="btn-secondary">Download Resume (PDF)</a>
+          <a href="index.html#contact" class="btn-primary premium-glow">
+            <span>Get in Touch</span>
+            <span aria-hidden="true" class="btn-arrow">→</span>
+          </a>
+          <a href="Ghanshyam_Kumar_Singh_Resume.pdf" class="btn-secondary ghost-hover premium-border" download>
+            <span>Download Resume</span>
+            <span aria-hidden="true" class="btn-arrow">↓</span>
+          </a>
         </div>
       </div>
     </section>
+
+    <!-- ========================================================================
+         5. EXECUTIVE MODAL BRIEFINGS (Direct from Master Work Repository)
+         ======================================================================== -->
+
+    <!-- Modal 1: Rocket Skill -->
+    <template id="modal-rocketskill">
+      <div style="padding: 0.5rem 0;">
+        <div class="modal-meta-row">
+          <span class="modal-meta-badge" style="color: #fbbf24; border-color: rgba(251, 191, 36, 0.3); background: rgba(251, 191, 36, 0.1);">Witzeal Technologies · Big Cash</span>
+          <span class="modal-meta-badge" style="color: var(--text-muted); border-color: var(--border); background: transparent;">Associate Product Manager · RMG & Growth</span>
+        </div>
+        <h2 style="font-size: 2.4rem; font-family: var(--font-display); font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.15;">
+          Rocket Skill: 0-to-1 Crash Game Launch & Scaling
+        </h2>
+        <div class="modal-stat-banner" style="color: #fbbf24; border-color: #fbbf24; background: rgba(251, 191, 36, 0.08);">
+          ₹3L → ₹8L/Day Net Commission (+167% Growth) · 40,000 DAU · ~100% Gross Margin
+        </div>
+
+        <div class="modal-metric-grid">
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: #fbbf24;">₹8,00,000</span>
+            <span class="modal-metric-lbl">Peak Daily Net Commission</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val">40,000</span>
+            <span class="modal-metric-lbl">Active Daily Players (DAU)</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: var(--accent-emerald);">0% Burn</span>
+            <span class="modal-metric-lbl">100% Organic In-App Discovery</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val">15 Days</span>
+            <span class="modal-metric-lbl">Concept to Playable MVP</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Strategic Context & Discovery</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem;">
+            Identified an accelerating appetite in the Indian market for short-session, high-tempo multiplier games (e.g. Aviator). Scoped and launched a playable MVP on Big Cash within 15 days, hitting ₹1,00,000/day in two weeks and ₹3,00,000/day by Month 2. However, revenue plateaued because multipliers were artificially capped at 10x, leaving high-rollers without an aspirational jackpot, while flat entry fees failed to separate casual players from high rollers.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Product Execution & Technical Levers</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li><strong>High-Roller Multiplier Curves:</strong> Raised maximum multiplier ceilings to 100x with dynamic probability odds balancing, preserving the 9% platform take rate (rake).</li>
+            <li><strong>10+ A/B Contest Lobby Experiments:</strong> Segmented lobbies by entry fees (low-stake, mid-tier, and high-roller tables), allowing users to self-select by risk appetite.</li>
+            <li><strong>Social Proof & Live Tickers:</strong> Implemented real-time on-screen tickers displaying winning usernames and cash-out multipliers, creating FOMO and social proof.</li>
+            <li><strong>Regulatory Skill Moat:</strong> Indian law strictly prohibits "games of chance" (gambling) but allows "games of skill". Differentiated Rocket Skill by engineering historical multiplier distributions, rolling averages, and a player "Skill Score" into the UI, making decisions data-driven and legally compliant in strictly regulated states.</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Quantified Commercial Impact</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li>Scaled net daily commission from <strong>₹3,00,000 to ₹8,00,000/day (+167% growth)</strong> across two quarters.</li>
+            <li>Doubled active game DAU from <strong>20,000 to 40,000 players</strong>.</li>
+            <li>Delivered <strong>~100% gross margin</strong> on commission with zero paid user acquisition or promotional bonus burn.</li>
+          </ul>
+        </div>
+
+        <div class="modal-lesson-box">
+          <h4>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            PM Hard Lesson: The ₹1 Minimum Bet Failure
+          </h4>
+          <p>
+            When we first raised multiplier ceilings to 100x, we kept the minimum bet at ₹1. Revenue showed zero statistically significant lift because players played 100x tables with ₹1–₹5 bets—thrill-seeking at zero risk. It was only when we coupled the 100x ceiling with segmented minimum bets (₹1 for 10x, ₹5 for 25x, ₹10 for 50x, ₹25 for 100x) that ARPU surged. <em>Takeaway: Aspiration without commitment is entertainment, not monetization.</em>
+          </p>
+        </div>
+      </div>
+    </template>
+
+    <!-- Modal 2: MySmartAssistant -->
+    <template id="modal-mysa">
+      <div style="padding: 0.5rem 0;">
+        <div class="modal-meta-row">
+          <span class="modal-meta-badge" style="color: #38bdf8; border-color: rgba(56, 189, 248, 0.3); background: rgba(56, 189, 248, 0.1);">AIVO Technologies</span>
+          <span class="modal-meta-badge" style="color: var(--text-muted); border-color: var(--border); background: transparent;">Product Manager · GenAI & Voice (Pod of 8)</span>
+        </div>
+        <h2 style="font-size: 2.4rem; font-family: var(--font-display); font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.15;">
+          MySmartAssistant: Autonomous Voice AI & Call Intelligence
+        </h2>
+        <div class="modal-stat-banner" style="color: #38bdf8; border-color: #38bdf8; background: rgba(56, 189, 248, 0.08);">
+          ₹1.5 Crore+ in 4 Months · 20,000+ Paid Subscribers · 100K+ Downloads in 30 Days
+        </div>
+
+        <div class="modal-metric-grid">
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: #38bdf8;">₹1.5 Cr+</span>
+            <span class="modal-metric-lbl">Consumer Revenue (4 Mos)</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val">100,000+</span>
+            <span class="modal-metric-lbl">Downloads within 30 Days</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: var(--accent-emerald);">₹2L+ MRR</span>
+            <span class="modal-metric-lbl">B2B Month 1 Revenue</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val">~92%</span>
+            <span class="modal-metric-lbl">Task Resolution Accuracy</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Strategic Problem & Discovery Insights</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem;">
+            A quantitative audit revealed an 80%+ drop-off in user task completion when relying strictly on mobile push notifications. In 500+ discovery interviews with Indian executives and SMBs, three truths emerged:
+          </p>
+          <div class="modal-callout-quote">
+            "I missed my car insurance renewal because the notification just disappeared in my app clutter. If someone had actually called me, I would have renewed immediately." — SMB Owner, Discovery Interview
+          </div>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li>Push notifications get buried in OS noise; critical deadlines demand direct phone-call escalation.</li>
+            <li>SMB owners lose 2–3 hours every day to spam and sales calls, but cannot turn phones off due to client emergencies.</li>
+            <li>Users demonstrated 3× higher Willingness to Pay (WTP) for voice-assisted phone automation over text-only chat.</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Product Architecture & Levers Shipped</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li><strong>Call Assist (Autonomous Inbound Call Screener):</strong> Cellular call interception where AI answers contextually, screens spam, transcribes intent, and dispatches instant structured summaries to WhatsApp.</li>
+            <li><strong>Autonomous Phone Call Escalation:</strong> Automated escalation matrix: if a push notification is unacknowledged after N minutes, backend initiates an outbound natural-voice phone call.</li>
+            <li><strong>Document Vault & OCR Pipeline:</strong> Users upload policies/RCs; OCR + LLM extracts expiry dates and grace periods, pre-populating renewal schedules.</li>
+            <li><strong>MySA Live (Real-Time Duplex Voice):</strong> Low-latency WebRTC duplex voice interface with natural barge-in support.</li>
+            <li><strong>MySA for Business (7-Day MVP):</strong> Captured organic B2B pull by shipping an enterprise self-serve console with custom RAG knowledge uploads, concurrent call lines, and CRM webhooks in 7 business days.</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Quantified Commercial Impact</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li>Scaled from 40,000 to <strong>100,000+ app downloads in 30 days</strong> of Call Assist launch.</li>
+            <li>Acquired <strong>20,000+ active paid subscribers</strong>, generating <strong>₹1.5 Crore ($180K+) in 4 months</strong>.</li>
+            <li>Closed <strong>20+ B2B enterprise clients</strong> in Month 1, achieving <strong>₹2,00,000+ MRR</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="modal-lesson-box">
+          <h4>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Strategic Prioritization: RICE + MoSCoW Framework
+          </h4>
+          <p>
+            We intentionally deprioritized duplex voice chat (MySA Live) in Sprint 1 to ship Call Assist first. Voice chat was commoditizing rapidly (ChatGPT Voice), whereas Call Assist created an entirely new category in India with 3× higher WTP and organic WhatsApp virality. Call Assist drove 60,000 of the 100,000 downloads in the first 30 days.
+          </p>
+        </div>
+      </div>
+    </template>
+
+    <!-- Modal 3: VIP Club -->
+    <template id="modal-vip">
+      <div style="padding: 0.5rem 0;">
+        <div class="modal-meta-row">
+          <span class="modal-meta-badge" style="color: #c084fc; border-color: rgba(192, 132, 252, 0.3); background: rgba(192, 132, 252, 0.1);">Witzeal Technologies · Big Cash</span>
+          <span class="modal-meta-badge" style="color: var(--text-muted); border-color: var(--border); background: transparent;">Associate Product Manager · Monetization</span>
+        </div>
+        <h2 style="font-size: 2.4rem; font-family: var(--font-display); font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.15;">
+          VIP Club Revamp: Tiered Monetization & Retention Hooks
+        </h2>
+        <div class="modal-stat-banner" style="color: #c084fc; border-color: #c084fc; background: rgba(192, 132, 252, 0.08);">
+          +75% VIP ARPU (₹8,000 → ₹14,000) · 65,000 Active VIP DAU · ₹1.5 Cr/Day Deposits
+        </div>
+
+        <div class="modal-metric-grid">
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: #c084fc;">+75%</span>
+            <span class="modal-metric-lbl">VIP ARPU (₹8K → ₹14K)</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val">65,000</span>
+            <span class="modal-metric-lbl">Active VIP DAU (+44%)</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: var(--accent-emerald);">₹1.5 Cr</span>
+            <span class="modal-metric-lbl">Daily Gross VIP Deposits</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val">81%</span>
+            <span class="modal-metric-lbl">Tier Renewal Retention</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Strategic Context & The Power-Law Reality</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem;">
+            A cohort analysis of Big Cash revealed extreme revenue concentration: <strong>20% of users (VIP) generated 85% of total platform commission and 89% of all deposits</strong>. Yet, high-rollers were stagnating in a legacy, single ₹5,000 wagering threshold. Once reached, there were zero higher milestones, depressing ARPU and leading players to churn to competing platforms.
+          </p>
+          <div class="modal-callout-quote">
+            "I don't care about being VIP. What does it even give me?" — Top Depositor (₹2L+ monthly wagering), Discovery Call
+          </div>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Product Architecture & Levers Shipped</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li><strong>Dynamic 3-Tier Wagering Progression:</strong> Built a milestone engine: Tier 1 VIP (₹5,000/mo), Tier 2 VIP Plus (₹50,000/mo), and Tier 3 VIP Pro (₹1,00,000/mo).</li>
+            <li><strong>Operational & Gameplay Perks:</strong> Escalated daily withdrawal limits, up to 10x multiplier on active weekly gameplay streaks, and dedicated VIP-only tournament tables.</li>
+            <li><strong>Gamification & Discovery:</strong> Placed VIP Club directly in primary bottom navigation; triggered dynamic progress bars when users hit 60% of tier target to stimulate deposit top-ups.</li>
+            <li><strong>Predictive Personalization:</strong> Segmented high-rollers based on betting velocity to deliver dynamic, personalized Add-Cash deposit bonuses.</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Quantified Commercial Impact</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li>VIP ARPU surged by <strong>+75% from ₹8,000 to ₹14,000</strong> within one quarter.</li>
+            <li>Active VIP DAU expanded from <strong>45,000 to 65,000 (+44%)</strong>.</li>
+            <li>VIP daily conversion rate jumped from 1,100 to <strong>1,800 users/day</strong>; tier renewal retention increased from <strong>61% to 81%</strong>.</li>
+            <li>Gross VIP daily deposit volume rose from <strong>₹1.2 Crore/day to ₹1.5 Crore/day</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="modal-lesson-box">
+          <h4>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            Trade-off: Why 4-Tier & 5-Tier Models Were Rejected
+          </h4>
+          <p>
+            We evaluated 4 and 5 tiers, but mobile-first usability testing proved that 3 tiers maximized psychological momentum without cognitive clutter. With 4+ tiers, progress bars became illegible on mobile screens, and tier labels truncated. Furthermore, tiered referral bonuses for VIPs failed completely because high-rollers earn more from game winnings than referral cash. We killed the referral feature within 4 weeks and redirected engineering to exclusive VIP tournament tables.
+          </p>
+        </div>
+      </div>
+    </template>
+
+    <!-- Modal 4: CRM + AI Support Automation -->
+    <template id="modal-crmai">
+      <div style="padding: 0.5rem 0;">
+        <div class="modal-meta-row">
+          <span class="modal-meta-badge" style="color: #fb7185; border-color: rgba(251, 113, 133, 0.3); background: rgba(251, 113, 133, 0.1);">Witzeal Technologies · Big Cash</span>
+          <span class="modal-meta-badge" style="color: var(--text-muted); border-color: var(--border); background: transparent;">Associate Product Manager · Support & AI Ops</span>
+        </div>
+        <h2 style="font-size: 2.4rem; font-family: var(--font-display); font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.15;">
+          End-to-End CRM Revamp & AI Support Automation
+        </h2>
+        <div class="modal-stat-banner" style="color: #fb7185; border-color: #fb7185; background: rgba(251, 113, 133, 0.08);">
+          FRT >6 Hours → <2 Minutes · CSAT 2.0 → 4.2 / 5.0 · 40–50% Autonomous Deflection
+        </div>
+
+        <div class="modal-metric-grid">
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: #fb7185;"><2 Mins</span>
+            <span class="modal-metric-lbl">First Response Time (FRT)</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: var(--accent-emerald);">4.2 / 5</span>
+            <span class="modal-metric-lbl">CSAT Score (Up from 2.0)</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val">40%–50%</span>
+            <span class="modal-metric-lbl">Autonomous Ticket Deflection</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val">1–2 Hours</span>
+            <span class="modal-metric-lbl">Resolution TAT (from 24-48h)</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Strategic Context & Operational Breakdown</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem;">
+            On a platform serving 50M+ users, support operations were on the verge of collapse: users waited over 6 hours for a first human response, and resolution took 24–48 hours. Only 3 human agents were on duty during off-hours to handle thousands of payment disputes and manual KYC tickets. Worse, 40–50% of incoming volume consisted of repetitive low-intent queries ("Where is my balance?") or abusive rants following gaming losses.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Product Execution & Technical Levers</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li><strong>Executive Buy-in Modeling:</strong> Built a predictive model correlating customer support wait times directly with paid player churn, securing executive budget for CRM infrastructure.</li>
+            <li><strong>Intelligent Freshchat Queue Routing:</strong> Integrated automated tier-based routing: VIP and high-deposit players were automatically directed to senior specialist queues with sub-minute SLAs.</li>
+            <li><strong>L1 Autonomous AI Support Bot:</strong> Deployed a conversational triage bot powered by RAG and core game-state APIs to autonomously resolve balance, withdrawal, and rule queries without human touch.</li>
+            <li><strong>Agent Helper AI Copilot:</strong> Built an internal copilot in the agent UI that analyzed real-time game logs, wallet transactions, and ticket context to recommend verified one-click resolutions.</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Quantified Operational Impact</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li>First Response Time (FRT) collapsed from <strong>>6 hours down to under 2 minutes</strong>.</li>
+            <li>Overall CSAT score increased from <strong>2.0 / 5.0 to 4.2 / 5.0</strong>.</li>
+            <li>Standard resolution turnaround dropped from <strong>24–48 hours to 1–2 hours</strong>; complex escalations fell from 4 days to &lt;12 hours.</li>
+            <li>Deflected <strong>40%–50% of routine tickets autonomously</strong>, relieving human agents to focus on fraud and payment edge cases.</li>
+          </ul>
+        </div>
+
+        <div class="modal-lesson-box">
+          <h4>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            PM Philosophy: Ground Truth in Support
+          </h4>
+          <p>
+            "The best products are built from the support queue, not the roadmap." At Witzeal, the support queue was our most unfiltered source of product friction. The AI triage bot, the VIP priority queue, and the KYC overhaul all shipped because of user pain uncovered in support tickets, not stakeholder intuition.
+          </p>
+        </div>
+      </div>
+    </template>
+
+    <!-- Modal 5: KYC Platform & TDS Engine -->
+    <template id="modal-kyc">
+      <div style="padding: 0.5rem 0;">
+        <div class="modal-meta-row">
+          <span class="modal-meta-badge" style="color: #34d399; border-color: rgba(52, 211, 153, 0.3); background: rgba(52, 211, 153, 0.1);">Witzeal Technologies · Big Cash</span>
+          <span class="modal-meta-badge" style="color: var(--text-muted); border-color: var(--border); background: transparent;">Associate Product Manager · FinTech & Compliance</span>
+        </div>
+        <h2 style="font-size: 2.4rem; font-family: var(--font-display); font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.15;">
+          Automated KYC Architecture & Section 194BA TDS Engine
+        </h2>
+        <div class="modal-stat-banner" style="color: #34d399; border-color: #34d399; background: rgba(52, 211, 153, 0.08);">
+          -97% Manual Review Queue · <1 Min Verification · 5-Day Launch of 30% TDS Refund Loop
+        </div>
+
+        <div class="modal-metric-grid">
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: #34d399;">-97%</span>
+            <span class="modal-metric-lbl">Manual Queue (1,500→30/d)</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val"><1 Min</span>
+            <span class="modal-metric-lbl">Auto-Verification TAT</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: var(--accent-emerald);">₹1.00</span>
+            <span class="modal-metric-lbl">Cost / Check (from ₹4.00)</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val">900,000</span>
+            <span class="modal-metric-lbl">Zero-Downtime User Migration</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Regulatory Crisis & Conversion Bottlenecks</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem;">
+            Government mandates required exact legal name matching between bank accounts and PAN cards. Legacy verification forced users to upload physical card photos, creating 12–24 hour delays. Generic name-matching algorithms consistently failed on Indian naming nuances (swapped first/last names, honorifics, initials), pushing 1,000–1,500 legitimate users per day into a manual review backlog. Simultaneously, Section 194BA introduced a flat 30% tax on net winnings from the very first rupee, threatening massive high-roller churn.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Product Architecture & Technical Levers</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li><strong>Zero-Upload Verification:</strong> Eliminated image uploads; users enter PAN & DOB, pulling official legal records from NSDL in &lt;60 seconds.</li>
+            <li><strong>Multi-Vendor Fallback Routing:</strong> Integrated Cashfree ↔ AuthBridge with automated latency/health monitoring, achieving 98%+ uptime and renegotiating costs by 75% (₹4.00 down to ₹1.00/call).</li>
+            <li><strong>Proprietary Indian Name-Matching Algorithm:</strong> Engineered a phonetic and structural algorithm handling initials (G.K. Singh ↔ Ghanshyam Kumar Singh), inversions, and honorific stripping with 95% accuracy.</li>
+            <li><strong>Section 194BA TDS Refund Bonus Engine:</strong> Designed and deployed an automated tax-offset bonus wallet in 5 days. Calculated 30% tax in real time, deducted it for compliance, and instantly credited equivalent bonus cash back to the player's wallet.</li>
+            <li><strong>Zero-Downtime Data Migration:</strong> Successfully migrated 900,000 legacy KYC users to the new compliant flow within 3 weeks without disrupting live tables.</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Quantified Commercial Impact</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li>Slashed manual verification backlog by <strong>97% (from 1,000–1,500 down to 30–50/day)</strong>.</li>
+            <li>Boosted D0 KYC verification completion from <strong>60% to 90%</strong>.</li>
+            <li>Cut verification expenses by <strong>75%</strong> while maintaining <strong>95% name-matching accuracy</strong>.</li>
+            <li>The 30% TDS refund went viral across WhatsApp and YouTube communities, turning a compliance crisis into an organic customer acquisition loop.</li>
+          </ul>
+        </div>
+
+        <div class="modal-lesson-box">
+          <h4>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            PM Philosophy: Regulations Are Product Features
+          </h4>
+          <p>
+            When the 30% tax mandate was announced, competitors passed the full burden onto players. By viewing regulation as a product design challenge, we engineered a promotional refund engine offset by restructured payment fees. We protected company gross margins while cementing player trust as the first platform in India to solve the tax burden.
+          </p>
+        </div>
+      </div>
+    </template>
+
+    <!-- Modal 6: GrowthTap Analytics -->
+    <template id="modal-growthtap">
+      <div style="padding: 0.5rem 0;">
+        <div class="modal-meta-row">
+          <span class="modal-meta-badge" style="color: #818cf8; border-color: rgba(129, 140, 248, 0.3); background: rgba(129, 140, 248, 0.1);">AIVO Technologies</span>
+          <span class="modal-meta-badge" style="color: var(--text-muted); border-color: var(--border); background: transparent;">Product Manager · Data Infrastructure</span>
+        </div>
+        <h2 style="font-size: 2.4rem; font-family: var(--font-display); font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.15;">
+          GrowthTap: Customer Engagement & Product Analytics Engine
+        </h2>
+        <div class="modal-stat-banner" style="color: #818cf8; border-color: #818cf8; background: rgba(129, 140, 248, 0.08);">
+          $50,000/Year SaaS Licensing Eliminated · Sub-Second Latency · 50M+ Users Tracked
+        </div>
+
+        <div class="modal-metric-grid">
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: #818cf8;">$50,000</span>
+            <span class="modal-metric-lbl">Annual SaaS License Saved</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val"><1 Sec</span>
+            <span class="modal-metric-lbl">Event Query Ingestion Latency</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: var(--accent-emerald);">-60%</span>
+            <span class="modal-metric-lbl">Client App Integration Time</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val">15+</span>
+            <span class="modal-metric-lbl">Omnichannel Campaign Templates</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Build vs. Buy Evaluation & Problem</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem;">
+            The company was spending $50,000/year on CleverTap. Attempting to transition to GA4 failed because Firebase-to-BigQuery pipelines suffered a 6-to-12-hour processing lag—making real-time win-back or deposit-drop triggers impossible. Furthermore, GA4 lacked single-user deterministic event timeline tracing and could not trigger instant push/in-app modals based on multi-property nested events.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Product Architecture & Levers Shipped</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li><strong>Apache Kafka + ClickHouse Pipeline:</strong> Architected a high-throughput event broker feeding a columnar ClickHouse database, enabling sub-second analytical querying across tens of millions of raw events.</li>
+            <li><strong>Proprietary Multi-Platform SDKs:</strong> Coordinated the delivery of lightweight SDKs across Android, iOS, Web, and Flutter with offline event batching and automated session tracking, cutting integration time by 60%.</li>
+            <li><strong>Omnichannel Campaign Engine:</strong> Built a campaign composer supporting scheduled and behavioral push, in-app modals, and WhatsApp alerts segmented by real-time event filters.</li>
+            <li><strong>Multi-Tenant Scoping & RBAC:</strong> Engineered Role-Based Access Control and multi-tenant scoping, empowering marketing, product, and QA pods to operate isolated analytical environments.</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Quantified Operational Impact</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li>Eliminated <strong>$50,000/year</strong> in third-party SaaS fees, paying for the underlying infrastructure in weeks.</li>
+            <li>Replaced 6–12 hour data processing lag with <strong>sub-second real-time event streaming</strong>.</li>
+            <li>Unified analytics and lifecycle automation across MySA B2C, MySA Business, and web properties with 100% data ownership.</li>
+          </ul>
+        </div>
+
+        <div class="modal-lesson-box">
+          <h4>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Scope Discipline: What We Intentionally Excluded
+          </h4>
+          <p>
+            We intentionally excluded ML-based churn predictions and visual in-app editors from the MVP. Both would have required dedicated ML training pipelines and bloated SDK size. By sticking to rule-based event triggers on ClickHouse, we delivered 90% of CleverTap's real-world business value in 8 weeks instead of 6+ months.
+          </p>
+        </div>
+      </div>
+    </template>
+
+    <!-- Modal 7: Lavola.ai GenAI Companion -->
+    <template id="modal-lavola">
+      <div style="padding: 0.5rem 0;">
+        <div class="modal-meta-row">
+          <span class="modal-meta-badge" style="color: #f472b6; border-color: rgba(244, 114, 182, 0.3); background: rgba(244, 114, 182, 0.1);">AIVO Technologies</span>
+          <span class="modal-meta-badge" style="color: var(--text-muted); border-color: var(--border); background: transparent;">Product Manager · GenAI & Conversational AI (Pod of 5)</span>
+        </div>
+        <h2 style="font-size: 2.4rem; font-family: var(--font-display); font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.15;">
+          Lavola.ai: Conversational GenAI Companion & Guardrails
+        </h2>
+        <div class="modal-stat-banner" style="color: #f472b6; border-color: #f472b6; background: rgba(244, 114, 182, 0.08);">
+          92% Task Accuracy · Zero PII Leaks · Real-Time Duplex Voice Calling
+        </div>
+
+        <div class="modal-metric-grid">
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: #f472b6;">92%</span>
+            <span class="modal-metric-lbl">Task Resolution Accuracy</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val">&lt;800ms</span>
+            <span class="modal-metric-lbl">Duplex Voice Latency</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: var(--accent-emerald);">0 Leaks</span>
+            <span class="modal-metric-lbl">Strict PII & Brand Safety</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val">3 Personas</span>
+            <span class="modal-metric-lbl">Empathetic / Companion / Mentor</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Strategic Context & User Discovery</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem;">
+            Demographic discovery highlighted acute digital loneliness, chronic workplace stress, and burnout among Gen Z and millennial digital natives. Existing market solutions (traditional rule-based chatbots or generic raw LLM wrappers) felt robotic, lacked persistent conversational memory, suffered high audio latency, and possessed zero distinct personality boundaries or safety guardrails.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Product Architecture & Technical Levers</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li><strong>Multi-Persona Prompt Orchestration:</strong> Engineered system prompts, conversational memory checkpoints, and safety guardrails across three specialized personas (Empathetic Listener, Conversational Companion, and Productivity & Wellness Mentor).</li>
+            <li><strong>Low-Latency Duplex Voice Calling:</strong> Architected real-time, bidirectional voice streaming with natural interruptions and barge-in handling, eliminating the frustrating "walkie-talkie" latency.</li>
+            <li><strong>Hands-On Full-Stack Delivery:</strong> Personally developed and launched the responsive web landing and acquisition interface to bypass engineering bottlenecks and accelerate go-to-market.</li>
+            <li><strong>Crisis Detection & Semantic Guardrails:</strong> Built enterprise safety boundaries, input sanitization pipelines, and real-time sentiment classifiers that automatically redirect crisis queries to verified professional helplines with zero PII leaks.</li>
+            <li><strong>Dynamic Subscription Paywalls:</strong> Formulated tiered monetization models gated by daily voice minutes, persona access depth, and premium audio features.</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Quantified Commercial & Safety Impact</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li>Delivered <strong>92% task resolution accuracy</strong> in closed beta testing environments.</li>
+            <li>Zero PII leakage and zero prompt injection vulnerabilities recorded during red-team audits.</li>
+            <li>Sub-800ms speech-to-speech response latency achieved across mobile web sessions.</li>
+          </ul>
+        </div>
+
+        <div class="modal-lesson-box">
+          <h4>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            PM Craft: The Cold-Start Empathy Paradox
+          </h4>
+          <p>
+            Early beta testing revealed that users felt alienated if the AI was too clinical, but felt uncomfortable if the AI was excessively cheerful. We solved this by implementing an adaptive sentiment calibration loop: the AI mirrors the user's emotional tempo in the first 3 conversation turns before gradually introducing grounded supportive guidance.
+          </p>
+        </div>
+      </div>
+    </template>
+
+    <!-- Modal 8: Qualitative Research & D0-D7 Retention -->
+    <template id="modal-research">
+      <div style="padding: 0.5rem 0;">
+        <div class="modal-meta-row">
+          <span class="modal-meta-badge" style="color: #60a5fa; border-color: rgba(96, 165, 250, 0.3); background: rgba(96, 165, 250, 0.1);">Witzeal Technologies · Big Cash</span>
+          <span class="modal-meta-badge" style="color: var(--text-muted); border-color: var(--border); background: transparent;">Associate PM (from Intern) · Growth & Research</span>
+        </div>
+        <h2 style="font-size: 2.4rem; font-family: var(--font-display); font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.15;">
+          D0–D7 Onboarding & 2,000+ Qualitative Discovery
+        </h2>
+        <div class="modal-stat-banner" style="color: #60a5fa; border-color: #60a5fa; background: rgba(96, 165, 250, 0.08);">
+          D7 Retention Doubled (12% → 25%) · 2,000+ Discovery Calls · -20% Bonus Burn
+        </div>
+
+        <div class="modal-metric-grid">
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: #60a5fa;">12% → 25%</span>
+            <span class="modal-metric-lbl">D7 Player Retention</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val">2,000+</span>
+            <span class="modal-metric-lbl">1-on-1 Discovery Calls</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val" style="color: var(--accent-emerald);">-20%</span>
+            <span class="modal-metric-lbl">Bonus Burn Reduction</span>
+          </div>
+          <div class="modal-metric-box">
+            <span class="modal-metric-val">+10% WoW</span>
+            <span class="modal-metric-lbl">Gross Merchandise Value (GMV)</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Discovery Insights: The Cognitive Overload Problem</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem;">
+            Deep funnel analysis showed severe drop-offs between signup (D0) and Day 7. Conducting over 2,000 qualitative user interviews across India revealed extreme cognitive overload: new players were confronted by 15+ game lobbies, lacked confidence in real-money contests, and experienced zero psychological momentum to return on Day 1 or Day 2.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Product Strategy & Growth Experiments</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li><strong>Campaign-to-Game Journey Mapping:</strong> Matched initial lobby views to the specific acquisition channel (e.g. Poker ad clickers were routed directly to Poker tutorials), dramatically slashing bounce rate.</li>
+            <li><strong>Dynamic Add-Cash Recommendation Engine:</strong> Built personalized deposit bonus tiers segmented by acquisition channel, device type, and geographical tier.</li>
+            <li><strong>Habit-Forming Streak Mechanics:</strong> Engineered 7-day progressive login streak rewards with multiplier escalations and micro-milestone quests.</li>
+            <li><strong>Guided Practice Overlays:</strong> Built interactive tooltips directing first-time players toward practice tables to build confidence before staking cash.</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Quantified Commercial Impact</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
+            <li>D7 Player Retention doubled from <strong>12% to 25% (+10% WoW improvement)</strong>.</li>
+            <li>Active D7 Users lifted from <strong>22% to 48%</strong>, driving a <strong>+10% WoW increase in GMV</strong>.</li>
+            <li>Drove <strong>+12% purchase conversion</strong> and <strong>+10% new user Add-Cash conversion</strong>.</li>
+            <li>Cut promotional bonus burn by <strong>20%</strong> via targeted incentive eligibility gates.</li>
+          </ul>
+        </div>
+
+        <div class="modal-lesson-box">
+          <h4>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            PM Hard Lesson: The ₹4–5 Lakh Bonus Burn Failure
+          </h4>
+          <p>
+            During an early retention push, I disbursed blanket deposit bonuses across dormant users, burning ₹4–5 Lakhs in days. Multi-accounting users claimed bonuses across 3–4 accounts and withdrew immediately. This taught me that <em>generosity without segmentation is just waste</em>. I subsequently enforced mandatory single-account device fingerprinting and 4-tier predictive bonus eligibility, reducing overall bonus burn by 20% while lifting reactivation.
+          </p>
+        </div>
+      </div>
+    </template>
   </main>
 
   <!-- Footer -->
@@ -409,7 +1247,11 @@
         <div class="footer-credo">
           Build. Measure. Learn. Scale.
         </div>
-        <div>
+        <div style="display: flex; gap: 1.25rem;">
+          <a href="work.html" style="color: var(--text-secondary);">Work</a>
+          <a href="experience.html" style="color: var(--text-secondary);">Experience</a>
+          <a href="about.html" style="color: var(--text-secondary);">About</a>
+          <a href="index.html#contact" style="color: var(--accent); font-weight: 600;">Contact</a>
           <a href="#" style="color: var(--accent); font-weight: 600;">Back to top ↑</a>
         </div>
       </div>
@@ -417,5 +1259,6 @@
   </footer>
 
   <script src="app.js"></script>
+  <script src="revamp.js"></script>
 </body>
 </html>
