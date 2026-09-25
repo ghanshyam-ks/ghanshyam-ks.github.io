@@ -721,8 +721,8 @@ body.modal-open {
 
 .carousel-btn {
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #f1f5f9;
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -730,12 +730,13 @@ body.modal-open {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
 .carousel-btn:hover {
-  background: white;
-  color: black;
+  background: #ffffff;
+  color: #0f1117;
+  border-color: #ffffff;
 }
 
 .carousel-btn svg {
@@ -748,6 +749,21 @@ body.modal-open {
 
 .carousel-btn:last-child:hover svg {
   transform: translateX(3px);
+}
+
+/* Light Theme: Ensure carousel arrow buttons are crisp, visible and premium */
+[data-theme="light"] .carousel-btn {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .carousel-btn:hover {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.18);
 }
 
 .3d-carousel {
@@ -1834,6 +1850,21 @@ input:checked + .slider:before {
   background: var(--text-primary);
   color: var(--bg-primary);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Shipped at Scale carousel arrows fix for light mode */
+[data-theme="light"] .carousel-btn {
+  background: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #0f172a !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+[data-theme="light"] .carousel-btn:hover {
+  background: #0f172a !important;
+  color: #ffffff !important;
+  border-color: #0f172a !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.18) !important;
 }
 
 /* Bento Card fixes for light mode */
